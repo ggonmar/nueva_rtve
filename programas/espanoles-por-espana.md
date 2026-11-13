@@ -1,13 +1,11 @@
 # Españoles por España
 
-- **Estado:** Confirmado
+- **Título:** Españoles por España
 - **Tipo:** Reportajes
+- **Estado:** Confirmado
+- **Descripción:** Bertín Osborne recorre una España donde la gente trabaja, emprende y habla sin esperar a que un ministerio le autorice la opinión.
 - **Presentador asignado:** Bertín Osborne
 - **Colaboradores:** Pendientes de concretar
-
-## Descripción
-
-Pendiente de concretar en la parrilla.
 
 ## Candidatos mencionados
 

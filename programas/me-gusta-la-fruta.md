@@ -1,8 +1,6 @@
 # Me gusta la fruta
 
-- **Estado:** Confirmado
+- **Título:** Me gusta la fruta
 - **Tipo:** Nutrición
-
-## Descripción
-
-Matinal enfocado en la alimentación sana.
+- **Estado:** Confirmado
+- **Descripción:** Matinal enfocado en la alimentación sana.

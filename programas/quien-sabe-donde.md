@@ -1,8 +1,6 @@
 # ¿Quién sabe dónde?
 
-- **Estado:** Confirmado
+- **Título:** ¿Quién sabe dónde?
 - **Tipo:** Investigación / recuperación de casos
-
-## Descripción
-
-Recuperar el formato con un enfoque específico en personas desaparecidas o fallecidas durante la Guerra Civil.
+- **Estado:** Confirmado
+- **Descripción:** Recuperar el formato con un enfoque específico en personas desaparecidas o fallecidas durante la Guerra Civil.

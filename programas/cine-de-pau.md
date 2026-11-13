@@ -1,8 +1,6 @@
 # Cine de PAU
 
-- **Estado:** Confirmado
+- **Título:** Cine de PAU
 - **Tipo:** Cine
-
-## Descripción
-
-Recuperación de Cine de Barrio con un nombre actualizado.
+- **Estado:** Confirmado
+- **Descripción:** Recuperación de Cine de Barrio con un nombre actualizado.

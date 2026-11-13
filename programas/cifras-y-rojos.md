@@ -1,8 +1,6 @@
 # Cifras y rojos
 
-- **Estado:** Confirmado
+- **Título:** Cifras y rojos
 - **Tipo:** Concurso matemático
-
-## Descripción
-
-Los concursantes calculan cuánto cuesta mantener a un comunista.
+- **Estado:** Confirmado
+- **Descripción:** Los concursantes calculan cuánto cuesta mantener a un comunista.

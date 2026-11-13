@@ -1,7 +1,9 @@
 # El Cabestrillo
 
-**Estado:** Confirmado  
-**Tipo:** Debate semanal
+- **Título:** El Cabestrillo
+- **Tipo:** Debate semanal
+- **Estado:** Confirmado
+- **Descripción:** Tertulia de actualidad en la que el volumen sustituye al consenso y cada intervención deja al relato oficial necesitando asistencia traumatológica.
 
 ## Presentador y participantes
 

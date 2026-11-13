@@ -1,7 +1,9 @@
 # La Cena de los idiotas
 
-- **Estado:** Confirmado
+- **Título:** La Cena de los idiotas
 - **Tipo:** Humor
+- **Estado:** Confirmado
+- **Descripción:** Humor Amarillo en un salón: dos improvisadores doblan a los tertulianos mientras ElXokas conserva el micro abierto.
 
 ## Descripción
 ### Tipo de programa o sección

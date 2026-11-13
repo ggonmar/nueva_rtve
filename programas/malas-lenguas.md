@@ -1,14 +1,10 @@
 # Malas Lenguas
 
-- **Estado:** Confirmado
+- **Título:** Malas Lenguas
 - **Tipo:** Enseñanza
-
-## Descripción
-
-Programa de 2 a 6 de la mañana en el que se enseña catalán, euskera y galego.
-
-
-Slogan: *Euskera, galego i català. De 2:00 a 6:00, España se entiende.*
+- **Estado:** Confirmado
+- **Descripción:** Programa de 2 a 6 de la mañana en el que se enseña catalán, euskera y galego.
+- **Slogan:** *Euskera, galego i català. De 2:00 a 6:00, España se entiende.*
 
 
 ## Tipo de programa o sección
