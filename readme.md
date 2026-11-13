@@ -65,12 +65,12 @@ Los horarios son una propuesta de franjas de emisión. Los candidatos son altern
 
 </details>
 
-<details>
-<summary>Personas</summary>
+### Personas
 
-<details>
-<summary>Confirmados</summary>
+<details open>
+<summary><h4>Confirmados<h4></summary>
 
+<!-- personas-confirmados:inicio -->
 | Nombre | Perfil de programa | Notas |
 | --- | --- | --- |
 | Alaska | Presentadora | Asignada a Una, Grande y Libre; también se propone tenerla en la recámara. |
@@ -83,12 +83,14 @@ Los horarios son una propuesta de franjas de emisión. Los candidatos son altern
 | Juan Ramón Rallo | Presentador | Asignado a El último contribuyente. |
 | Santiago Segura y El Sevilla | Presentadores | Asignados a Cachitos de Hierro y Rojo; Santiago Segura también se propone para la recámara. |
 | Bertín Osborne | Presentador | Asignado a Españoles por España. |
+<!-- personas-confirmados:fin -->
 
 </details>
 
 <details>
-<summary>Candidatos</summary>
+<summary><h4>Candidatos</h4></summary>
 
+<!-- personas-candidatos:inicio -->
 | Nombre | Perfil de programa | Notas |
 | --- | --- | --- |
 | Ramón García | Presentador | Candidato propuesto; programa por concretar. |
@@ -102,28 +104,10 @@ Los horarios son una propuesta de franjas de emisión. Los candidatos son altern
 | Santiago Segura | Presentador / colaborador | Se propone tenerlo en la recámara, además de su asignación a Cachitos de Hierro y Rojo. |
 | Cristina Seguí | Colaboradora | Posible incorporación; programa por concretar. |
 | Arcadi Espada | Colaborador / reportero | Posible encaje en Españoles por España. |
+<!-- personas-candidatos:fin -->
 
 </details>
 
-</details>
-
-<details>
-<summary>Asignación programa - persona</summary>
-
-| Programa | Presentador / Coordinador / Productor | Colaboradores |
-| --- | --- | --- |
-| [Una, Grande y Libre](programas/una-grande-y-libre.md) | Alaska | --- |
-| [Cunetas o Pesetas](programas/cunetas-o-pesetas.md) | ... | ... |
-| [Quién quiere ser funcionario](programas/quien-quiere-ser-funcionario.md) | Carlos Sobera | ... |
-| [No, Patxarán](programas/no-patxaran.md) | Los Meconios | Miguel Lago |
-| [Amar en tiempos de rojos](programas/amar-en-tiempos-de-rojos.md) | Telenovela | ... |
-| [El Cabestrillo](programas/el%20cabestrillo.md) | ElXokas, WSW y UTBH | Inda, Fonseca, Santaolalla (obligada bajo amenaza de imputación) |
-| [Cuarto Reich](programas/cuarto-reich.md) | Iker Jimenez | --- |
-| [Españoles por España](programas/espanoles-por-espana.md) | Bertín Osborne | --- |
-| [El último contribuyente](programas/el-ultimo-contribuyente.md) | Juan Ramon Rallo | ... |
-| [Cachitos de Hierro y Rojo](programas/cachitos-de-hierro-y-rojo.md) | Santiago Segura y El Sevilla | ... |
-
-</details>
 
 ## Estado de las propuestas
 
