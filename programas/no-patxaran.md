@@ -3,6 +3,7 @@
 - **Título:** No, Patxarán
 - **Tipo:** Late night
 - **Estado:** Confirmado
+- **Horario:** 23:00-01:00
 - **Descripción:** Los Meconios y Miguel Lago despiden el día con humor, música y más ganas de pinchar globos progresistas que de cobrar la próxima subvención. Se propone un late night sin líneas rojas, con actualidad copa en mano y sátira de subvenciones y observatorios.
 - **Presentador:** Los Meconios
 - **Colaborador asignado:** Miguel Lago

@@ -9,8 +9,9 @@ from urllib.parse import quote
 
 
 ROOT = Path(__file__).resolve().parent.parent
-FIELD_PATTERN = re.compile(r"^\s*-\s+\*\*(Título|Titulo|Tipo|Estado|Presentador|Descripción):\*\*\s*(.*?)\s*$")
-REQUIRED_FIELDS = ("Título", "Tipo", "Estado", "Descripción")
+FIELD_PATTERN = re.compile(r"^\s*-\s+\*\*(Título|Titulo|Tipo|Estado|Horario|Presentador|Descripción):\*\*\s*(.*?)\s*$")
+REQUIRED_FIELDS = ("Título", "Tipo", "Estado", "Horario", "Descripción")
+SCHEDULE_PATTERN = re.compile(r"([01][0-9]|2[0-3]):([0-5][0-9])-([01][0-9]|2[0-3]):([0-5][0-9])")
 MARKERS = {
     "Confirmado": ("<!-- programas-confirmados:inicio -->", "<!-- programas-confirmados:fin -->"),
     "Candidato": ("<!-- programas-candidatos:inicio -->", "<!-- programas-candidatos:fin -->"),
@@ -36,6 +37,9 @@ def read_program(path, root):
         raise ValueError(f"{path}: faltan campos: {', '.join(missing)}")
     if fields["Estado"] not in MARKERS:
         raise ValueError(f"{path}: estado desconocido: {fields['Estado']}")
+    schedule = SCHEDULE_PATTERN.fullmatch(fields["Horario"])
+    if not schedule or schedule.group(1, 2) == schedule.group(3, 4):
+        raise ValueError(f"{path}: horario inválido: {fields['Horario']}; usa HH:MM-HH:MM con horas distintas")
     fields["ruta"] = path.relative_to(root).as_posix()
     return fields
 
@@ -45,15 +49,15 @@ def escape_cell(value):
 
 
 def render_table(programs):
-    rows = ["| Nombre | Tipo | Presentador | Descripción |", "| --- | --- | --- | --- |"]
-    for program in sorted(programs, key=lambda item: item["Título"].casefold()):
+    rows = ["| Horario | Nombre | Tipo | Presentador | Descripción |", "| --- | --- | --- | --- | --- |"]
+    for program in sorted(programs, key=lambda item: (item["Horario"][:5], item["Título"].casefold())):
         title = program["Título"].replace("\\", "\\\\").replace("[", r"\[").replace("]", r"\]")
         title = escape_cell(title)
         url = quote(program["ruta"], safe="/")
         kind = escape_cell(program["Tipo"])
         presenter = escape_cell(program.get("Presentador", "Por concretar"))
         description = escape_cell(program["Descripción"])
-        rows.append(f"| [{title}]({url}) | {kind} | {presenter} | {description} |")
+        rows.append(f"| {program['Horario']} | [{title}]({url}) | {kind} | {presenter} | {description} |")
     return "\n".join(rows)
 
 

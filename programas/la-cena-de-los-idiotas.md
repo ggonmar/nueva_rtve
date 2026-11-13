@@ -3,6 +3,7 @@
 - **Título:** La Cena de los idiotas
 - **Tipo:** Humor
 - **Estado:** Confirmado
+- **Horario:** 21:00-22:00
 - **Descripción:** Humor Amarillo en un salón: dos improvisadores doblan a los tertulianos mientras ElXokas conserva el micro abierto.
 
 ## Descripción

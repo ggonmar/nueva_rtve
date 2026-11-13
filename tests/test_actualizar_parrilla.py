@@ -22,12 +22,12 @@ class GenerarParrillaTest(unittest.TestCase):
             encoding="utf-8",
         )
 
-    def ficha(self, filename, title, status="Confirmado", description="Descripción"):
+    def ficha(self, filename, title, status="Confirmado", description="Descripción", schedule="16:00-18:00"):
         path = self.root / "programas" / filename
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(
             f"- **Título:** {title}\n- **Tipo:** Humor\n"
-            f"- **Estado:** {status}\n- **Descripción:** {description}\n",
+            f"- **Estado:** {status}\n- **Horario:** {schedule}\n- **Descripción:** {description}\n",
             encoding="utf-8",
         )
         return path
@@ -70,6 +70,36 @@ class GenerarParrillaTest(unittest.TestCase):
         content = (self.root / "readme.md").read_text(encoding="utf-8")
         self.assertEqual(content.count("| Tipo | Presentador | Descripción |"), 2)
         self.assertEqual(content.count(r"| Humor | Ana \| Luis | Descripción |"), 2)
+
+    def test_ordena_por_inicio_y_desempata_por_titulo_en_ambos_estados(self):
+        for status in ("Confirmado", "Candidato"):
+            self.ficha(f"{status}-z.md", "Zeta " + status, status, schedule="02:00-06:00")
+            self.ficha(f"{status}-a.md", "Alfa " + status, status, schedule="23:00-01:00")
+            self.ficha(f"{status}-b.md", "Beta " + status, status, schedule="02:00-03:00")
+            self.ficha(f"{status}-m.md", "Medianoche " + status, status, schedule="00:00-02:00")
+        generate(self.root)
+        content = (self.root / "readme.md").read_text(encoding="utf-8")
+        self.assertEqual(content.count("| Horario | Nombre | Tipo | Presentador | Descripción |"), 2)
+        for status in ("Confirmado", "Candidato"):
+            positions = [content.index(f"[{name} {status}]") for name in ("Medianoche", "Beta", "Zeta", "Alfa")]
+            self.assertEqual(positions, sorted(positions))
+            self.assertIn(f"| 23:00-01:00 | [Alfa {status}]", content)
+
+    def test_rechaza_horarios_invalidos_sin_modificar_el_readme(self):
+        original = (self.root / "readme.md").read_text(encoding="utf-8")
+        for schedule in ("9:00-10:00", "24:00-02:00", "10:60-11:00", "12:00-12:00", "tarde"):
+            with self.subTest(schedule=schedule):
+                self.ficha("a.md", "Programa", schedule=schedule)
+                with self.assertRaisesRegex(ValueError, "horario inválido"):
+                    generate(self.root)
+                self.assertEqual(original, (self.root / "readme.md").read_text(encoding="utf-8"))
+        path = self.ficha("a.md", "Programa")
+        path.write_text(
+            path.read_text(encoding="utf-8").replace("- **Horario:** 16:00-18:00\n", ""),
+            encoding="utf-8",
+        )
+        with self.assertRaisesRegex(ValueError, "faltan campos: Horario"):
+            generate(self.root)
 
     def test_actualiza_el_readme_sin_modificar_la_parrilla_antigua(self):
         legacy = self.root / "parrilla.md"

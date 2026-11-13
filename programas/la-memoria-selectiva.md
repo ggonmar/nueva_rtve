@@ -3,6 +3,7 @@
 - **Título:** La memoria selectiva
 - **Tipo:** Documental
 - **Estado:** Confirmado
+- **Horario:** 10:00-12:00
 - **Descripción:** Un espacio documental sobre los asesinatos de ETA y los relatos que la política prefiere administrar por capítulos: unas memorias se exhiben y otras se archivan cuando incomodan.
 - **Productores asignados:** Tierra Ignota
 
