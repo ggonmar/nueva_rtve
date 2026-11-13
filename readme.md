@@ -3,11 +3,11 @@
 ## Declaración de intenciones
 
 La televisión pública también toma partido cuando presenta una mirada ideológica como si fuera neutral. Ahí están los títulos, enfoques y objetivos de programas de la televisión actual que, a juicio de este proyecto, se inclinan claramente a la izquierda. No hay mas que considerar cualquiera de los siguientes ejemplos:
-- **Cara al Show** (en clara mofa al conocido "_Cara al Sol_"), programa en el que se percibe, desde el titulo hasta en los contenidos, un tinte politico izquierdista populista
-- **Al cielo con ella** (haciendo mofa al dicho común en la Semana Santa, siendo cualquier evento religioso católico algo peleado con la actual izquierda)
-- **El Perro Andaluz by Manu Sanchez** (haciendo especial hincapié en las palabras _Perro Sanchez_, como claro acto de self-labeling ante el otrora despectivo _PerroSanxe_)
-- **¡Cuánta Guerra!** (publirreportaje de la guerra civil para mantener viva la crispacion y polarización social con una guerra que sucedió hace casi un siglo).
-- **Los archivos secretos del NO-DO** (una vez más, un reportaje atacando unicamente a un lado de la historia, interesado en mantener la crispación en la sociedad).
+- [**Cara al Show**](https://es.wikipedia.org/wiki/Cara_al_show) (en clara mofa al conocido "_Cara al Sol_"), programa en el que se percibe, desde el titulo hasta en los contenidos, un tinte politico izquierdista populista
+- [**Al cielo con ella**](https://es.wikipedia.org/wiki/Al_cielo_con_ella) (haciendo mofa al dicho común en la Semana Santa, siendo cualquier evento religioso católico algo peleado con la actual izquierda)
+- [**El Perro Andaluz by Manu Sanchez**](https://es.wikipedia.org/wiki/El_perro_andaluz_by_Manu_S%C3%A1nchez) (haciendo especial hincapié en las palabras _Perro Sanchez_, como claro acto de self-labeling ante el otrora despectivo _PerroSanxe_)
+- [**¡Cuánta Guerra!**](https://es.wikipedia.org/wiki/%C2%A1Cu%C3%A1nta_guerra!) (publirreportaje de la guerra civil para mantener viva la crispacion y polarización social con una guerra que sucedió hace casi un siglo).
+- [**Los archivos secretos del NO-DO**](https://es.wikipedia.org/wiki/Los_archivos_secretos_del_NO-DO) (una vez más, un reportaje atacando unicamente a un lado de la historia, interesado en mantener la crispación en la sociedad).
 
 Este proyecto propone devolver el golpe con el mismo ejercicio, pero en sentido contrario: una parrilla ficticia que lleva esa lógica hasta el exceso, cambia el signo de la provocación y aplica un pendulazo social de proporciones deliberadamente desmedidas. No pretende ofrecer una programación real ni una alternativa neutral; es sátira política, espejo deformante y réplica a lo que sus autores perciben como sesgo en la pantalla pública.
 
