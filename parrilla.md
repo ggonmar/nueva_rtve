@@ -11,26 +11,26 @@ La parrilla es una propuesta satírica y deliberadamente exagerada de una televi
 ### Confirmados
 | Nombre | Tipo | Descripcion | 
 | ---    | ---  | ---  | 
-| [Una, Grande y Libre](una-grande-y-libre.md) | Magazine de sobremesa  | ---  | 
-| [Cunetas o Pesetas](cunetas-o-pesetas.md) | Concurso | ---  | 
-| [Quién quiere ser funcionario](quien-quiere-ser-funcionario.md) | Concurso | ---  | 
-| [No, Patxarán](no-patxaran.md) | Late night | ---  | 
-| [Amar en tiempos de rojos](amar-en-tiempos-de-rojos.md) | Telenovela | ---  | 
-| [El Cabestrillo](el%20cabestrillo.md) | Debate semanal | ---  | 
-| [Cuarto Reich](cuarto-reich.md) | Misterio |---  | 
-| [Españoles por España](espanoles-por-espana.md) | Reportajes | ---  | 
-| [El último contribuyente](el-ultimo-contribuyente.md) | Documental económico | ---  | 
-| [Cachitos de Hierro y Rojo](cachitos-de-hierro-y-rojo.md) | Archivo musical | ---  | 
-| [La memoria selectiva](la-memoria-selectiva.md) | Documentales | ---  | 
-| [Megainfraestructuras](megainfraestructuras.md) | Documentales |---  | 
-| [Una, Grande y Libre](una-grande-y-libre.md) | Magazine de sobremesa | Propuesta de presentar el programa como un «mid afternoon» con una presentadora liberal |
-| [No, Patxarán](no-patxaran.md) | Late night | Late night sin líneas rojas que parodia el humor comprometido de la televisión pública: actualidad copa en mano, actuaciones musicales satíricas y dardos a las subvenciones al cine español y a los observatorios de igualdad. |
-| [Cine de PAU](cine-de-pau.md) | Cine | Recuperación de Cine de Barrio con un nombre actualizado. |
-| [Cifras y rojos](cifras-y-rojos.md) | Concurso matemático | Los concursantes calculan cuánto cuesta mantener a un comunista. |
-| [¿Quién sabe dónde?](quien-sabe-donde.md) | Investigación / recuperación de casos | Recuperar el formato con un enfoque específico en personas desaparecidas o fallecidas durante la Guerra Civil. |
-| [Me gusta la fruta](me-gusta-la-fruta.md) | Nutrición | Matinal enfocado en la alimentación sana |
-| [La Cena de los idiotas](la-cena-de-los-idiotas.md) | Humor |  Humor amarillo, pero en un salón, y solo con idiotas |
-| [Malas Lenguas](malas-lenguas.md) | Enseñanza | Programa de 2 a 6 de la mañana en el que se enseña catalán, euskera y galego |
+| [Una, Grande y Libre](programas/una-grande-y-libre.md) | Magazine de sobremesa  | ---  |
+| [Cunetas o Pesetas](programas/cunetas-o-pesetas.md) | Concurso | ---  |
+| [Quién quiere ser funcionario](programas/quien-quiere-ser-funcionario.md) | Concurso | ---  |
+| [No, Patxarán](programas/no-patxaran.md) | Late night | ---  |
+| [Amar en tiempos de rojos](programas/amar-en-tiempos-de-rojos.md) | Telenovela | ---  |
+| [El Cabestrillo](programas/el%20cabestrillo.md) | Debate semanal | ---  |
+| [Cuarto Reich](programas/cuarto-reich.md) | Misterio |---  |
+| [Españoles por España](programas/espanoles-por-espana.md) | Reportajes | ---  |
+| [El último contribuyente](programas/el-ultimo-contribuyente.md) | Documental económico | ---  |
+| [Cachitos de Hierro y Rojo](programas/cachitos-de-hierro-y-rojo.md) | Archivo musical | ---  |
+| [La memoria selectiva](programas/la-memoria-selectiva.md) | Documentales | ---  |
+| [Megainfraestructuras](programas/megainfraestructuras.md) | Documentales |---  |
+| [Una, Grande y Libre](programas/una-grande-y-libre.md) | Magazine de sobremesa | Propuesta de presentar el programa como un «mid afternoon» con una presentadora liberal |
+| [No, Patxarán](programas/no-patxaran.md) | Late night | Late night sin líneas rojas que parodia el humor comprometido de la televisión pública: actualidad copa en mano, actuaciones musicales satíricas y dardos a las subvenciones al cine español y a los observatorios de igualdad. |
+| [Cine de PAU](programas/cine-de-pau.md) | Cine | Recuperación de Cine de Barrio con un nombre actualizado. |
+| [Cifras y rojos](programas/cifras-y-rojos.md) | Concurso matemático | Los concursantes calculan cuánto cuesta mantener a un comunista. |
+| [¿Quién sabe dónde?](programas/quien-sabe-donde.md) | Investigación / recuperación de casos | Recuperar el formato con un enfoque específico en personas desaparecidas o fallecidas durante la Guerra Civil. |
+| [Me gusta la fruta](programas/me-gusta-la-fruta.md) | Nutrición | Matinal enfocado en la alimentación sana |
+| [La Cena de los idiotas](programas/la-cena-de-los-idiotas.md) | Humor |  Humor amarillo, pero en un salón, y solo con idiotas |
+| [Malas Lenguas](programas/malas-lenguas.md) | Enseñanza | Programa de 2 a 6 de la mañana en el que se enseña catalán, euskera y galego |
 
 ### Candidatos
 | Nombre | Tipo | Descripcion |
@@ -77,14 +77,14 @@ La parrilla es una propuesta satírica y deliberadamente exagerada de una televi
 
 | Programa | Presentador / Coordinador / Productor | Colaboradores |
 | --- | --- | --- |
-| [Una, Grande y Libre](una-grande-y-libre.md) | Alaska  | ---         |
-| [Cunetas o Pesetas](cunetas-o-pesetas.md) | ... | ... |
-| [Quién quiere ser funcionario](quien-quiere-ser-funcionario.md) | Carlos Sobera | ... |
-| [No, Patxarán](no-patxaran.md) | Los Meconios | Miguel Lago |
-| [Amar en tiempos de rojos](amar-en-tiempos-de-rojos.md) | Telenovela | ... |
-| [El Cabestrillo](el%20cabestrillo.md) | ElXokas, WSW y UTBH | Inda, Fonseca, Santaolalla (obligada bajo amenaza de imputación) |
-| [Cuarto Reich](cuarto-reich.md) | Iker Jimenez | --- |
-| [Españoles por España](espanoles-por-espana.md) | Bertín Osborne | --- |
-| [El último contribuyente](el-ultimo-contribuyente.md) | Juan Ramon Rallo | ... |
-| [Cachitos de Hierro y Rojo](cachitos-de-hierro-y-rojo.md) | Santiago Segura y El Sevilla | ... |
+| [Una, Grande y Libre](programas/una-grande-y-libre.md) | Alaska  | ---         |
+| [Cunetas o Pesetas](programas/cunetas-o-pesetas.md) | ... | ... |
+| [Quién quiere ser funcionario](programas/quien-quiere-ser-funcionario.md) | Carlos Sobera | ... |
+| [No, Patxarán](programas/no-patxaran.md) | Los Meconios | Miguel Lago |
+| [Amar en tiempos de rojos](programas/amar-en-tiempos-de-rojos.md) | Telenovela | ... |
+| [El Cabestrillo](programas/el%20cabestrillo.md) | ElXokas, WSW y UTBH | Inda, Fonseca, Santaolalla (obligada bajo amenaza de imputación) |
+| [Cuarto Reich](programas/cuarto-reich.md) | Iker Jimenez | --- |
+| [Españoles por España](programas/espanoles-por-espana.md) | Bertín Osborne | --- |
+| [El último contribuyente](programas/el-ultimo-contribuyente.md) | Juan Ramon Rallo | ... |
+| [Cachitos de Hierro y Rojo](programas/cachitos-de-hierro-y-rojo.md) | Santiago Segura y El Sevilla | ... |
 

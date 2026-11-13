@@ -17,30 +17,30 @@ Como expresa la premisa original, no se trata de imaginar «qué mierda de telev
 
 - [parrilla.md](parrilla.md): listado general de programas confirmados y candidatos, personas asociadas y asignaciones.
 - Fichas de programas confirmados:
-  - [Una, Grande y Libre](una-grande-y-libre.md)
-  - [Cunetas o Pesetas](cunetas-o-pesetas.md)
-  - [Quién quiere ser funcionario](quien-quiere-ser-funcionario.md)
-  - [No, Patxarán](no-patxaran.md)
-  - [Amar en tiempos de rojos](amar-en-tiempos-de-rojos.md)
-  - [El Cabestrillo](el%20cabestrillo.md)
-  - [Cuarto Reich](cuarto-reich.md)
-  - [Españoles por España](espanoles-por-espana.md)
-  - [El último contribuyente](el-ultimo-contribuyente.md)
-  - [Cachitos de Hierro y Rojo](cachitos-de-hierro-y-rojo.md)
-  - [La memoria selectiva](la-memoria-selectiva.md)
-  - [Megainfraestructuras](megainfraestructuras.md)
-  - [Cine de PAU](cine-de-pau.md)
-  - [Cifras y rojos](cifras-y-rojos.md)
-  - [¿Quién sabe dónde?](quien-sabe-donde.md)
-  - [Me gusta la fruta](me-gusta-la-fruta.md)
-  - [La Cena de los idiotas](la-cena-de-los-idiotas.md)
-  - [Malas Lenguas](malas-lenguas.md)
+  - [Una, Grande y Libre](programas/una-grande-y-libre.md)
+  - [Cunetas o Pesetas](programas/cunetas-o-pesetas.md)
+  - [Quién quiere ser funcionario](programas/quien-quiere-ser-funcionario.md)
+  - [No, Patxarán](programas/no-patxaran.md)
+  - [Amar en tiempos de rojos](programas/amar-en-tiempos-de-rojos.md)
+  - [El Cabestrillo](programas/el%20cabestrillo.md)
+  - [Cuarto Reich](programas/cuarto-reich.md)
+  - [Españoles por España](programas/espanoles-por-espana.md)
+  - [El último contribuyente](programas/el-ultimo-contribuyente.md)
+  - [Cachitos de Hierro y Rojo](programas/cachitos-de-hierro-y-rojo.md)
+  - [La memoria selectiva](programas/la-memoria-selectiva.md)
+  - [Megainfraestructuras](programas/megainfraestructuras.md)
+  - [Cine de PAU](programas/cine-de-pau.md)
+  - [Cifras y rojos](programas/cifras-y-rojos.md)
+  - [¿Quién sabe dónde?](programas/quien-sabe-donde.md)
+  - [Me gusta la fruta](programas/me-gusta-la-fruta.md)
+  - [La Cena de los idiotas](programas/la-cena-de-los-idiotas.md)
+  - [Malas Lenguas](programas/malas-lenguas.md)
 - [conversaciones/chatgpt.md](conversaciones/chatgpt.md): ideas y propuestas de partida consideradas para completar la parrilla.
 
 ## Estado de las propuestas
 
-La parrilla distingue entre programas y personas confirmados y candidatos. Las ideas de `conversaciones/chatgpt.md` se incorporan como candidaturas cuando no estaban ya reflejadas; no se convierten por ello en decisiones confirmadas. Las descripciones aún sin desarrollar se dejan pendientes en vez de inventar detalles.
+Estamos abiertos a nuevas propuestas, no dudes en submittear tus ideas.
 
 ## Organización
 
-Las fichas de los programas confirmados están en la raíz del proyecto y se enlazan desde [parrilla.md](parrilla.md). Cada ficha identifica el tipo de programa y las personas asignadas cuando esa información está disponible; los apartados todavía no definidos pueden completarse más adelante.
+Las fichas de los programas confirmados están en la carpeta `programas` y se enlazan desde [parrilla.md](parrilla.md). Cada ficha identifica el tipo de programa y las personas asignadas cuando esa información está disponible; los apartados todavía no definidos pueden completarse más adelante.
