@@ -4,7 +4,7 @@
 - **Tipo:** Reportajes
 - **Estado:** Confirmado
 - **Descripción:** Bertín Osborne recorre una España donde la gente trabaja, emprende y habla sin esperar a que un ministerio le autorice la opinión.
-- **Presentador asignado:** Bertín Osborne
+- **Presentador:** Bertín Osborne
 - **Colaboradores:** Pendientes de concretar
 
 ## Candidatos mencionados

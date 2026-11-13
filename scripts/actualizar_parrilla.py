@@ -9,7 +9,7 @@ from urllib.parse import quote
 
 
 ROOT = Path(__file__).resolve().parent.parent
-FIELD_PATTERN = re.compile(r"^\s*-\s+\*\*(Título|Titulo|Tipo|Estado|Descripción):\*\*\s*(.*?)\s*$")
+FIELD_PATTERN = re.compile(r"^\s*-\s+\*\*(Título|Titulo|Tipo|Estado|Presentador|Descripción):\*\*\s*(.*?)\s*$")
 REQUIRED_FIELDS = ("Título", "Tipo", "Estado", "Descripción")
 MARKERS = {
     "Confirmado": ("<!-- programas-confirmados:inicio -->", "<!-- programas-confirmados:fin -->"),
@@ -45,14 +45,15 @@ def escape_cell(value):
 
 
 def render_table(programs):
-    rows = ["| Nombre | Tipo | Descripción |", "| --- | --- | --- |"]
+    rows = ["| Nombre | Tipo | Presentador | Descripción |", "| --- | --- | --- | --- |"]
     for program in sorted(programs, key=lambda item: item["Título"].casefold()):
         title = program["Título"].replace("\\", "\\\\").replace("[", r"\[").replace("]", r"\]")
         title = escape_cell(title)
         url = quote(program["ruta"], safe="/")
         kind = escape_cell(program["Tipo"])
+        presenter = escape_cell(program.get("Presentador", "Por concretar"))
         description = escape_cell(program["Descripción"])
-        rows.append(f"| [{title}]({url}) | {kind} | {description} |")
+        rows.append(f"| [{title}]({url}) | {kind} | {presenter} | {description} |")
     return "\n".join(rows)
 
 
@@ -103,7 +104,7 @@ def main():
     if not current:
         print("La parrilla no está actualizada. Ejecuta python scripts/actualizar_parrilla.py.", file=sys.stderr)
         return 1
-    print("Parrilla actualizada." if not args.check else "La parrilla está actualizada.")
+    print("Parrilla actualizada." if not args.check else "La parrilla esta actualizada.")
     return 0
 
 

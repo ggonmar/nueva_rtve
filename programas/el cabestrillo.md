@@ -3,11 +3,11 @@
 - **Título:** El Cabestrillo
 - **Tipo:** Debate semanal
 - **Estado:** Confirmado
+- **Presentador:** ElXokas, WSW y UTBH
 - **Descripción:** Tertulia de actualidad en la que el volumen sustituye al consenso y cada intervención deja al relato oficial necesitando asistencia traumatológica.
 
 ## Presentador y participantes
 
-- **Presentadores / participantes:** ElXokas, WSW y UTBH.
 - **Colaboradores:** Inda, Fonseca y Santaolalla. La parrilla indica que la participación de Santaolalla sería «obligada bajo amenaza de imputación».
  
 ## Secciones

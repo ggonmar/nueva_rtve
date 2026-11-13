@@ -4,7 +4,7 @@
 - **Tipo:** Magazine de sobremesa
 - **Estado:** Confirmado
 - **Descripción:** Alaska sirve actualidad, corazón y cultura sin pedir permiso al comité de pureza ideológica. La única alerta de contenido es la factura del Estado. Se propone un enfoque liberal de «mid afternoon».
-- **Presentadora asignada:** Alaska
+- **Presentador:** Alaska
 
 ## Propuesta de enfoque
 

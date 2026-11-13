@@ -19,50 +19,47 @@ La parrilla es una propuesta satírica y deliberadamente exagerada de una televi
 
 ## Contenido
 
-<details>
-<summary>Programas</summary>
+### Programas
 
-<details>
-<summary>Confirmados</summary>
+<details open>
+<summary><h4>Confirmados</h4></summary>
 
 <!-- programas-confirmados:inicio -->
-| Nombre | Tipo | Descripción |
-| --- | --- | --- |
-| [Amar en tiempos de rojos](programas/amar-en-tiempos-de-rojos.md) | Telenovela | Dos enamorados intentan sobrevivir al romance, la militancia y una asamblea vecinal que exige nacionalizar hasta las mariposas del estómago. |
-| [Cachitos de Hierro y Rojo](programas/cachitos-de-hierro-y-rojo.md) | Archivo musical | Santiago Segura y El Sevilla rebuscan en el archivo musical: himnos, joyas olvidadas y artistas que descubrieron que protestar contra el sistema suena mejor con ayuda pública. |
-| [Cifras y rojos](programas/cifras-y-rojos.md) | Concurso matemático | Los concursantes calculan cuánto cuesta mantener a un comunista. |
-| [Cine de PAU](programas/cine-de-pau.md) | Cine | Recuperación de Cine de Barrio con un nombre actualizado. |
-| [Cuarto Reich](programas/cuarto-reich.md) | Misterio | Iker Jiménez investiga el fenómeno paranormal favorito de la tertulia: encontrar un fascista detrás de cada crítica, incluso cuando solo hay un autónomo con una factura. |
-| [Cunetas o Pesetas](programas/cunetas-o-pesetas.md) | Concurso | Los concursantes eligen entre remover eternamente el pasado o llevarse un premio; el presentador descubre que hasta la memoria histórica tiene presupuesto. |
-| [El Cabestrillo](programas/el%20cabestrillo.md) | Debate semanal | Tertulia de actualidad en la que el volumen sustituye al consenso y cada intervención deja al relato oficial necesitando asistencia traumatológica. |
-| [El último contribuyente](programas/el-ultimo-contribuyente.md) | Documental económico | Juan Ramón Rallo sigue la pista del esquivo ciudadano que todavía paga la fiesta, mientras cada nueva partida presupuestaria amenaza con convertirlo en especie protegida. |
-| [Españoles por España](programas/espanoles-por-espana.md) | Reportajes | Bertín Osborne recorre una España donde la gente trabaja, emprende y habla sin esperar a que un ministerio le autorice la opinión. |
-| [La Cena de los idiotas](programas/la-cena-de-los-idiotas.md) | Humor | Humor Amarillo en un salón: dos improvisadores doblan a los tertulianos mientras ElXokas conserva el micro abierto. |
-| [La memoria selectiva](programas/la-memoria-selectiva.md) | Documental | Un espacio documental sobre los asesinatos de ETA y los relatos que la política prefiere administrar por capítulos: unas memorias se exhiben y otras se archivan cuando incomodan. |
-| [Malas Lenguas](programas/malas-lenguas.md) | Enseñanza | Programa de 2 a 6 de la mañana en el que se enseña catalán, euskera y galego. |
-| [Me gusta la fruta](programas/me-gusta-la-fruta.md) | Nutrición | Matinal enfocado en la alimentación sana. |
-| [Megainfraestructuras](programas/megainfraestructuras.md) | Documentales | Un recorrido por obras faraónicas y proyectos abandonados, donde la cinta inaugural llega puntual aunque la infraestructura todavía esté esperando presupuesto, pasajeros o sentido común. |
-| [No, Patxarán](programas/no-patxaran.md) | Late night | Los Meconios y Miguel Lago despiden el día con humor, música y más ganas de pinchar globos progresistas que de cobrar la próxima subvención. Se propone un late night sin líneas rojas, con actualidad copa en mano y sátira de subvenciones y observatorios. |
-| [Quién quiere ser funcionario](programas/quien-quiere-ser-funcionario.md) | Concurso | Carlos Sobera pone a prueba a aspirantes al empleo vitalicio: superar la oposición es difícil, pero encontrar la ventanilla correcta es el verdadero premio. |
-| [Una, Grande y Libre](programas/una-grande-y-libre.md) | Magazine de sobremesa | Alaska sirve actualidad, corazón y cultura sin pedir permiso al comité de pureza ideológica. La única alerta de contenido es la factura del Estado. Se propone un enfoque liberal de «mid afternoon». |
-| [¿Quién sabe dónde?](programas/quien-sabe-donde.md) | Investigación / recuperación de casos | Recuperar el formato con un enfoque específico en personas desaparecidas o fallecidas durante la Guerra Civil. |
+| Nombre | Tipo | Presentador | Descripción |
+| --- | --- | --- | --- |
+| [Amar en tiempos de rojos](programas/amar-en-tiempos-de-rojos.md) | Telenovela | Por concretar | Dos enamorados intentan sobrevivir al romance, la militancia y una asamblea vecinal que exige nacionalizar hasta las mariposas del estómago. |
+| [Cachitos de Hierro y Rojo](programas/cachitos-de-hierro-y-rojo.md) | Archivo musical | Santiago Segura y El Sevilla | Santiago Segura y El Sevilla rebuscan en el archivo musical: himnos, joyas olvidadas y artistas que descubrieron que protestar contra el sistema suena mejor con ayuda pública. |
+| [Cifras y rojos](programas/cifras-y-rojos.md) | Concurso matemático | Por concretar | Los concursantes calculan cuánto cuesta mantener a un comunista. |
+| [Cine de PAU](programas/cine-de-pau.md) | Cine | Por concretar | Recuperación de Cine de Barrio con un nombre actualizado. |
+| [Cuarto Reich](programas/cuarto-reich.md) | Misterio | Iker Jiménez | Iker Jiménez investiga el fenómeno paranormal favorito de la tertulia: encontrar un fascista detrás de cada crítica, incluso cuando solo hay un autónomo con una factura. |
+| [Cunetas o Pesetas](programas/cunetas-o-pesetas.md) | Concurso | Por concretar | Los concursantes eligen entre remover eternamente el pasado o llevarse un premio; el presentador descubre que hasta la memoria histórica tiene presupuesto. |
+| [El Cabestrillo](programas/el%20cabestrillo.md) | Debate semanal | ElXokas, WSW y UTBH | Tertulia de actualidad en la que el volumen sustituye al consenso y cada intervención deja al relato oficial necesitando asistencia traumatológica. |
+| [El último contribuyente](programas/el-ultimo-contribuyente.md) | Documental económico | Juan Ramón Rallo | Juan Ramón Rallo sigue la pista del esquivo ciudadano que todavía paga la fiesta, mientras cada nueva partida presupuestaria amenaza con convertirlo en especie protegida. |
+| [Españoles por España](programas/espanoles-por-espana.md) | Reportajes | Bertín Osborne | Bertín Osborne recorre una España donde la gente trabaja, emprende y habla sin esperar a que un ministerio le autorice la opinión. |
+| [La Cena de los idiotas](programas/la-cena-de-los-idiotas.md) | Humor | Por concretar | Humor Amarillo en un salón: dos improvisadores doblan a los tertulianos mientras ElXokas conserva el micro abierto. |
+| [La memoria selectiva](programas/la-memoria-selectiva.md) | Documental | Por concretar | Un espacio documental sobre los asesinatos de ETA y los relatos que la política prefiere administrar por capítulos: unas memorias se exhiben y otras se archivan cuando incomodan. |
+| [Malas Lenguas](programas/malas-lenguas.md) | Enseñanza | Por concretar | Programa de 2 a 6 de la mañana en el que se enseña catalán, euskera y galego. |
+| [Me gusta la fruta](programas/me-gusta-la-fruta.md) | Nutrición | Por concretar | Matinal enfocado en la alimentación sana. |
+| [Megainfraestructuras](programas/megainfraestructuras.md) | Documentales | Por concretar | Un recorrido por obras faraónicas y proyectos abandonados, donde la cinta inaugural llega puntual aunque la infraestructura todavía esté esperando presupuesto, pasajeros o sentido común. |
+| [No, Patxarán](programas/no-patxaran.md) | Late night | Los Meconios | Los Meconios y Miguel Lago despiden el día con humor, música y más ganas de pinchar globos progresistas que de cobrar la próxima subvención. Se propone un late night sin líneas rojas, con actualidad copa en mano y sátira de subvenciones y observatorios. |
+| [Quién quiere ser funcionario](programas/quien-quiere-ser-funcionario.md) | Concurso | Carlos Sobera | Carlos Sobera pone a prueba a aspirantes al empleo vitalicio: superar la oposición es difícil, pero encontrar la ventanilla correcta es el verdadero premio. |
+| [Una, Grande y Libre](programas/una-grande-y-libre.md) | Magazine de sobremesa | Alaska | Alaska sirve actualidad, corazón y cultura sin pedir permiso al comité de pureza ideológica. La única alerta de contenido es la factura del Estado. Se propone un enfoque liberal de «mid afternoon». |
+| [¿Quién sabe dónde?](programas/quien-sabe-donde.md) | Investigación / recuperación de casos | Por concretar | Recuperar el formato con un enfoque específico en personas desaparecidas o fallecidas durante la Guerra Civil. |
 <!-- programas-confirmados:fin -->
 
 </details>
 
 <details>
-<summary>Candidatos</summary>
+<summary><h4>Candidatos</h4></summary>
 
 <!-- programas-candidatos:inicio -->
-| Nombre | Tipo | Descripción |
-| --- | --- | --- |
-| [Documental sobre el imperio español](programas/documental-imperio-espanol.md) | Documental histórico | Repaso al imperio español y a las hazañas de grandes personalidades españolas. |
-| [Matinal (título pendiente)](programas/matinal-pendiente.md) | Magacín matinal | Propuesta pendiente de desarrollar; se señala la necesidad de incorporar un matinal a la parrilla. |
-| [Pedro Sánchez, Hijo de Fruta](programas/pedro-sanchez-hijo-de-fruta.md) | Afternight show | Reformulación de «El Perro Andaluz» que da otra vuelta al relabeling de «perrosanxe». |
-| [Programa musical (título pendiente)](programas/programa-musical-pendiente.md) | Programa musical | Propuesta pendiente de desarrollar; se señala la necesidad de incorporar un programa musical. |
+| Nombre | Tipo | Presentador | Descripción |
+| --- | --- | --- | --- |
+| [Documental sobre el imperio español](programas/documental-imperio-espanol.md) | Documental histórico | Por concretar | Repaso al imperio español y a las hazañas de grandes personalidades españolas. |
+| [Matinal (título pendiente)](programas/matinal-pendiente.md) | Magacín matinal | Por concretar | Propuesta pendiente de desarrollar; se señala la necesidad de incorporar un matinal a la parrilla. |
+| [Pedro Sánchez, Hijo de Fruta](programas/pedro-sanchez-hijo-de-fruta.md) | Afternight show | Por concretar | Reformulación de «El Perro Andaluz» que da otra vuelta al relabeling de «perrosanxe». |
+| [Programa musical (título pendiente)](programas/programa-musical-pendiente.md) | Programa musical | Por concretar | Propuesta pendiente de desarrollar; se señala la necesidad de incorporar un programa musical. |
 <!-- programas-candidatos:fin -->
-
-</details>
 
 </details>
 
@@ -142,9 +139,10 @@ Cada archivo Markdown de `programas` debe incluir estos campos, uno por línea:
 - **Título:** Nombre del programa
 - **Tipo:** Tipo de programa
 - **Estado:** Confirmado
+- **Presentador:** Nombre del presentador
 - **Descripción:** Descripción breve para la parrilla.
 ```
 
-El estado debe ser `Confirmado` o `Candidato`. Las tablas de programas de este README se generan a partir de estas fichas; no hay que editar las filas entre sus marcadores. Las tablas de personas y asignaciones se mantienen manualmente.
+El estado debe ser `Confirmado` o `Candidato`. El campo `Presentador` es opcional: si todavía no está asignado, la tabla muestra «Por concretar». Las tablas de programas de este README se generan a partir de estas fichas; no hay que editar las filas entre sus marcadores. Las tablas de personas y asignaciones se mantienen manualmente.
 
 Para actualizar las tablas localmente, ejecuta `python scripts/actualizar_parrilla.py`. Para comprobar que están al día sin modificarlas, añade `--check`. Al subir a `main` cambios de las fichas, la parrilla, el generador o su workflow, GitHub Actions ejecuta el generador y, si es necesario, publica un commit de `github-actions[bot]` con la parrilla actualizada. Para ello, el repositorio debe permitir que las Actions escriban en el contenido y la rama debe admitir ese commit.

@@ -39,8 +39,8 @@ class GenerarParrillaTest(unittest.TestCase):
         self.assertIn("Tabla antigua", (self.root / "readme.md").read_text(encoding="utf-8"))
         self.assertTrue(generate(self.root))
         content = (self.root / "readme.md").read_text(encoding="utf-8")
-        self.assertIn("| [Zeta](programas/zeta.md) | Humor | Descripción |", content)
-        self.assertIn(r"| [A \[prueba\]](programas/sub%20carpeta/a.md) | Humor | Uno \| dos |", content)
+        self.assertIn("| [Zeta](programas/zeta.md) | Humor | Por concretar | Descripción |", content)
+        self.assertIn(r"| [A \[prueba\]](programas/sub%20carpeta/a.md) | Humor | Por concretar | Uno \| dos |", content)
         self.assertIn("Texto manual", content)
         self.assertTrue(generate(self.root, check=True))
         self.assertTrue(generate(self.root))
@@ -60,6 +60,16 @@ class GenerarParrillaTest(unittest.TestCase):
         self.assertNotIn("[Programa]", (self.root / "readme.md").read_text(encoding="utf-8"))
         (self.root / "programas").rmdir()
         self.assertTrue(generate(self.root, check=True))
+
+    def test_incluye_presentador_en_confirmados_y_candidatos(self):
+        for filename, status in (("a.md", "Confirmado"), ("b.md", "Candidato")):
+            path = self.ficha(filename, filename, status)
+            with path.open("a", encoding="utf-8") as file:
+                file.write("- **Presentador:** Ana | Luis\n")
+        generate(self.root)
+        content = (self.root / "readme.md").read_text(encoding="utf-8")
+        self.assertEqual(content.count("| Tipo | Presentador | Descripción |"), 2)
+        self.assertEqual(content.count(r"| Humor | Ana \| Luis | Descripción |"), 2)
 
     def test_actualiza_el_readme_sin_modificar_la_parrilla_antigua(self):
         legacy = self.root / "parrilla.md"
