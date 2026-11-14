@@ -9,7 +9,7 @@ La televisión pública también toma partido cuando presenta una mirada ideoló
 - [**¡Cuánta Guerra!**](https://es.wikipedia.org/wiki/%C2%A1Cu%C3%A1nta_guerra!) (publirreportaje de la guerra civil para mantener viva la crispacion y polarización social con una guerra que sucedió hace casi un siglo).
 - [**Los archivos secretos del NO-DO**](https://es.wikipedia.org/wiki/Los_archivos_secretos_del_NO-DO) (una vez más, un reportaje atacando unicamente a un lado de la historia, interesado en mantener la crispación en la sociedad).
 
-Este proyecto propone devolver el golpe con el mismo ejercicio, pero en sentido contrario: una parrilla ficticia que lleva esa lógica hasta el exceso, cambia el signo de la provocación y aplica un pendulazo social de proporciones deliberadamente desmedidas. No pretende ofrecer una programación real ni una alternativa neutral; es sátira política, espejo deformante y réplica a lo que sus autores perciben como sesgo en la pantalla pública.
+Este proyecto propone devolver el golpe con el mismo ejercicio, pero en sentido contrario: una parrilla ficticia que lleva esa lógica hasta el exceso, cambia el signo de la provocación y aplica un pendulazo social de proporciones deliberadamente desmedidas. No pretende ofrecer una programación real (o sí?) ni una alternativa neutral (seguro que no); es sátira política, espejo deformante y réplica a lo que sus autores perciben como sesgo en la pantalla pública.
 
 Como expresa la premisa original, no se trata de imaginar «qué mierda de televisión saldrá si ganan los fachas», sino de exagerar como reacción a «la mierda de televisión que dejan los rojos» y aplicar una contrapartida ideológica imaginaria a la actual programación. 
 
