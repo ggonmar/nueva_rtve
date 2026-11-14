@@ -11,11 +11,9 @@ La televisión pública también toma partido cuando presenta una mirada ideoló
 
 Este proyecto propone devolver el golpe con el mismo ejercicio, pero en sentido contrario: una parrilla ficticia que lleva esa lógica hasta el exceso, cambia el signo de la provocación y aplica un pendulazo social de proporciones deliberadamente desmedidas. No pretende ofrecer una programación real ni una alternativa neutral; es sátira política, espejo deformante y réplica a lo que sus autores perciben como sesgo en la pantalla pública.
 
-Como expresa la premisa original, no se trata de imaginar «qué mierda de televisión saldrá si ganan los fachas», sino de exagerar como reacción a «la mierda de televisión que dejan los rojos» y reírse de esa pasada de frenada. La sátira no pretende ofender a los votantes de derechas: busca que escueza especialmente al lado progresista y al «psoe-state-of-mind».
+Como expresa la premisa original, no se trata de imaginar «qué mierda de televisión saldrá si ganan los fachas», sino de exagerar como reacción a «la mierda de televisión que dejan los rojos» y aplicar una contrapartida ideológica imaginaria a la actual programación. 
 
-## Enfoque del proyecto
-
-La parrilla es una propuesta satírica y deliberadamente exagerada de una televisión pública de ficción. No pretende ser una crítica a «la televisión que habría si ganan los fachas», sino llevar al extremo, en clave de humor, la reacción a lo que sus impulsores consideran una televisión dominada por la izquierda. La sátira busca incomodar especialmente al progresismo y al «psoe-state-of-mind», no ser una burla dirigida a los votantes de derechas.
+Es relevante mencionar que, para poder llevar a cabo este proyecto, a la IA que se ha utilizado para facilitar la escritura, ha sido necesario explicar de manera explicita que la sátira no pretende ofender a los votantes de derechas (como siempre tendía a hacer): el objetivo del proyecto es que escueza especialmente al lado progresista y al «psoe-state-of-mind».
 
 ## Contenido
 
