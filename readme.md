@@ -162,6 +162,7 @@ La parrilla también se publica como una web con estética de teletexto en [ggon
 | 301 en adelante | Una página por programa: primero los confirmados por hora de inicio y después los candidatos |
 | 400 | Rostros de la cadena (tablas de personas de este README) |
 | 500 | Subvencionómetro |
+| 555 | Buscador: programas, noticias, presentadores y páginas, con resultados según se escribe |
 
 Todas las páginas se pueden compartir con el botón «Compartir» del televisor, el botón ⇪ del mando o la tecla C. Se puede copiar el enlace, usar el menú de compartir del dispositivo, o copiar al portapapeles o descargar un pantallazo PNG de la página completa. El pantallazo se genera en el navegador con [modern-screenshot](https://github.com/qq15725/modern-screenshot), que se carga bajo demanda. La fuente VT323 se sirve desde `web/fuentes/` (licencia OFL).
 

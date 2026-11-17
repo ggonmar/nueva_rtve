@@ -265,6 +265,7 @@
       ${PROGRAMAS.length ? filaIndice('FICHAS DE PROGRAMAS', PROGRAMAS[0].slug, `${PROGRAMAS[0].pagina}-${PROGRAMAS[PROGRAMAS.length - 1].pagina}`) : ''}
       ${filaIndice('ROSTROS DE LA CADENA', 'rostros', 400)}
       ${filaIndice('SUBVENCIONÓMETRO', 'subvencionometro', 500)}
+      ${filaIndice('BUSCADOR', 'buscador', 555)}
       ${filaIndice('AYUDA Y GUÍA DE PÁGINAS', 'ayuda', 199)}
 
       <h2 class="franja franja-cian">PREGUNTA DEL DÍA</h2>
@@ -495,6 +496,7 @@
       ...(PROGRAMAS.length ? [[rangoPaginas(PROGRAMAS), PROGRAMAS[0].slug, 'Una página por programa: primero los confirmados, luego los candidatos.']] : []),
       ['400', 'rostros', 'Rostros de la cadena: presentadores en plantilla y en la recámara.'],
       ['500', 'subvencionometro', 'Subvencionómetro: dinero público repartido en directo.'],
+      ['555', 'buscador', 'Buscador: programas, noticias y presentadores según escribe.'],
     ];
     return {
       titulo: 'Ayuda',
@@ -524,8 +526,127 @@
         ${PROGRAMAS.map((p) => filaIndice(p.titulo, p.slug, p.pagina)).join('')}
         ${filaIndice('ROSTROS', 'rostros', 400)}
         ${filaIndice('SUBVENCIONÓMETRO', 'subvencionometro', 500)}
+        ${filaIndice('BUSCADOR', 'buscador', 555)}
         <p class="tenue">Se rumorea que existe un código secreto de los de antes. ↑↑↓↓…</p>`,
     };
+  }
+
+  /* ---------- Buscador (555) ---------- */
+
+  const normalizar = (texto) => sinTildes(String(texto || '')).toLowerCase();
+  const soloTexto = (html) => { const caja = document.createElement('div'); caja.innerHTML = html || ''; return caja.textContent; };
+  let indiceBusqueda = null;
+
+  function construirIndice() {
+    const fijas = [
+      [100, 'Portada', 'portada'], [101, 'Manifiesto', 'manifiesto'], [110, 'Noticias', 'noticias'],
+      [199, 'Ayuda y guía de páginas', 'ayuda'], [200, 'Parrilla completa', 'parrilla'],
+      [400, 'Rostros de la cadena', 'rostros'], [500, 'Subvencionómetro', 'subvencionometro'],
+    ];
+    const personas = [
+      ...DATOS.personas.confirmados.map((p) => ({ ...p, grupo: 'en plantilla' })),
+      ...DATOS.personas.candidatos.map((p) => ({ ...p, grupo: 'en la recámara' })),
+    ];
+    return [
+      ...fijas.map(([num, titulo, destino]) => ({ tipo: 'PÁG', num, titulo, detalle: 'Página del FACHATEXTO', destino, extra: '' })),
+      ...PROGRAMAS.map((p) => ({
+        tipo: 'PROG', num: p.pagina, titulo: p.titulo, destino: p.slug,
+        detalle: `${p.horario} · ${p.tipo} · ${p.presentador || 'Presentador por concretar'}`,
+        extra: `${p.tipo} ${p.presentador || ''}`,
+      })),
+      ...NOTICIAS.map((n) => ({
+        tipo: 'NOTI', num: n.pagina, titulo: n.titular, destino: `noticias/${n.slug}`,
+        detalle: `${n.seccion} · ${fechaNoticia(n.fecha)}`, extra: `${n.seccion} ${soloTexto(n.entradilla)}`,
+      })),
+      ...personas.map((p) => ({
+        tipo: 'ROST', num: 400, titulo: p.nombre, destino: 'rostros',
+        detalle: `${p.perfil} · ${p.grupo}`, extra: `${p.perfil} ${soloTexto(p.notas)}`,
+      })),
+    ].map((r) => ({ ...r, claveTitulo: normalizar(r.titulo), claveExtra: normalizar(r.extra) }));
+  }
+
+  function buscarEnIndice(consulta) {
+    const palabras = normalizar(consulta).split(/\s+/).filter(Boolean);
+    if (!palabras.length) return [];
+    indiceBusqueda = indiceBusqueda || construirIndice();
+    return indiceBusqueda
+      .map((r) => {
+        let puntos = 0;
+        for (const palabra of palabras) {
+          if (r.claveTitulo.startsWith(palabra)) puntos += 6;
+          else if (new RegExp(`\\b${palabra.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`).test(r.claveTitulo)) puntos += 4;
+          else if (r.claveTitulo.includes(palabra)) puntos += 3;
+          else if (r.claveExtra.includes(palabra)) puntos += 1;
+          else return null;
+        }
+        return { ...r, puntos };
+      })
+      .filter(Boolean)
+      .sort((a, b) => b.puntos - a.puntos || a.num - b.num);
+  }
+
+  function resaltar(texto, consulta) {
+    const clave = normalizar(texto);
+    if (clave.length !== texto.length) return esc(texto);
+    const marcas = new Array(texto.length).fill(false);
+    normalizar(consulta).split(/\s+/).filter(Boolean).forEach((palabra) => {
+      let i = clave.indexOf(palabra);
+      while (i !== -1) { marcas.fill(true, i, i + palabra.length); i = clave.indexOf(palabra, i + 1); }
+    });
+    return [...texto].map((c, i) => {
+      const abre = marcas[i] && !marcas[i - 1] ? '<mark>' : '';
+      const cierra = marcas[i] && !marcas[i + 1] ? '</mark>' : '';
+      return `${abre}${esc(c)}${cierra}`;
+    }).join('');
+  }
+
+  const SIN_RESULTADOS = [
+    'SIN RESULTADOS. Puede que lo hayan resignificado.',
+    'SIN RESULTADOS. El Ministerio de la Verdad lo ha retirado de la circulación.',
+    'SIN RESULTADOS. Pruebe con algo que no esté en un cajón de Ferraz.',
+  ];
+
+  function buscador() {
+    const html = `
+      ${banner('BUSCADOR', 'verde')}
+      <label class="buscador" for="busqueda">
+        <span class="amarillo">BUSCAR ▶</span>
+        <input id="busqueda" type="search" autocomplete="off" spellcheck="false" placeholder="programa, noticia o presentador" aria-describedby="busqueda-estado">
+      </label>
+      <p class="tenue" id="busqueda-estado">Escriba y los resultados aparecerán al momento. Intro abre el primero.</p>
+      <div class="resultados" id="resultados"></div>`;
+    const montar = () => {
+      const campo = document.getElementById('busqueda');
+      const estado = document.getElementById('busqueda-estado');
+      const caja = document.getElementById('resultados');
+      let resultados = [];
+      const pintar = () => {
+        campo.setAttribute('value', campo.value);
+        resultados = buscarEnIndice(campo.value);
+        if (!campo.value.trim()) {
+          estado.textContent = 'Escriba y los resultados aparecerán al momento. Intro abre el primero.';
+          caja.innerHTML = '';
+          return;
+        }
+        estado.textContent = resultados.length
+          ? `${resultados.length} RESULTADO${resultados.length === 1 ? '' : 'S'}`
+          : azar(SIN_RESULTADOS);
+        caja.innerHTML = resultados.slice(0, 30).map((r) => `
+          <a class="fila indice resultado" href="#/${esc(r.destino)}">
+            <span class="etiqueta etiqueta-${r.tipo === 'PÁG' ? 'pag' : r.tipo.toLowerCase()}">${r.tipo}</span>
+            <span class="titulo">${resaltar(r.titulo, campo.value)}</span><span class="puntos" aria-hidden="true"></span><span class="num">${r.num}</span>
+          </a>
+          <p class="detalle detalle-resultado">${esc(r.detalle)}</p>`).join('');
+      };
+      const alPulsar = (evento) => {
+        if (evento.key === 'Enter' && resultados.length) { evento.preventDefault(); irA(resultados[0].destino); }
+      };
+      campo.addEventListener('input', pintar);
+      campo.addEventListener('keydown', alPulsar);
+      setTimeout(() => campo.focus({ preventScroll: true }), 0);
+      return () => { campo.removeEventListener('input', pintar); campo.removeEventListener('keydown', alPulsar); };
+    };
+    return { titulo: 'Buscador', html, montar };
   }
 
   function transicion() {
@@ -593,6 +714,7 @@
     { num: 200, alias: 'parrilla', construir: parrilla },
     { num: 400, alias: 'rostros', construir: rostros },
     { num: 500, alias: 'subvencionometro', construir: subvencionometro },
+    { num: 555, alias: 'buscador', construir: buscador },
     { num: 936, alias: 'transicion', construir: transicion, oculta: true },
   ];
   const SECUENCIA = [...FIJAS.filter((f) => !f.oculta).map((f) => f.num), ...PROGRAMAS.map((p) => p.pagina), ...NOTICIAS.map((n) => n.pagina)]

@@ -618,6 +618,36 @@ body.revelar .pista-revelar { display: none; }
   font-size: 3cqi;
 }
 
+/* ---------- Buscador (555) ---------- */
+
+.buscador { display: flex; align-items: baseline; gap: .5em; margin: .3em 0; }
+
+.buscador input {
+  flex: 1;
+  min-width: 0;
+  font: inherit;
+  color: var(--amarillo);
+  background: #000c3a;
+  border: 0;
+  border-bottom: .12em solid var(--cian);
+  padding: .05em .3em;
+  text-shadow: inherit;
+  caret-color: var(--verde);
+  outline: none;
+}
+
+.buscador input::placeholder { color: var(--azul-claro); opacity: .8; }
+.buscador input:focus { background: var(--azul); }
+.buscador input::-webkit-search-cancel-button { filter: invert(1); }
+
+.resultado .etiqueta { flex: none; min-width: 5ch; text-align: center; color: var(--negro); text-shadow: none; padding: 0 .2em; }
+.etiqueta-prog { background: var(--verde); }
+.etiqueta-noti { background: var(--rojo); color: var(--blanco) !important; }
+.etiqueta-rost { background: var(--cian); }
+.etiqueta-pag { background: var(--amarillo); }
+.resultado mark { background: var(--magenta); color: var(--blanco); }
+.pagina .detalle.detalle-resultado { margin-left: calc(7ch + .5em) !important; margin-bottom: .35em !important; color: var(--cian); opacity: .9; }
+
 /* ---------- Página 936: la Transición ---------- */
 
 .centrado { text-align: center; }
