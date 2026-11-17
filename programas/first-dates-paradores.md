@@ -5,11 +5,13 @@
 - **Estado:** Confirmado
 - **Horario:** 19:00-20:00
 - **Presentador:** José Luis Ábalos
-- **Descripción:** Spin-off del programa de citas de Cuatro, grabado en la red de Paradores y presentado por alguien que conoce cada habitación. Al programa se llega en autobús, y la primera eliminatoria es una selección de personal a cargo del propio presentador.
+- **Descripción:** Spin-off del programa de citas de Cuatro, emitido en directo desde el Parador de Teruel y presentado por alguien que conoce cada habitación. Al programa se llega en autobús, y la primera eliminatoria es una selección de personal a cargo del propio presentador.
 
 ## Tipo de programa o sección
 
-Dating show diario. Mantiene la estética del original, con su barra, sus mesas para dos y su cámara de confesiones, pero traslada la acción al comedor de un Parador Nacional distinto cada semana. La cuenta, como siempre, la paga el contribuyente.
+Dating show diario, emitido en directo desde el comedor del Parador de Teruel. Mantiene la estética del original, con su barra, sus mesas para dos y su cámara de confesiones. La cuenta, como siempre, la paga el contribuyente.
+
+El directo tiene una norma de producción innegociable: todo se hace bajito. Los micrófonos van al mínimo, el público aplaude en lengua de signos y la sintonía se tararea en voz baja, para no despertar a Pilar Alegría, que según el equipo «sigue alojada en el piso de arriba desde la última vez». Si algún concursante sube la voz, Ábalos se lleva el dedo a los labios y señala el techo.
 
 ## Premisa y enfoque satírico
 
