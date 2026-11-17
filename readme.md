@@ -1,5 +1,6 @@
 # Parrilla televisiva para RTVE
 
+<!-- manifiesto:inicio -->
 ## Declaración de intenciones
 
 La televisión pública también toma partido cuando presenta una mirada ideológica como si fuera neutral. Ahí están los títulos, enfoques y objetivos de programas de la televisión actual que, a juicio de este proyecto, se inclinan claramente a la izquierda. No hay mas que considerar cualquiera de los siguientes ejemplos:
@@ -14,6 +15,7 @@ Este proyecto propone devolver el golpe con el mismo ejercicio, pero en sentido 
 Como expresa la premisa original, no se trata de imaginar «qué mierda de televisión saldrá si ganan los fachas», sino de exagerar como reacción a «la mierda de televisión que dejan los rojos» y aplicar una contrapartida ideológica imaginaria a la actual programación. 
 
 Es relevante mencionar que, para poder llevar a cabo este proyecto, a la IA que se ha utilizado para facilitar la escritura, ha sido necesario explicar de manera explicita que la sátira no pretende ofender a los votantes de derechas (como siempre tendía a hacer): el objetivo del proyecto es que escueza especialmente al lado progresista y al «psoe-state-of-mind».
+<!-- manifiesto:fin -->
 
 ## Contenido
 
@@ -133,3 +135,21 @@ El estado debe ser `Confirmado` o `Candidato`. El campo `Presentador` es opciona
 El campo `Horario` es obligatorio y usa el formato de 24 horas `HH:MM-HH:MM`. Si la hora final es anterior a la inicial, termina al día siguiente (por ejemplo, `23:00-01:00`). Las tablas se ordenan por hora de inicio, desde las 00:00; a igualdad de hora, por título.
 
 Para actualizar las tablas localmente, ejecuta `python scripts/actualizar_parrilla.py`. Para comprobar que están al día sin modificarlas, añade `--check`. Al subir a `main` cambios de las fichas, la parrilla, el generador o su workflow, GitHub Actions ejecuta el generador y, si es necesario, publica un commit de `github-actions[bot]` con la parrilla actualizada. Para ello, el repositorio debe permitir que las Actions escriban en el contenido y la rama debe admitir ese commit.
+
+### Web: el FACHATEXTO
+
+La parrilla también se publica como una web con estética de teletexto en [ggonmar.github.io/nueva_rtve](https://ggonmar.github.io/nueva_rtve/). Se navega tecleando números de página de tres cifras (con el teclado o el mando en pantalla), con los botones de colores y con las flechas:
+
+| Página | Contenido |
+| --- | --- |
+| 100 | Portada: qué se emite ahora, qué viene después y titulares |
+| 101 | Manifiesto (el texto de este README entre los comentarios `manifiesto:inicio` y `manifiesto:fin`) |
+| 199 | Ayuda y mapa de páginas |
+| 200 | Parrilla completa |
+| 301 en adelante | Una página por programa: primero los confirmados por hora de inicio y después los candidatos |
+| 400 | Rostros de la cadena (tablas de personas de este README) |
+| 500 | Subvencionómetro |
+
+Cada programa tiene también una dirección fija basada en el nombre de su ficha, por ejemplo `#/el-cabestrillo` para `programas/el cabestrillo.md`. Para añadir la imagen representativa de un programa, guárdala como `imagenes/programas/<dirección>.jpg` (también valen `.png`, `.webp`, `.gif` y `.svg`); mientras no exista, la ficha muestra una carta de ajuste con la ruta esperada.
+
+La web se genera con `python scripts/construir_web.py` a partir de las fichas, este README y los archivos estáticos de `web/`, y se deja en `_site/` (no se versiona). Para verla en local, ejecuta después `python -m http.server --directory _site` y abre `http://localhost:8000`. Al subir cualquier cambio a `main`, el workflow «Publicar web» la construye y la despliega en GitHub Pages; en la configuración del repositorio, *Settings › Pages › Source* debe estar en «GitHub Actions».

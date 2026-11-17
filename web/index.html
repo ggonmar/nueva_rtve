@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FACHATEXTO · La nueva parrilla de RTVE</title>
+  <meta name="description" content="Teletexto satírico con la parrilla ficticia de la nueva televisión pública: programas, manifiesto y rostros de la cadena.">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4' shape-rendering='crispEdges'%3E%3Crect width='4' height='4'/%3E%3Crect x='0' y='0' width='1' height='4' fill='%23ff0'/%3E%3Crect x='1' y='0' width='2' height='1' fill='%23ff0'/%3E%3Crect x='1' y='2' width='1' height='1' fill='%23f00'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="salon">
+    <div class="tv">
+      <div class="pantalla encendiendo" id="pantalla">
+        <header class="cabecera" id="cabecera">
+          <span class="cab-entrada" id="cab-entrada">P100</span>
+          <span class="cab-nombre" id="cab-nombre">FACHATEXTO</span>
+          <span class="cab-num" id="cab-num">100</span>
+          <span class="cab-fecha" id="cab-fecha"></span>
+          <span class="cab-hora" id="cab-hora"></span>
+        </header>
+        <main class="pagina" id="pagina" tabindex="-1" aria-live="polite"></main>
+        <div class="rotulo" id="rotulo">
+          <span class="rotulo-etiqueta">EN ANTENA</span>
+          <div class="rotulo-ventana"><div class="rotulo-pista" id="rotulo-pista"></div></div>
+        </div>
+        <nav class="fastext" id="fastext" aria-label="Botones de colores"></nav>
+        <div class="ruido" id="ruido" aria-hidden="true"></div>
+        <div class="aviso" id="aviso" role="status"></div>
+      </div>
+      <div class="marco-inferior">
+        <span class="marca">FACHAVISIÓN</span>
+        <span class="modelo">625 LÍNEAS · PAL · SIN SUBVENCIÓN</span>
+        <span class="piloto" title="Encendido"></span>
+      </div>
+    </div>
+
+    <aside class="mando" id="mando" aria-label="Mando a distancia">
+      <div class="mando-marca">TELEMANDO</div>
+      <div class="mando-teclas">
+        <button type="button" data-tecla="1">1</button>
+        <button type="button" data-tecla="2">2</button>
+        <button type="button" data-tecla="3">3</button>
+        <button type="button" data-tecla="4">4</button>
+        <button type="button" data-tecla="5">5</button>
+        <button type="button" data-tecla="6">6</button>
+        <button type="button" data-tecla="7">7</button>
+        <button type="button" data-tecla="8">8</button>
+        <button type="button" data-tecla="9">9</button>
+        <button type="button" data-accion="anterior" aria-label="Página anterior">P−</button>
+        <button type="button" data-tecla="0">0</button>
+        <button type="button" data-accion="siguiente" aria-label="Página siguiente">P+</button>
+      </div>
+      <div class="mando-colores">
+        <button type="button" class="b-rojo" data-accion="color-0" aria-label="Botón rojo"></button>
+        <button type="button" class="b-verde" data-accion="color-1" aria-label="Botón verde"></button>
+        <button type="button" class="b-amarillo" data-accion="color-2" aria-label="Botón amarillo"></button>
+        <button type="button" class="b-azul" data-accion="color-3" aria-label="Botón azul"></button>
+      </div>
+      <div class="mando-extra">
+        <button type="button" data-accion="indice" title="Índice (I)">IDX</button>
+        <button type="button" data-accion="revelar" title="Revelar (?)">?</button>
+        <button type="button" data-accion="sonido" id="boton-sonido" title="Sonido (M)" aria-label="Activar sonido">🔇</button>
+      </div>
+      <div class="mando-pie">MOD. 1977-R</div>
+    </aside>
+  </div>
+
+  <p class="aviso-legal">
+    Sátira política. Parrilla ficticia sin relación con RTVE ni con nadie que salga en ella.
+    <a href="#/ayuda">Cómo se usa</a>
+  </p>
+
+  <noscript>
+    <p class="sin-js">El FACHATEXTO necesita JavaScript. Los rojos te lo han desactivado, o has sido tú.</p>
+  </noscript>
+
+  <script src="datos.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
