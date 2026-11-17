@@ -527,6 +527,34 @@
     };
   }
 
+  function transicion() {
+    const html = `
+      ${banner('1936-1978', 'magenta')}
+      <p class="cian centrado">EMISIÓN ESPECIAL DE MADRUGADA · NO AJUSTE SU TELEVISOR</p>
+      <div class="bandera en-marcha" id="bandera" role="img" aria-label="La bandera republicana se transforma en la bandera de España">
+        <span class="bandera-franja bf1"></span><span class="bandera-franja bf2"></span><span class="bandera-franja bf3"></span>
+      </div>
+      <p class="estado-transicion">
+        <span class="fase-curso">TRANSICIÓN EN CURSO. NO CAMBIE DE CANAL…</span>
+        <span class="fase-hecha">TRANSICIÓN COMPLETADA. EL MORADO HA SIDO REASIGNADO A UN OBSERVATORIO.</span>
+      </p>
+      <p class="centrado"><button type="button" class="boton-tt" id="rebobinar">◀◀ REBOBINAR</button></p>`;
+    const montar = () => {
+      const boton = document.getElementById('rebobinar');
+      const reiniciar = () => {
+        const bandera = document.getElementById('bandera');
+        bandera.classList.remove('en-marcha');
+        void bandera.offsetWidth;
+        bandera.classList.add('en-marcha');
+        ruido(180);
+        pitido('cambio');
+      };
+      boton.addEventListener('click', reiniciar);
+      return () => boton.removeEventListener('click', reiniciar);
+    };
+    return { titulo: 'Transición', html, montar };
+  }
+
   const EXCUSAS = [
     'Ha sido retirada por el Observatorio de la Neutralidad Informativa.',
     'Está en proceso de resignificación.',
@@ -564,8 +592,9 @@
     { num: 200, alias: 'parrilla', construir: parrilla },
     { num: 400, alias: 'rostros', construir: rostros },
     { num: 500, alias: 'subvencionometro', construir: subvencionometro },
+    { num: 936, alias: 'transicion', construir: transicion, oculta: true },
   ];
-  const SECUENCIA = [...FIJAS.map((f) => f.num), ...PROGRAMAS.map((p) => p.pagina), ...NOTICIAS.map((n) => n.pagina)]
+  const SECUENCIA = [...FIJAS.filter((f) => !f.oculta).map((f) => f.num), ...PROGRAMAS.map((p) => p.pagina), ...NOTICIAS.map((n) => n.pagina)]
     .sort((a, b) => a - b);
 
   function resolver(clave) {

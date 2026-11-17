@@ -617,6 +617,52 @@ body.revelar .pista-revelar { display: none; }
   font-size: 3cqi;
 }
 
+/* ---------- Página 936: la Transición ---------- */
+
+.centrado { text-align: center; }
+
+.bandera {
+  --morado: #7a2d8f;
+  display: flex;
+  flex-direction: column;
+  width: min(100%, 13em);
+  aspect-ratio: 3 / 2;
+  margin: .6em auto;
+  border: .15em solid var(--blanco);
+  position: relative;
+}
+
+.bandera::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 calc(100% / 24 - 1px), rgba(0, 0, 0, .35) calc(100% / 24 - 1px) calc(100% / 24)),
+    repeating-linear-gradient(0deg, transparent 0 calc(100% / 16 - 1px), rgba(0, 0, 0, .35) calc(100% / 16 - 1px) calc(100% / 16));
+  pointer-events: none;
+}
+
+.bandera-franja { flex: 1 1 0; }
+.bf1 { background: var(--rojo); }
+.bf2 { background: var(--amarillo); flex-grow: 2; }
+.bf3 { background: var(--rojo); }
+
+.bandera.en-marcha .bf2 { animation: franja-crece 3.2s steps(6) 1.2s both; }
+.bandera.en-marcha .bf3 { animation: morado-a-rojo 3.2s steps(6) 1.2s both; }
+.estado-transicion { display: grid; text-align: center; min-height: 2.2em; }
+.estado-transicion > span { grid-area: 1 / 1; }
+.estado-transicion .fase-curso { visibility: hidden; }
+.estado-transicion .fase-hecha { color: var(--verde); }
+.bandera.en-marcha + .estado-transicion .fase-curso { animation: parpadeo 1s steps(1) infinite, fase-inicial 4.4s both; }
+.bandera.en-marcha + .estado-transicion .fase-hecha { animation: fase-final .01s 4.4s both; }
+
+@keyframes franja-crece { from { flex-grow: 1; } to { flex-grow: 2; } }
+@keyframes morado-a-rojo { from { background: var(--morado); } to { background: var(--rojo); } }
+@keyframes fase-inicial { 0%, 99.9% { visibility: visible; } 100% { visibility: hidden; } }
+@keyframes fase-final { from { visibility: hidden; } to { visibility: visible; } }
+
+.captura .centrado .boton-tt { display: none; }
+
 /* ---------- Modo NO-DO ---------- */
 
 body.no-do .pantalla { filter: grayscale(1) sepia(.7) contrast(1.25) brightness(.95); }
