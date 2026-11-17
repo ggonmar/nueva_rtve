@@ -4,7 +4,7 @@
 - **Tipo:** Debate semanal
 - **Estado:** Confirmado
 - **Horario:** 21:00-23:00
-- **Presentador:** ElXokas, WSW y UTBH
+- **Presentador:** ElXokas, WallStreetWolverine y UTBH
 - **Descripción:** Tertulia de actualidad en la que el volumen sustituye al consenso y cada intervención deja al relato oficial necesitando asistencia traumatológica.
 
 ## Presentador y participantes
