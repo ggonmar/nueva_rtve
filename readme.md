@@ -36,7 +36,7 @@ Los horarios son una propuesta de franjas de emisión. Los candidatos son altern
 | 08:00-09:00 | [Me gusta la fruta](programas/me-gusta-la-fruta.md) | Nutrición | Por concretar | Matinal de alimentación sana con una sola norma: aquí se habla claro y se come fruta. Mucha fruta. Especialmente cuando sale el presidente en las noticias. |
 | 10:00-11:00 | [El último contribuyente](programas/el-ultimo-contribuyente.md) | Documental económico | Juan Ramón Rallo | Juan Ramón Rallo sigue la pista del esquivo ciudadano que todavía paga la fiesta, mientras cada nueva partida presupuestaria amenaza con convertirlo en especie protegida. |
 | 10:00-12:00 | [La memoria selectiva](programas/la-memoria-selectiva.md) | Documental | Federico Jiménez Losantos | Un espacio documental sobre los asesinatos de ETA y los relatos que la política prefiere administrar por capítulos: unas memorias se exhiben y otras se archivan cuando incomodan. |
-| 12:00-13:00 | [Quién quiere ser funcionario](programas/quien-quiere-ser-funcionario.md) | Concurso | Carlos Sobera | Carlos Sobera pone a prueba a aspirantes al empleo vitalicio: superar la oposición es difícil, pero encontrar la ventanilla correcta es el verdadero premio. |
+| 12:00-13:00 | [Quién quiere ser funcionario](programas/quien-quiere-ser-funcionario.md) | Concurso | Ramón García | Con las oposiciones reducidas al mínimo, el Estado monetiza el proceso: en lugar de examen, los aspirantes superan pruebas al estilo Grand Prix para sumar puntos y llevarse una plaza de funcionario C2. Los domingos, especial C1. |
 | 13:00-14:00 | [Cunetas o Pesetas](programas/cunetas-o-pesetas.md) | Concurso | Por concretar | Los concursantes eligen entre remover eternamente el pasado o llevarse un premio; el presentador descubre que hasta la memoria histórica tiene presupuesto. |
 | 14:00-14:30 | [La Cuneta de la Fortuna](programas/la-cuneta-de-la-fortuna.md) | Concurso | Por concretar | Concurso documental que recorre las cunetas de España: los concursantes buscan a sus tatarabuelos mientras giran una enorme ruleta de cartón piedra. ¡Cuidado con caer en la quiebra! |
 | 16:00-17:00 | [Amar en tiempos de rojos](programas/amar-en-tiempos-de-rojos.md) | Telenovela | Por concretar | Dos enamorados intentan sobrevivir al romance, la militancia y una asamblea vecinal que exige nacionalizar hasta las mariposas del estómago. |
@@ -81,7 +81,7 @@ Los horarios son una propuesta de franjas de emisión. Los candidatos son altern
 | Nombre | Perfil de programa | Notas |
 | --- | --- | --- |
 | Alaska | Presentadora | Asignada a Una, Grande y Libre; también se propone tenerla en la recámara. |
-| Carlos Sobera | Presentador | Asignado a Quién quiere ser funcionario. |
+| Ramón García | Presentador | Asignado a Quién quiere ser funcionario. |
 | Los Meconios | Presentadores / humoristas | Asignados a No, Patxarán; también se propone su perfil de parodia musical y sátira política para el formato. |
 | Miguel Lago | Colaborador | Asignado a No, Patxarán. |
 | ElXokas, WSW y UTBH | Presentadores / participantes | Asignados a El Cabestrillo. |
@@ -102,7 +102,7 @@ Los horarios son una propuesta de franjas de emisión. Los candidatos son altern
 <!-- personas-candidatos:inicio -->
 | Nombre | Perfil de programa | Notas |
 | --- | --- | --- |
-| Ramón García | Presentador | Candidato propuesto; programa por concretar. |
+| Carlos Sobera | Presentador | Antes asignado a Quién quiere ser funcionario; programa por concretar. |
 | Jesús Calleja | Presentador / reportero | Posible encaje en Españoles por España. |
 | Francisco Marhuenda | Presentador / tertuliano | Propuesta de tertulia política, análisis de actualidad y defensa numantina de cualquier decisión gubernamental. |
 | Los Meconios | Presentadores / humoristas | Se propone su parodia musical y sátira política como alternativa a un presentador convencional. |
