@@ -231,11 +231,11 @@ body {
   gap: .5em;
   color: var(--blanco);
   text-decoration: none;
-  padding: 0 .1em 0 1.3ch;
+  padding: 0 .1em 0 3.2ch;
   position: relative;
 }
 
-.fila .marcador { position: absolute; left: 0; color: var(--verde); }
+.fila .marcador { position: absolute; left: 0; width: 2.8ch; text-align: center; color: var(--verde); }
 .pagina a.fila { color: var(--blanco); }
 .fila .hora { color: var(--blanco); white-space: nowrap; min-width: 11ch; }
 .fila .titulo { color: var(--amarillo); min-width: 0; }
@@ -247,7 +247,7 @@ body {
 .indice .titulo { color: var(--blanco); }
 
 .bloque-programa { margin-bottom: .25em; }
-.detalle { margin: 0 0 .2em calc(12.3ch + .5em) !important; color: var(--blanco); opacity: .9; }
+.detalle { margin: 0 0 .2em calc(14.2ch + .5em) !important; color: var(--blanco); opacity: .9; }
 .rostro .detalle { margin-left: 2ch !important; }
 
 .relleno { color: var(--magenta); }
