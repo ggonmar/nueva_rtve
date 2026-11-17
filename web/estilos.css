@@ -343,12 +343,12 @@ body.revelar .pista-revelar { display: none; }
 
 .datos {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-columns: fit-content(40%) minmax(0, 1fr);
   gap: .1em .6em;
   margin: 0;
 }
 
-.datos dt { color: var(--cian); }
+.datos dt { color: var(--cian); overflow-wrap: normal; hyphens: auto; }
 .datos dd { margin: 0; color: var(--blanco); }
 .teclas dt { color: var(--amarillo); }
 
