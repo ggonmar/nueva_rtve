@@ -446,7 +446,7 @@
     ['EN TRÁMITE', 'Vuelva en 2031 con el sello del sello.'],
     ['DENEGADA', 'Ha declarado beneficios. Eso aquí no se hace.'],
     ['CONCEDIDA', 'Se crea un observatorio para observar su subvención.'],
-    ['EXTRAVIADA', 'Su expediente está en Megainfraestructuras, esperando presupuesto.'],
+    ['EXTRAVIADA', 'Su expediente está en MEGAFACHADAS, esperando presupuesto.'],
   ];
 
   function subvencionometro() {

@@ -29,7 +29,7 @@ El concurso no se ríe de quienes estudian años para sacar una plaza, sino de u
 
 ## Puntuación y premio
 
-Cada prueba vale puntos según el grupo al que se aspira. El ganador del programa diario obtiene una plaza C2. El ganador del especial del domingo se lleva una plaza C1 y una placa conmemorativa, la misma que se usa en las inauguraciones de Megainfraestructuras. Los perdedores reciben una bolsa de empleo, que es exactamente eso: una bolsa de tela con el logotipo del ministerio.
+Cada prueba vale puntos según el grupo al que se aspira. El ganador del programa diario obtiene una plaza C2. El ganador del especial del domingo se lleva una plaza C1 y una placa conmemorativa, la misma que se usa en las inauguraciones de MEGAFACHADAS. Los perdedores reciben una bolsa de empleo, que es exactamente eso: una bolsa de tela con el logotipo del ministerio.
 
 ## Spin-off: Quién quiere ser pensionista
 
