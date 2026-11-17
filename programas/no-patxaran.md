@@ -25,7 +25,7 @@ Los Meconios llevan el programa como lo que son: dos cómicos que sueltan burrad
 - **Barra libre:** los presentadores leen en voz alta los tuits más ofendidos que ha provocado el programa la noche anterior y les ponen música de fondo.
 - **El entrevistado incómodo:** cada noche se sienta en el sofá alguien a quien nunca invitarían a otro late night de la casa, y se le deja hablar sin interrumpir, que en esta televisión es lo más subversivo que se puede hacer.
 - **Subvenciómetro musical:** Los Meconios cantan, a ritmo de pasodoble, la lista de subvenciones al cine español del mes, con su importe y su número de espectadores. La canción suele ser muy larga y la lista de espectadores, muy corta.
-- **La última y nos vamos:** despedida con todo el equipo en el escenario, el público cantando y la botella de patxarán vacía. "Hasta mañana, si el regulador lo permite."
+- **La última y nos vamos:** despedida con todo el equipo en el escenario y el público cantando. "Hasta mañana, si el regulador lo permite." Entonces uno de Los Meconios levanta la botella de patxarán, la pone boca abajo, comprueba que no cae ni una gota y cierra el programa con la frase de cada noche: «Bueno, pues al final sí que ha patxado».
 
 # Notas
 
