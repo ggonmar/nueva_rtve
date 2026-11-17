@@ -260,6 +260,8 @@ def collect(root, repository=None, branch="main"):
     for page, program in enumerate(programs, FIRST_PROGRAM_PAGE):
         link = make_linker(program["ruta"], slugs, repository, branch)
         extras, body = split_program(program["texto"])
+        replaces = next((value for name, value in extras if name == "Reemplaza"), None)
+        extras = [(name, value) for name, value in extras if name != "Reemplaza"]
         image = find_image(root, program["slug"])
         data.append({
             "slug": program["slug"],
@@ -272,6 +274,7 @@ def collect(root, repository=None, branch="main"):
             "descripcion": render_inline(program["Descripción"], link),
             "extras": [{"campo": name, "valor": render_inline(value, link)} for name, value in extras],
             "cuerpo": markdown_to_html(body, link),
+            "reemplaza": render_inline(replaces, link) if replaces else None,
             "imagen": image.relative_to(root).as_posix() if image else None,
             "imagenSugerida": (IMAGE_DIR / f"{program['slug']}.jpg").as_posix(),
             "fuente": program["ruta"],

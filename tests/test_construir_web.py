@@ -67,7 +67,7 @@ class ConstruirWebTest(unittest.TestCase):
     def test_genera_paginas_datos_e_imagenes(self):
         self.ficha("tarde.md", "Tarde", schedule="18:00-19:00")
         self.ficha("la cena.md", "La Cena", schedule="09:00-10:00",
-                   extra="- **Slogan:** *Hola*\n\n## Secciones\nVer [la tarde](tarde.md).\n\n# Notas\nNo publicar.\n")
+                   extra="- **Slogan:** *Hola*\n- **Reemplaza:** *Cine de Barrio*\n\n## Secciones\nVer [la tarde](tarde.md).\n\n# Notas\nNo publicar.\n")
         self.ficha("idea.md", "Idea", status="Candidato", schedule="01:00-02:00")
         (self.root / "imagenes" / "programas").mkdir(parents=True)
         (self.root / "imagenes" / "programas" / "la-cena.png").write_bytes(b"png")
@@ -79,6 +79,8 @@ class ConstruirWebTest(unittest.TestCase):
         self.assertEqual([item["slug"] for item in data["programas"]], ["la-cena", "tarde", "idea"])
         self.assertEqual([item["pagina"] for item in data["programas"]], [301, 302, 303])
         self.assertEqual(programs["la-cena"]["extras"], [{"campo": "Slogan", "valor": "<em>Hola</em>"}])
+        self.assertEqual(programs["la-cena"]["reemplaza"], "<em>Cine de Barrio</em>")
+        self.assertIsNone(programs["tarde"]["reemplaza"])
         self.assertEqual(programs["la-cena"]["cuerpo"], '<h3>Secciones</h3><p>Ver <a href="#/tarde">la tarde</a>.</p>')
         self.assertEqual(programs["la-cena"]["imagen"], "imagenes/programas/la-cena.png")
         self.assertIsNone(programs["tarde"]["imagen"])

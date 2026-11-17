@@ -410,7 +410,8 @@
           <a href="#/parrilla">PARRILLA 200</a>
           <a href="${enlacePrograma(siguiente)}">${siguiente.pagina} ▶</a>
         </nav>
-        ${DATOS.repositorio ? `<p class="fuente">${enlaceGithub(`blob/${DATOS.rama}/${encodeURI(p.fuente)}`, '✎ Ver o mejorar esta ficha en GitHub')}</p>` : ''}`,
+        ${DATOS.repositorio ? `<p class="fuente">${enlaceGithub(`blob/${DATOS.rama}/${encodeURI(p.fuente)}`, '✎ Ver o mejorar esta ficha en GitHub')}</p>` : ''}
+        ${p.reemplaza ? `<dl class="datos reemplaza"><dt>REEMPLAZA A</dt><dd>${p.reemplaza}</dd></dl>` : ''}`,
       fastext: [
         { texto: 'Parrilla', destino: 'parrilla' },
         { texto: `◀ ${anterior.pagina}`, destino: anterior.slug },

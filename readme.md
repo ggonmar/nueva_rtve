@@ -29,13 +29,13 @@ Los horarios son una propuesta de franjas de emisión. Los candidatos son altern
 <!-- programas-confirmados:inicio -->
 | Horario | Nombre | Tipo | Presentador | Descripción |
 | --- | --- | --- | --- | --- |
-| 00:30-03:00 | [El chiringuito de gorrones](programas/el-chiringuito-de-gorrones.md) | Concurso | Por concretar | Cada semana, varias personas acostumbradas a cobrar el IMV compiten por uno de los pocos ingresos mínimos vitales que le sobran al ministerio tras repartir el resto entre asesores. |
+| 00:30-03:00 | [El chiringuito de gorrones](programas/el-chiringuito-de-gorrones.md) | Concurso | Por concretar | Cada semana, varios g-etnianos, moros y panchos compiten por uno de los pocos IMVs que le sobran al ministerio. |
 | 01:00-02:00 | [Cachitos de Hierro y Rojo](programas/cachitos-de-hierro-y-rojo.md) | Archivo musical | Santiago Segura y El Sevilla | Santiago Segura y El Sevilla rebuscan en el archivo musical: himnos, joyas olvidadas y artistas que descubrieron que protestar contra el sistema suena mejor con ayuda pública. |
 | 02:00-06:00 | [Malas Lenguas](programas/malas-lenguas.md) | Enseñanza | Por concretar | Programa de 2 a 6 de la mañana en el que se enseña catalán, euskera y galego. |
 | 06:00-07:00 | [Megainfraestructuras](programas/megainfraestructuras.md) | Documentales | Por concretar | Un recorrido por obras faraónicas y proyectos abandonados, donde la cinta inaugural llega puntual aunque la infraestructura todavía esté esperando presupuesto, pasajeros o sentido común. |
 | 08:00-09:00 | [Me gusta la fruta](programas/me-gusta-la-fruta.md) | Nutrición | Por concretar | Matinal enfocado en la alimentación sana. |
 | 10:00-11:00 | [El último contribuyente](programas/el-ultimo-contribuyente.md) | Documental económico | Juan Ramón Rallo | Juan Ramón Rallo sigue la pista del esquivo ciudadano que todavía paga la fiesta, mientras cada nueva partida presupuestaria amenaza con convertirlo en especie protegida. |
-| 10:00-12:00 | [La memoria selectiva](programas/la-memoria-selectiva.md) | Documental | Por concretar | Un espacio documental sobre los asesinatos de ETA y los relatos que la política prefiere administrar por capítulos: unas memorias se exhiben y otras se archivan cuando incomodan. |
+| 10:00-12:00 | [La memoria selectiva](programas/la-memoria-selectiva.md) | Documental | Federico Jiménez Losantos | Un espacio documental sobre los asesinatos de ETA y los relatos que la política prefiere administrar por capítulos: unas memorias se exhiben y otras se archivan cuando incomodan. |
 | 12:00-13:00 | [Quién quiere ser funcionario](programas/quien-quiere-ser-funcionario.md) | Concurso | Carlos Sobera | Carlos Sobera pone a prueba a aspirantes al empleo vitalicio: superar la oposición es difícil, pero encontrar la ventanilla correcta es el verdadero premio. |
 | 13:00-14:00 | [Cunetas o Pesetas](programas/cunetas-o-pesetas.md) | Concurso | Por concretar | Los concursantes eligen entre remover eternamente el pasado o llevarse un premio; el presentador descubre que hasta la memoria histórica tiene presupuesto. |
 | 14:00-14:30 | [La Cuneta de la Fortuna](programas/la-cuneta-de-la-fortuna.md) | Concurso | Por concretar | Concurso documental que recorre las cunetas de España: los concursantes buscan a sus tatarabuelos mientras giran una enorme ruleta de cartón piedra. ¡Cuidado con caer en la quiebra! |
@@ -49,6 +49,8 @@ Los horarios son una propuesta de franjas de emisión. Los candidatos son altern
 | 20:00-21:00 | [En el Punto de Mira](programas/en-el-punto-de-mira.md) | Investigación | Por concretar | Hemos comprado los derechos del mítico programa de investigación y le hemos añadido literalidad: un francotirador, un Ministerio de Igualdad y demasiada burocracia. Spoiler: nunca llega a apretar el gatillo. |
 | 21:00-23:00 | [El Cabestrillo](programas/el-cabestrillo.md) | Debate semanal | ElXokas, WSW y UTBH | Tertulia de actualidad en la que el volumen sustituye al consenso y cada intervención deja al relato oficial necesitando asistencia traumatológica. |
 | 21:00-22:00 | [La Cena de los idiotas](programas/la-cena-de-los-idiotas.md) | Humor | Por concretar | Humor Amarillo en un salón: dos improvisadores doblan a los tertulianos mientras ElXokas conserva el micro abierto. |
+| 21:45-22:45 | [La Reconquista](programas/la-reconquista.md) | Late night | Bertín Osborne | Bertín Osborne recupera el late night de la televisión pública: guitarra, invitados sin pin y las preguntas de siempre, pero al revés. Aquí no se resiste a nada; se reconquista todo. |
+| 22:00-23:30 | [Aquellos Maravillosos Años](programas/aquellos-maravillosos-anos.md) | Serie | Por concretar | Serie que recuerda con nostalgia la Españita feliz de los 2000: hipotecas a 40 años que se firmaban sonriendo, el euro recién estrenado, pleno empleo en la obra y un país que ganaba Mundiales sin pedir perdón por ello. |
 | 22:00-23:00 | [Cuarto Reich](programas/cuarto-reich.md) | Misterio | Iker Jiménez | Iker Jiménez investiga el fenómeno paranormal favorito de la tertulia: encontrar un fascista detrás de cada crítica, incluso cuando solo hay un autónomo con una factura. |
 | 23:00-01:00 | [No, Patxarán](programas/no-patxaran.md) | Late night | Los Meconios | Los Meconios y Miguel Lago despiden el día con humor, música y más ganas de pinchar globos progresistas que de cobrar la próxima subvención. Se propone un late night sin líneas rojas, con actualidad copa en mano y sátira de subvenciones y observatorios. |
 <!-- programas-confirmados:fin -->
@@ -86,7 +88,8 @@ Los horarios son una propuesta de franjas de emisión. Los candidatos son altern
 | Iker Jiménez | Presentador | Asignado a Cuarto Reich. |
 | Juan Ramón Rallo | Presentador | Asignado a El último contribuyente. |
 | Santiago Segura y El Sevilla | Presentadores | Asignados a Cachitos de Hierro y Rojo; Santiago Segura también se propone para la recámara. |
-| Bertín Osborne | Presentador | Asignado a Españoles por España. |
+| Bertín Osborne | Presentador | Asignado a Españoles por España y La Reconquista. |
+| Federico Jiménez Losantos | Presentador | Asignado a La memoria selectiva. |
 <!-- personas-confirmados:fin -->
 
 </details>
@@ -132,10 +135,11 @@ Cada archivo Markdown de `programas` debe incluir estos campos, uno por línea:
 - **Estado:** Confirmado
 - **Horario:** 16:00-18:00
 - **Presentador:** Nombre del presentador
+- **Reemplaza:** Programa actual al que sustituye
 - **Descripción:** Descripción breve para la parrilla.
 ```
 
-El estado debe ser `Confirmado` o `Candidato`. El campo `Presentador` es opcional: si todavía no está asignado, la tabla muestra «Por concretar». Las tablas de programas de este README se generan a partir de estas fichas; no hay que editar las filas entre sus marcadores. Las tablas de personas y asignaciones se mantienen manualmente.
+El estado debe ser `Confirmado` o `Candidato`. El campo `Presentador` es opcional: si todavía no está asignado, la tabla muestra «Por concretar». El campo `Reemplaza` también es opcional: indica a qué programa de la televisión actual sustituye, y en la web solo aparece al final de la página del programa. Las tablas de programas de este README se generan a partir de estas fichas; no hay que editar las filas entre sus marcadores. Las tablas de personas y asignaciones se mantienen manualmente.
 
 El campo `Horario` es obligatorio y usa el formato de 24 horas `HH:MM-HH:MM`. Si la hora final es anterior a la inicial, termina al día siguiente (por ejemplo, `23:00-01:00`). Las tablas se ordenan por hora de inicio, desde las 00:00; a igualdad de hora, por título.
 
