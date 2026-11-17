@@ -1,0 +1,128 @@
+- generic [ref=f4e1]:
+  - generic [ref=f4e2]:
+    - generic [ref=f4e3]:
+      - generic [ref=f4e4]:
+        - banner [ref=f4e5]:
+          - generic [ref=f4e6]: P111
+          - generic [ref=f4e7]: FACHATEXTO
+          - generic [ref=f4e8]: "111"
+          - generic [ref=f4e9]: MAR 17 NOV
+          - generic [ref=f4e10]: 13:20:33
+        - main [active] [ref=f4e11]:
+          - generic [ref=f4e249]:
+            - generic [ref=f4e250]: NOTICIAS 111 · TRIBUNALES
+            - generic [ref=f4e251]: 17 DE NOVIEMBRE DE 2026
+          - heading "Óscar Puente se imputa a sí mismo en X para llegar, por una vez, antes que alguien" [level=1] [ref=f4e252]
+          - paragraph [ref=f4e253]: El ministro publica un hilo de 112 mensajes en el que se acusa, se defiende, se absuelve y, finalmente, culpa a Feijóo de haberle obligado a escribirlo.
+          - generic [ref=f4e254]:
+            - paragraph [ref=f4e255]: VALLADOLID, (FACHATEXTO). En un movimiento inédito en la política española, el ministro de Transportes, Óscar Puente, ha anunciado en redes sociales su autoimputación «en un ejercicio de transparencia y de puntualidad que no siempre se ve en el ferrocarril».
+            - paragraph [ref=f4e256]: «Si alguien va a llegar tarde a este asunto, que sea el tren», ha escrito el ministro, que ha adjuntado una captura del Código Penal con varios artículos subrayados y un emoticono de una cara guiñando el ojo.
+            - heading "La Fiscalía, sin nadie disponible para firmar" [level=3] [ref=f4e257]
+            - paragraph [ref=f4e258]: Fuentes judiciales confirman que la autoimputación carece de validez legal, pero reconocen que «es la primera vez en esta legislatura que alguien del Gobierno se adelanta a un juez». En la Fiscalía han tratado de responder por escrito, aunque la tarea se ha retrasado mientras se buscaba a algún cargo que no estuviera, a su vez, pendiente de sentencia.
+            - paragraph [ref=f4e259]: "El hilo termina con una encuesta: «¿Quién tiene la culpa de todo? A) Aznar B) Ayuso C) Los fachas D) Todas son correctas». Con el 98 % de los votos, gana la opción E, que no existía."
+          - paragraph [ref=f4e260]: Redacción de Tribunales (sección cada vez más grande)
+          - paragraph [ref=f4e261]: Noticia satírica. Cualquier parecido con la realidad es culpa de la realidad.
+          - navigation "Otras noticias" [ref=f4e262]:
+            - link "◀ 118" [ref=f4e263] [cursor=pointer]:
+              - /url: "#/noticias/plan-transicion-termica"
+            - link "NOTICIAS 110" [ref=f4e264] [cursor=pointer]:
+              - /url: "#/noticias"
+            - link "112 ▶" [ref=f4e265] [cursor=pointer]:
+              - /url: "#/noticias/sanchez-manual-de-permanencia"
+          - paragraph [ref=f4e266]:
+            - link "✎ Ver o mejorar esta noticia en GitHub" [ref=f4e267] [cursor=pointer]:
+              - /url: https://github.com/ggonmar/nueva_rtve/blob/main/noticias/puente-autoimputacion.md
+        - generic [ref=f4e183]:
+          - generic [ref=f4e184]: EN ANTENA
+          - generic [ref=f4e186]:
+            - generic [ref=f4e187]:
+              - generic [ref=f4e188]:
+                - link "AHORA ▶ CUNETAS O PESETAS" [ref=f4e189] [cursor=pointer]:
+                  - /url: "#/cunetas-o-pesetas"
+                - text: 13:00-14:00
+              - text: ★
+              - link "16:00 Amar en tiempos de rojos" [ref=f4e191] [cursor=pointer]:
+                - /url: "#/amar-en-tiempos-de-rojos"
+              - text: ★
+              - link "16:00 Cine de PAU" [ref=f4e193] [cursor=pointer]:
+                - /url: "#/cine-de-pau"
+              - text: ★
+              - link "16:00 Una, Grande y Libre" [ref=f4e195] [cursor=pointer]:
+                - /url: "#/una-grande-y-libre"
+              - text: ★
+              - link "17:00 Españoles por España" [ref=f4e197] [cursor=pointer]:
+                - /url: "#/espanoles-por-espana"
+              - text: ★PULSE 200 PARA LA PARRILLA COMPLETA★PULSE 101 PARA EL MANIFIESTO★
+              - 'link "ÚLTIMA HORA: Óscar Puente se imputa a sí mismo en X para llegar, por una vez, antes que alguien" [ref=f4e199] [cursor=pointer]':
+                - /url: "#/noticias/puente-autoimputacion"
+              - text: ★
+            - generic [aria-hidden] [ref=f4e200]:
+              - generic [ref=f4e201]:
+                - link [ref=f4e202] [cursor=pointer]:
+                  - /url: "#/cunetas-o-pesetas"
+                  - text: AHORA ▶ CUNETAS O PESETAS
+                - text: 13:00-14:00
+              - text: ★
+              - link [ref=f4e204] [cursor=pointer]:
+                - /url: "#/amar-en-tiempos-de-rojos"
+                - text: 16:00 Amar en tiempos de rojos
+              - text: ★
+              - link [ref=f4e206] [cursor=pointer]:
+                - /url: "#/cine-de-pau"
+                - text: 16:00 Cine de PAU
+              - text: ★
+              - link [ref=f4e208] [cursor=pointer]:
+                - /url: "#/una-grande-y-libre"
+                - text: 16:00 Una, Grande y Libre
+              - text: ★
+              - link [ref=f4e210] [cursor=pointer]:
+                - /url: "#/espanoles-por-espana"
+                - text: 17:00 Españoles por España
+              - text: ★PULSE 200 PARA LA PARRILLA COMPLETA★PULSE 101 PARA EL MANIFIESTO★
+              - link [ref=f4e212] [cursor=pointer]:
+                - /url: "#/noticias/puente-autoimputacion"
+                - text: "ÚLTIMA HORA: Óscar Puente se imputa a sí mismo en X para llegar, por una vez, antes que alguien"
+              - text: ★
+        - navigation "Botones de colores" [ref=f4e213]:
+          - link "Noticias" [ref=f4e268] [cursor=pointer]:
+            - /url: "#/noticias"
+          - link "◀ 118" [ref=f4e269] [cursor=pointer]:
+            - /url: "#/noticias/plan-transicion-termica"
+          - link "112 ▶" [ref=f4e270] [cursor=pointer]:
+            - /url: "#/noticias/sanchez-manual-de-permanencia"
+          - link "Otra" [ref=f4e271] [cursor=pointer]:
+            - /url: "#/noticias/plan-transicion-termica"
+        - status
+      - generic [ref=f4e218]:
+        - generic [ref=f4e219]: FACHAVISIÓN
+        - generic [ref=f4e220]: 625 LÍNEAS · PAL · SIN SUBVENCIÓN
+        - generic "Encendido" [ref=f4e221]
+    - complementary "Mando a distancia" [ref=f4e222]:
+      - generic [ref=f4e223]: TELEMANDO
+      - generic [ref=f4e224]:
+        - button "1" [ref=f4e225] [cursor=pointer]
+        - button "2" [ref=f4e226] [cursor=pointer]
+        - button "3" [ref=f4e227] [cursor=pointer]
+        - button "4" [ref=f4e228] [cursor=pointer]
+        - button "5" [ref=f4e229] [cursor=pointer]
+        - button "6" [ref=f4e230] [cursor=pointer]
+        - button "7" [ref=f4e231] [cursor=pointer]
+        - button "8" [ref=f4e232] [cursor=pointer]
+        - button "9" [ref=f4e233] [cursor=pointer]
+        - button "Página anterior" [ref=f4e234] [cursor=pointer]: P−
+        - button "0" [ref=f4e235] [cursor=pointer]
+        - button "Página siguiente" [ref=f4e236] [cursor=pointer]: P+
+      - generic [ref=f4e237]:
+        - button "Botón rojo" [ref=f4e238] [cursor=pointer]
+        - button "Botón verde" [ref=f4e239] [cursor=pointer]
+        - button "Botón amarillo" [ref=f4e240] [cursor=pointer]
+        - button "Botón azul" [ref=f4e241] [cursor=pointer]
+      - generic [ref=f4e242]:
+        - button "IDX" [ref=f4e243] [cursor=pointer]
+        - button "?" [ref=f4e244] [cursor=pointer]
+        - button "Activar sonido" [ref=f4e245] [cursor=pointer]: 🔇
+      - generic [ref=f4e246]: MOD. 1977-R
+  - paragraph [ref=f4e247]:
+    - text: Sátira política. Parrilla ficticia sin relación con RTVE ni con nadie que salga en ella.
+    - link "Cómo se usa" [ref=f4e248] [cursor=pointer]:
+      - /url: "#/ayuda"

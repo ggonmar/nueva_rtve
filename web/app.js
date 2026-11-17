@@ -7,6 +7,8 @@
   const PROGRAMAS = DATOS.programas;
   const CONFIRMADOS = PROGRAMAS.filter((p) => p.estado === 'Confirmado');
   const CANDIDATOS = PROGRAMAS.filter((p) => p.estado === 'Candidato');
+  const NOTICIAS = DATOS.noticias || [];
+  const DESTACADA = NOTICIAS.length ? NOTICIAS[Math.floor(Math.random() * NOTICIAS.length)] : null;
   const MOVIMIENTO_REDUCIDO = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const COLORES = ['rojo', 'verde', 'amarillo', 'azul'];
   const TECLAS_COLOR = ['r', 'v', 'a', 'z'];
@@ -186,6 +188,12 @@
   /* ---------- Piezas reutilizables ---------- */
 
   const enlacePrograma = (p) => `#/${p.slug}`;
+  const enlaceNoticia = (n) => `#/noticias/${n.slug}`;
+
+  const filaNoticia = (n) => `
+    <a class="fila indice" href="${enlaceNoticia(n)}">
+      <span class="titulo">${esc(n.titular)}</span><span class="puntos" aria-hidden="true"></span><span class="num">${n.pagina}</span>
+    </a>`;
 
   function filaPrograma(p, ahora) {
     const directo = p.estado === 'Confirmado' && enEmision(p, ahora);
@@ -215,13 +223,6 @@
 
   /* ---------- Páginas ---------- */
 
-  const TITULARES_EXTRA = [
-    'El Observatorio de Observatorios abre una investigación sobre sí mismo.',
-    'La carta de ajuste supera en audiencia a tres tertulias de la competencia.',
-    'Un contribuyente es avistado en libertad. Los expertos piden prudencia.',
-    'Se agota el presupuesto anual para pancartas en el primer trimestre.',
-  ];
-
   const PREGUNTAS = [
     ['¿Cuántos observatorios caben en una subvención?', 'Todos. Y sobra para un chiringuito.'],
     ['¿Qué hace RTVE de 2:00 a 6:00?', 'Enseñar euskera, galego i català. Despierto o no.'],
@@ -234,25 +235,29 @@
     const emitiendo = CONFIRMADOS.filter((p) => enEmision(p, ahora));
     const siguen = proximos(ahora, 3);
     const [pregunta, respuesta] = azar(PREGUNTAS);
-    const titulares = [
-      ...CONFIRMADOS.map((p) => ({ titulo: p.titulo, texto: p.descripcion, href: enlacePrograma(p), num: p.pagina })),
-      ...TITULARES_EXTRA.map((t) => ({ titulo: 'ÚLTIMA HORA', texto: esc(t), href: '#/500', num: 500 })),
-    ].sort(() => Math.random() - 0.5).slice(0, 6);
+    const otras = NOTICIAS.filter((n) => n !== DESTACADA).sort(() => Math.random() - 0.5).slice(0, 3);
+    const ultimaHora = DESTACADA ? `
+      <h2 class="franja franja-rojo">ÚLTIMA HORA <span class="subpagina">${esc(DESTACADA.seccion.toUpperCase())}</span></h2>
+      <a class="titular-portada" href="${enlaceNoticia(DESTACADA)}">${esc(DESTACADA.titular)}</a>
+      <p class="entradilla">${DESTACADA.entradilla}</p>
+      <p class="sigue"><a href="${enlaceNoticia(DESTACADA)}">Siga leyendo en la página ${DESTACADA.pagina} ▶</a></p>` : '';
+    const masTitulares = otras.length
+      ? `<h2 class="franja franja-amarillo">MÁS TITULARES</h2>${otras.map(filaNoticia).join('')}` : '';
 
     const html = `
       ${banner('FACHATEXTO', 'rojo', { animado: true })}
       <p class="lema"><span class="amarillo">LA TELEVISIÓN PÚBLICA,</span> <span class="cian">PERO AL REVÉS</span></p>
+      ${ultimaHora}
 
       <h2 class="franja franja-azul">▶ AHORA EN ANTENA</h2>
       ${emitiendo.length ? emitiendo.map((p) => filaPrograma(p, ahora)).join('') : `<p class="relleno">${esc(azar(RELLENOS))}</p>`}
       <h2 class="franja franja-magenta">A CONTINUACIÓN</h2>
       ${siguen.map((p) => filaPrograma(p, ahora)).join('')}
-
-      <h2 class="franja franja-rojo">ÚLTIMA HORA <span class="subpagina" id="subpagina">1/${titulares.length}</span></h2>
-      <div class="titular" id="titular"></div>
+      ${masTitulares}
 
       <h2 class="franja franja-verde">ÍNDICE</h2>
       ${filaIndice('MANIFIESTO', 'manifiesto', 101)}
+      ${NOTICIAS.length ? filaIndice('NOTICIAS', 'noticias', 110) : ''}
       ${filaIndice('PARRILLA COMPLETA', 'parrilla', 200)}
       ${PROGRAMAS.length ? filaIndice('FICHAS DE PROGRAMAS', PROGRAMAS[0].slug, `${PROGRAMAS[0].pagina}-${PROGRAMAS[PROGRAMAS.length - 1].pagina}`) : ''}
       ${filaIndice('ROSTROS DE LA CADENA', 'rostros', 400)}
@@ -263,21 +268,55 @@
       <p>${esc(pregunta)}</p>
       <p>RESPUESTA: <span class="oculto">${esc(respuesta)}</span> <span class="pista-revelar">(pulse ?)</span></p>`;
 
-    const montar = () => {
-      let i = 0;
-      const mostrarTitular = () => {
-        const t = titulares[i % titulares.length];
-        const caja = document.getElementById('titular');
-        if (!caja) return;
-        caja.innerHTML = `<a href="${t.href}"><span class="amarillo">${esc(t.titulo.toUpperCase())}</span> <span class="num">${t.num}</span></a><p>${t.texto}</p>`;
-        document.getElementById('subpagina').textContent = `${(i % titulares.length) + 1}/${titulares.length}`;
-        i += 1;
-      };
-      mostrarTitular();
-      const intervalo = setInterval(mostrarTitular, 6000);
-      return () => clearInterval(intervalo);
+    return { titulo: 'Portada', html };
+  }
+
+  const fechaNoticia = (iso) => new Intl.DateTimeFormat('es-ES', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })
+    .format(new Date(`${iso}T12:00:00Z`)).toUpperCase();
+
+  function noticias() {
+    const secciones = [...new Set(NOTICIAS.map((n) => n.seccion))];
+    return {
+      titulo: 'Noticias',
+      html: `
+        ${banner('NOTICIAS', 'rojo')}
+        <p class="cian">Información veraz, contrastada y deliberadamente desequilibrada.</p>
+        ${secciones.map((s) => `
+          <h2 class="franja franja-azul">${esc(s.toUpperCase())}</h2>
+          ${NOTICIAS.filter((n) => n.seccion === s).map(filaNoticia).join('')}`).join('')
+          || '<p class="relleno">Sin noticias. El Gobierno lo celebra.</p>'}`,
     };
-    return { titulo: 'Portada', html, montar };
+  }
+
+  function noticia(n) {
+    const i = NOTICIAS.indexOf(n);
+    const anterior = NOTICIAS[(i - 1 + NOTICIAS.length) % NOTICIAS.length];
+    const siguiente = NOTICIAS[(i + 1) % NOTICIAS.length];
+    return {
+      titulo: n.titular,
+      html: `
+        <div class="franja franja-rojo cabecera-programa">
+          <span>NOTICIAS ${n.pagina} · ${esc(n.seccion.toUpperCase())}</span>
+          <span>${esc(fechaNoticia(n.fecha))}</span>
+        </div>
+        <h1 class="titular-noticia">${esc(n.titular)}</h1>
+        <p class="descripcion entradilla">${n.entradilla}</p>
+        <div class="cuerpo">${n.cuerpo}</div>
+        ${n.firma ? `<p class="firma">${esc(n.firma)}</p>` : ''}
+        <p class="tenue aviso-noticia">Noticia satírica. Cualquier parecido con la realidad es culpa de la realidad.</p>
+        <nav class="pasos" aria-label="Otras noticias">
+          <a href="${enlaceNoticia(anterior)}">◀ ${anterior.pagina}</a>
+          <a href="#/noticias">NOTICIAS 110</a>
+          <a href="${enlaceNoticia(siguiente)}">${siguiente.pagina} ▶</a>
+        </nav>
+        ${DATOS.repositorio ? `<p class="fuente">${enlaceGithub(`blob/${DATOS.rama}/${encodeURI(n.fuente)}`, '✎ Ver o mejorar esta noticia en GitHub')}</p>` : ''}`,
+      fastext: [
+        { texto: 'Noticias', destino: 'noticias' },
+        { texto: `◀ ${anterior.pagina}`, destino: `noticias/${anterior.slug}` },
+        { texto: `${siguiente.pagina} ▶`, destino: `noticias/${siguiente.slug}` },
+        { texto: 'Otra', destino: `noticias/${azar(NOTICIAS).slug}` },
+      ],
+    };
   }
 
   function manifiesto() {
@@ -447,6 +486,8 @@
         <h2 class="franja franja-magenta">MAPA DE PÁGINAS</h2>
         ${filaIndice('PORTADA', 'portada', 100)}
         ${filaIndice('MANIFIESTO', 'manifiesto', 101)}
+        ${filaIndice('NOTICIAS', 'noticias', 110)}
+        ${NOTICIAS.map(filaNoticia).join('')}
         ${filaIndice('PARRILLA', 'parrilla', 200)}
         ${PROGRAMAS.map((p) => filaIndice(p.titulo, p.slug, p.pagina)).join('')}
         ${filaIndice('ROSTROS', 'rostros', 400)}
@@ -487,12 +528,14 @@
   const FIJAS = [
     { num: 100, alias: 'portada', construir: portada },
     { num: 101, alias: 'manifiesto', construir: manifiesto },
+    { num: 110, alias: 'noticias', construir: noticias },
     { num: 199, alias: 'ayuda', construir: ayuda },
     { num: 200, alias: 'parrilla', construir: parrilla },
     { num: 400, alias: 'rostros', construir: rostros },
     { num: 500, alias: 'subvencionometro', construir: subvencionometro },
   ];
-  const SECUENCIA = [...FIJAS.map((f) => f.num), ...PROGRAMAS.map((p) => p.pagina)].sort((a, b) => a - b);
+  const SECUENCIA = [...FIJAS.map((f) => f.num), ...PROGRAMAS.map((p) => p.pagina), ...NOTICIAS.map((n) => n.pagina)]
+    .sort((a, b) => a - b);
 
   function resolver(clave) {
     let texto = '';
@@ -504,12 +547,15 @@
     if (fija) return { num: fija.num, fija, clave: fija.alias };
     const prog = PROGRAMAS.find((p) => p.pagina === numero || p.slug === texto);
     if (prog) return { num: prog.pagina, programa: prog, clave: prog.slug };
+    const nota = NOTICIAS.find((n) => n.pagina === numero || `noticias/${n.slug}` === texto);
+    if (nota) return { num: nota.pagina, noticia: nota, clave: `noticias/${nota.slug}` };
     return { num: numero, clave: texto };
   }
 
   function construir(destino) {
     if (destino.fija) return destino.fija.construir();
     if (destino.programa) return programa(destino.programa);
+    if (destino.noticia) return noticia(destino.noticia);
     return error(destino.num);
   }
 
@@ -569,7 +615,7 @@
     pintarFastext(vista.fastext || FASTEXT_POR_DEFECTO());
     actual = destino;
     limpiar = vista.montar ? vista.montar() : null;
-    if (!destino.fija && !destino.programa) pitido('error');
+    if (!destino.fija && !destino.programa && !destino.noticia) pitido('error');
     el.pagina.focus({ preventScroll: true });
   }
 
@@ -688,6 +734,7 @@
       ...proximos(ahora, 4).map((p) => `<a href="${enlacePrograma(p)}">${esc(p.horario.slice(0, 5))} ${esc(p.titulo)}</a>`),
       'PULSE 200 PARA LA PARRILLA COMPLETA',
       'PULSE 101 PARA EL MANIFIESTO',
+      ...(DESTACADA ? [`<a href="${enlaceNoticia(DESTACADA)}">ÚLTIMA HORA: ${esc(DESTACADA.titular)}</a>`] : []),
     ];
     const contenido = piezas.map((p) => `<span class="pieza">${p}</span>`).join('<span class="sep">★</span>');
     if (contenido === rotuloAnterior) return;

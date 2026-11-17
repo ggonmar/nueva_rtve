@@ -244,9 +244,12 @@ body {
 
 .relleno { color: var(--magenta); }
 
-.titular { min-height: 4.5em; }
-.titular a { text-decoration: none; }
-.titular p { margin-top: .1em; }
+.titular-portada { display: block; color: var(--amarillo) !important; text-decoration: none; font-size: 1.25em; line-height: 1.1; margin: .2em 0; }
+.titular-noticia { font-size: 1.5em; line-height: 1.1; font-weight: normal; color: var(--amarillo); margin: .3em 0 .35em; }
+.entradilla { color: var(--blanco); }
+.sigue { text-align: right; }
+.firma { text-align: right; color: var(--magenta); }
+.aviso-noticia { font-size: .85em; border-top: .1em dashed var(--azul-claro); padding-top: .3em; }
 
 .oculto {
   color: transparent;

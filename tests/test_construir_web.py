@@ -103,6 +103,35 @@ class ConstruirWebTest(unittest.TestCase):
             build(self.root, output)
         self.assertTrue((output / "importante.txt").exists())
 
+    def noticia(self, filename, date="2026-11-10", extra=""):
+        folder = self.root / "noticias"
+        folder.mkdir(exist_ok=True)
+        (folder / filename).write_text(
+            f"# Titular\n\n- **Titular:** Titular {filename}\n- **Sección:** Nacional\n"
+            f"- **Fecha:** {date}\n- **Entradilla:** Una *entradilla*\n{extra}",
+            encoding="utf-8",
+        )
+
+    def test_genera_noticias_ordenadas_por_fecha(self):
+        self.ficha("tarde.md", "Tarde")
+        self.noticia("vieja.md", "2026-01-01")
+        self.noticia("nueva.md", "2026-11-17", "\nTexto con [enlace](../programas/tarde.md).\n")
+
+        data = build(self.root, self.root / "_site")
+
+        self.assertEqual([(n["slug"], n["pagina"]) for n in data["noticias"]], [("nueva", 111), ("vieja", 112)])
+        self.assertEqual(data["noticias"][0]["entradilla"], "Una <em>entradilla</em>")
+        self.assertEqual(data["noticias"][0]["cuerpo"], '<p>Texto con <a href="#/tarde">enlace</a>.</p>')
+
+    def test_rechaza_noticias_incompletas_o_con_fecha_invalida(self):
+        self.ficha("tarde.md", "Tarde")
+        self.noticia("mala.md", "17/11/2026")
+        with self.assertRaisesRegex(ValueError, "fecha inválida"):
+            build(self.root, self.root / "_site")
+        (self.root / "noticias" / "mala.md").write_text("- **Titular:** Solo titular\n", encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "faltan campos: Sección, Fecha, Entradilla"):
+            build(self.root, self.root / "_site")
+
     def test_rechaza_fichas_con_la_misma_direccion(self):
         self.ficha("la cena.md", "La Cena")
         self.ficha("la-cena.md", "Otra Cena")

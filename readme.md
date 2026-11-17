@@ -144,6 +144,8 @@ La parrilla también se publica como una web con estética de teletexto en [ggon
 | --- | --- |
 | 100 | Portada: qué se emite ahora, qué viene después y titulares |
 | 101 | Manifiesto (el texto de este README entre los comentarios `manifiesto:inicio` y `manifiesto:fin`) |
+| 110 | Índice de noticias, agrupadas por sección |
+| 111-198 | Una página por noticia, de la más reciente a la más antigua |
 | 199 | Ayuda y mapa de páginas |
 | 200 | Parrilla completa |
 | 301 en adelante | Una página por programa: primero los confirmados por hora de inicio y después los candidatos |
@@ -152,4 +154,16 @@ La parrilla también se publica como una web con estética de teletexto en [ggon
 
 Cada programa tiene también una dirección fija basada en el nombre de su ficha, por ejemplo `#/el-cabestrillo` para `programas/el cabestrillo.md`. Para añadir la imagen representativa de un programa, guárdala como `imagenes/programas/<dirección>.jpg` (también valen `.png`, `.webp`, `.gif` y `.svg`); mientras no exista, la ficha muestra una carta de ajuste con la ruta esperada.
 
-La web se genera con `python scripts/construir_web.py` a partir de las fichas, este README y los archivos estáticos de `web/`, y se deja en `_site/` (no se versiona). Para verla en local, ejecuta después `python -m http.server --directory _site` y abre `http://localhost:8000`. Al subir cualquier cambio a `main`, el workflow «Publicar web» la construye y la despliega en GitHub Pages; en la configuración del repositorio, *Settings › Pages › Source* debe estar en «GitHub Actions».
+Las noticias están en la carpeta [noticias](noticias/), una por archivo Markdown. Cada vez que se carga la web, la portada muestra una al azar en «Última hora». Cada noticia empieza con estos campos, uno por línea, seguidos del cuerpo en Markdown:
+
+```markdown
+- **Titular:** Titular de la noticia
+- **Sección:** Nacional
+- **Fecha:** 2026-11-17
+- **Firma:** Redacción FACHATEXTO
+- **Entradilla:** Resumen de una o dos frases.
+```
+
+Todos los campos son obligatorios salvo `Firma`, y la fecha usa el formato `AAAA-MM-DD`. Las noticias se mantienen dentro del enfoque del proyecto: sátira que escueza al PSOE y al «psoe-state-of-mind», sin herir a conservadores ni liberales. Deben estar redactadas como una noticia de agencia, pero con un absurdo evidente que no deje dudas de que son ficción.
+
+La web se genera con `python scripts/construir_web.py` a partir de las fichas, las noticias, este README y los archivos estáticos de `web/`, y se deja en `_site/` (no se versiona). Para verla en local, ejecuta después `python -m http.server --directory _site` y abre `http://localhost:8000`. Al subir cualquier cambio a `main`, el workflow «Publicar web» la construye y la despliega en GitHub Pages; en la configuración del repositorio, *Settings › Pages › Source* debe estar en «GitHub Actions».

@@ -1,0 +1,131 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - banner [ref=e5]:
+          - generic [ref=e6]: P308
+          - generic [ref=e7]: FACHATEXTO
+          - generic [ref=e8]: "308"
+          - generic [ref=e9]: MAR 17 NOV
+          - generic [ref=e10]: 13:11:30
+        - main [active] [ref=e11]:
+          - generic [ref=e12]:
+            - generic [ref=e13]: PROGRAMA 308
+            - generic [ref=e14]: ● EN ANTENA
+          - heading "Cunetas o Pesetas" [level=1] [ref=e15]
+          - generic [ref=e16]:
+            - figure [ref=e17]:
+              - img "IMAGEN PENDIENTE" [ref=e18]:
+                - generic [ref=e27]:
+                  - strong [ref=e28]: IMAGEN PENDIENTE
+                  - generic [ref=e29]: "Se busca foto: imagenes/programas/cunetas-o-pesetas.jpg"
+            - generic [ref=e30]:
+              - term [ref=e31]: HORARIO
+              - definition [ref=e32]: 13:00-14:00
+              - term [ref=e33]: TIPO
+              - definition [ref=e34]: Concurso
+              - term [ref=e35]: PRESENTA
+              - definition [ref=e36]: Por concretar
+              - term [ref=e37]: ESTADO
+              - definition [ref=e38]: CONFIRMADO
+              - term [ref=e39]: PRESENTACIÓN Y COLABORADORES
+              - definition [ref=e40]: Pendientes de concretar
+          - paragraph [ref=e41]: Los concursantes eligen entre remover eternamente el pasado o llevarse un premio; el presentador descubre que hasta la memoria histórica tiene presupuesto.
+          - paragraph [ref=e42]: Contenido en desarrollo. El guionista sigue esperando la subvención.
+          - navigation "Otros programas" [ref=e43]:
+            - link "◀ 307" [ref=e44] [cursor=pointer]:
+              - /url: "#/quien-quiere-ser-funcionario"
+            - link "PARRILLA 200" [ref=e45] [cursor=pointer]:
+              - /url: "#/parrilla"
+            - link "309 ▶" [ref=e46] [cursor=pointer]:
+              - /url: "#/amar-en-tiempos-de-rojos"
+          - paragraph [ref=e47]:
+            - link "✎ Ver o mejorar esta ficha en GitHub" [ref=e48] [cursor=pointer]:
+              - /url: https://github.com/ggonmar/nueva_rtve/blob/main/programas/cunetas-o-pesetas.md
+        - generic [ref=e49]:
+          - generic [ref=e50]: EN ANTENA
+          - generic [ref=e52]:
+            - generic [ref=e53]:
+              - generic [ref=e54]:
+                - link "AHORA ▶ CUNETAS O PESETAS" [ref=e55] [cursor=pointer]:
+                  - /url: "#/cunetas-o-pesetas"
+                - text: 13:00-14:00
+              - text: ★
+              - link "16:00 Amar en tiempos de rojos" [ref=e57] [cursor=pointer]:
+                - /url: "#/amar-en-tiempos-de-rojos"
+              - text: ★
+              - link "16:00 Cine de PAU" [ref=e59] [cursor=pointer]:
+                - /url: "#/cine-de-pau"
+              - text: ★
+              - link "16:00 Una, Grande y Libre" [ref=e61] [cursor=pointer]:
+                - /url: "#/una-grande-y-libre"
+              - text: ★
+              - link "17:00 Españoles por España" [ref=e63] [cursor=pointer]:
+                - /url: "#/espanoles-por-espana"
+              - text: ★PULSE 200 PARA LA PARRILLA COMPLETA★PULSE 101 PARA EL MANIFIESTO★
+            - generic [aria-hidden] [ref=e64]:
+              - generic [ref=e65]:
+                - link [ref=e66] [cursor=pointer]:
+                  - /url: "#/cunetas-o-pesetas"
+                  - text: AHORA ▶ CUNETAS O PESETAS
+                - text: 13:00-14:00
+              - text: ★
+              - link [ref=e68] [cursor=pointer]:
+                - /url: "#/amar-en-tiempos-de-rojos"
+                - text: 16:00 Amar en tiempos de rojos
+              - text: ★
+              - link [ref=e70] [cursor=pointer]:
+                - /url: "#/cine-de-pau"
+                - text: 16:00 Cine de PAU
+              - text: ★
+              - link [ref=e72] [cursor=pointer]:
+                - /url: "#/una-grande-y-libre"
+                - text: 16:00 Una, Grande y Libre
+              - text: ★
+              - link [ref=e74] [cursor=pointer]:
+                - /url: "#/espanoles-por-espana"
+                - text: 17:00 Españoles por España
+              - text: ★PULSE 200 PARA LA PARRILLA COMPLETA★PULSE 101 PARA EL MANIFIESTO★
+        - navigation "Botones de colores" [ref=e75]:
+          - link "Parrilla" [ref=e76] [cursor=pointer]:
+            - /url: "#/parrilla"
+          - link "◀ 307" [ref=e77] [cursor=pointer]:
+            - /url: "#/quien-quiere-ser-funcionario"
+          - link "309 ▶" [ref=e78] [cursor=pointer]:
+            - /url: "#/amar-en-tiempos-de-rojos"
+          - link "Zapping" [ref=e79] [cursor=pointer]:
+            - /url: "#/matinal-pendiente"
+        - status
+      - generic [ref=e80]:
+        - generic [ref=e81]: FACHAVISIÓN
+        - generic [ref=e82]: 625 LÍNEAS · PAL · SIN SUBVENCIÓN
+        - generic "Encendido" [ref=e83]
+    - complementary "Mando a distancia" [ref=e84]:
+      - generic [ref=e85]: TELEMANDO
+      - generic [ref=e86]:
+        - button "1" [ref=e87] [cursor=pointer]
+        - button "2" [ref=e88] [cursor=pointer]
+        - button "3" [ref=e89] [cursor=pointer]
+        - button "4" [ref=e90] [cursor=pointer]
+        - button "5" [ref=e91] [cursor=pointer]
+        - button "6" [ref=e92] [cursor=pointer]
+        - button "7" [ref=e93] [cursor=pointer]
+        - button "8" [ref=e94] [cursor=pointer]
+        - button "9" [ref=e95] [cursor=pointer]
+        - button "Página anterior" [ref=e96] [cursor=pointer]: P−
+        - button "0" [ref=e97] [cursor=pointer]
+        - button "Página siguiente" [ref=e98] [cursor=pointer]: P+
+      - generic [ref=e99]:
+        - button "Botón rojo" [ref=e100] [cursor=pointer]
+        - button "Botón verde" [ref=e101] [cursor=pointer]
+        - button "Botón amarillo" [ref=e102] [cursor=pointer]
+        - button "Botón azul" [ref=e103] [cursor=pointer]
+      - generic [ref=e104]:
+        - button "IDX" [ref=e105] [cursor=pointer]
+        - button "?" [ref=e106] [cursor=pointer]
+        - button "Activar sonido" [ref=e107] [cursor=pointer]: 🔇
+      - generic [ref=e108]: MOD. 1977-R
+  - paragraph [ref=e109]:
+    - text: Sátira política. Parrilla ficticia sin relación con RTVE ni con nadie que salga en ella.
+    - link "Cómo se usa" [ref=e110] [cursor=pointer]:
+      - /url: "#/ayuda"

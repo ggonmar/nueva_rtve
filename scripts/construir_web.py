@@ -19,6 +19,10 @@ from actualizar_parrilla import FIELD_PATTERN, read_program  # noqa: E402
 ROOT = Path(__file__).resolve().parent.parent
 FIRST_PROGRAM_PAGE = 301
 LAST_PROGRAM_PAGE = 399
+FIRST_NEWS_PAGE = 111
+LAST_NEWS_PAGE = 198
+NEWS_FIELDS = ("Titular", "Sección", "Fecha", "Entradilla")
+DATE_PATTERN = re.compile(r"\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])")
 IMAGE_DIR = Path("imagenes") / "programas"
 IMAGE_EXTENSIONS = (".webp", ".png", ".jpg", ".jpeg", ".gif", ".svg")
 MANIFESTO_MARKERS = ("<!-- manifiesto:inicio -->", "<!-- manifiesto:fin -->")
@@ -175,6 +179,54 @@ def find_image(root, slug):
     return None
 
 
+def read_news(root, slugs, repository, branch):
+    news = []
+    for path in sorted((root / "noticias").rglob("*.md")):
+        source = path.relative_to(root).as_posix()
+        fields, body, in_header = {}, [], True
+        for line in path.read_text(encoding="utf-8").splitlines():
+            field = EXTRA_FIELD_PATTERN.match(line) if in_header else None
+            if field:
+                name, value = field.groups()
+                if name in fields:
+                    raise ValueError(f"{path}: campo duplicado: {name}")
+                fields[name] = value
+                continue
+            if in_header and (not line.strip() or re.match(r"#\s", line.strip())):
+                continue
+            in_header = False
+            body.append(line)
+        missing = [name for name in NEWS_FIELDS if not fields.get(name)]
+        if missing:
+            raise ValueError(f"{path}: faltan campos: {', '.join(missing)}")
+        if not DATE_PATTERN.fullmatch(fields["Fecha"]):
+            raise ValueError(f"{path}: fecha inválida: {fields['Fecha']}; usa AAAA-MM-DD")
+        link = make_linker(source, slugs, repository, branch)
+        news.append({
+            "slug": slugify(path.stem),
+            "titular": fields["Titular"],
+            "seccion": fields["Sección"],
+            "fecha": fields["Fecha"],
+            "firma": fields.get("Firma"),
+            "entradilla": render_inline(fields["Entradilla"], link),
+            "cuerpo": markdown_to_html("\n".join(body), link),
+            "fuente": source,
+        })
+
+    seen = set()
+    for item in news:
+        if item["slug"] in seen:
+            raise ValueError(f"Dos noticias generan la misma dirección web «{item['slug']}»")
+        seen.add(item["slug"])
+    news.sort(key=lambda item: item["slug"])
+    news.sort(key=lambda item: item["fecha"], reverse=True)
+    if FIRST_NEWS_PAGE + len(news) - 1 > LAST_NEWS_PAGE:
+        raise ValueError(f"Hay demasiadas noticias para las páginas {FIRST_NEWS_PAGE}-{LAST_NEWS_PAGE}")
+    for page, item in enumerate(news, FIRST_NEWS_PAGE):
+        item["pagina"] = page
+    return news
+
+
 def collect(root, repository=None, branch="main"):
     files = sorted((root / "programas").rglob("*.md"))
     programs, slugs, titles = [], {}, {}
@@ -232,6 +284,7 @@ def collect(root, repository=None, branch="main"):
         "rama": branch,
         "manifiesto": markdown_to_html(between_markers(readme, *MANIFESTO_MARKERS), readme_link),
         "programas": data,
+        "noticias": read_news(root, slugs, repository, branch),
         "personas": people,
     }
 
