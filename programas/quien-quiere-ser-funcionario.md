@@ -25,7 +25,7 @@ El concurso no se ríe de quienes estudian años para sacar una plaza, sino de u
 - **La vaquilla del silencio administrativo:** el aspirante debe conseguir que le sellen un documento mientras una vaquilla le persigue por la plaza. Si pasan tres meses sin que se lo sellen, se entiende desestimado.
 - **El puente de la ventanilla:** una pasarela resbaladiza lleva a dieciséis ventanillas, de las que solo una está abierta. No se sabe cuál hasta que se llega.
 - **La rampa del formulario:** el concursante sube una rampa enjabonada para entregar un impreso en la parte superior. A mitad de subida, el impreso cambia de versión.
-- **El juego de la cita previa:** se pide cita previa por teléfono en directo. Si se consigue antes de que acabe el programa, el concursante gana la prueba y el récord mundial.
+- **El juego de la cita previa:** el concursante se sienta tras una ventanilla y, durante tres minutos, desfila ante él una cola de ciudadanos con trámites urgentes. Su objetivo es no atender a ninguno, pero tiene prohibida la frase comodín del funcionariado español: «¿Tiene cita previa?». Puede recurrir a cualquier otra técnica homologada: «Eso es en la otra ventanilla», «Le falta la compulsa», «El sistema se ha caído», «Vuelva usted mañana», «Eso lo lleva mi compañera, que está desayunando» o simplemente cerrar la ventanilla dos minutos antes de la hora. Si se le escapa la frase prohibida, suena una sirena y el concursante tiene que tramitar en directo el expediente del ciudadano, lo que equivale a quedar eliminado. Gana quien despache a más ciudadanos sin haber resuelto nada.
 
 ## Puntuación y premio
 
