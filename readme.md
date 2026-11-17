@@ -68,6 +68,7 @@ Los horarios son una propuesta de franjas de emisión. Los candidatos son altern
 | 08:00-10:00 | [Matinal (título pendiente)](programas/matinal-pendiente.md) | Magacín matinal | Por concretar | Propuesta pendiente de desarrollar; se señala la necesidad de incorporar un matinal a la parrilla. |
 | 14:00-16:00 | [Documental sobre el imperio español](programas/documental-imperio-espanol.md) | Documental histórico | Por concretar | Repaso al imperio español y a las hazañas de grandes personalidades españolas. |
 | 21:00-22:00 | [Programa musical (título pendiente)](programas/programa-musical-pendiente.md) | Programa musical | Por concretar | Propuesta pendiente de desarrollar; se señala la necesidad de incorporar un programa musical. |
+| 22:00-23:00 | [Ongi Etorri: bienvenidos a casa](programas/ongi-etorri.md) | Gala de variedades | Por concretar | La gran gala semanal de la convivencia: recibimientos con txistu y confeti, socios de Gobierno muy queridos y un Ejecutivo que lo concede todo a cambio de seis votos. Al final, un minuto en negro para los únicos que nunca son bienvenidos en esta televisión: los asesinados por ETA. |
 <!-- programas-candidatos:fin -->
 
 </details>
