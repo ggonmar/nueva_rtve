@@ -19,7 +19,7 @@ Cada capítulo toma un episodio de los últimos cincuenta años y compara lo que
 
 ## Capítulos
 
-### Capítulo 1 (apertura de temporada): 11M, los tres días que cambiaron unas elecciones
+### Capítulo 1 (apertura de temporada): 11M, el principio del fin
 
 El programa se estrena con el documental de Tierra Ignota sobre el 11 de marzo de 2004: el atentado más grave de la historia de España, los días de confusión que siguieron, las concentraciones ante las sedes del partido del Gobierno en plena jornada de reflexión y la frase «Los españoles se merecen un Gobierno que no les mienta» convertida en consigna. Un capítulo sobre cómo el relato de tres días puede decidir el de una década.
 
