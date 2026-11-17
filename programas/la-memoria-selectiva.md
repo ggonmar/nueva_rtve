@@ -25,7 +25,7 @@ El programa se estrena con el documental de Tierra Ignota sobre el 11 de marzo d
 
 ### Capítulo 2: Los GAL que nadie recuerda
 
-Una organización terrorista financiada con fondos reservados, un ministro del Interior y un secretario de Estado condenados por secuestro, y un presidente del Gobierno que nunca supo nada. El capítulo se pregunta por qué el terrorismo de Estado de los años ochenta no aparece en ninguna ley de memoria, ni tiene un día oficial, ni una sola exhumación televisada.
+Estaba bien tirado, pero no bien hecho. Habia que poner fin al terror, y lo único que quedaba era bajar al barro. Sin embargo, el relato que ha permanecido es una organización terrorista financiada con fondos reservados, un ministro del Interior y un secretario de Estado condenados por secuestro, y un presidente del Gobierno que nunca supo nada. El capítulo muestra el ambiente social que reinaba para que ésta fuera una vía impopular, pero necesaria, y cómo, bien ejecutada, hubiera ahorrado años si no décadas de sufrimiento.
 
 ### Capítulo 3: Filesa, o el primer chiringuito
 

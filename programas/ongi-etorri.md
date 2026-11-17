@@ -2,7 +2,7 @@
 
 - **Título:** Ongi Etorri: bienvenidos a casa
 - **Tipo:** Gala de variedades
-- **Estado:** Candidato
+- **Estado:** Confirmado
 - **Horario:** 22:00-23:00
 - **Descripción:** La gran gala semanal de la convivencia: recibimientos con txistu y confeti, socios de Gobierno muy queridos y un Ejecutivo que lo concede todo a cambio de seis votos. Al final, un minuto en negro para los únicos que nunca son bienvenidos en esta televisión: los asesinados por ETA.
 
