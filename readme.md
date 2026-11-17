@@ -54,6 +54,7 @@ Los horarios son una propuesta de franjas de emisión. Los candidatos son altern
 | 21:45-22:45 | [La Reconquista](programas/la-reconquista.md) | Late night | Miguel lago | Miguel Lago recupera el late night de la televisión pública: guitarra, invitados sin pin y las preguntas de siempre, pero al revés. Aquí no se resiste a nada; se reconquista todo. |
 | 22:00-23:30 | [Aquellos Maravillosos Años](programas/aquellos-maravillosos-anos.md) | Serie | Por concretar | Serie que recuerda con nostalgia la Españita feliz de los 2000: hipotecas a 40 años que se firmaban sonriendo, el euro recién estrenado, pleno empleo en la obra y un país que ganaba Mundiales sin pedir perdón por ello. |
 | 22:00-23:00 | [Cuarto Reich](programas/cuarto-reich.md) | Misterio | Iker Jiménez | Iker Jiménez investiga el fenómeno paranormal favorito de la tertulia: encontrar un fascista detrás de cada crítica, incluso cuando solo hay un autónomo con una factura. |
+| 22:00-23:00 | [Ongi Etorri: bienvenidos a casa](programas/ongi-etorri.md) | Gala de variedades | Por concretar | La gran gala semanal de la convivencia: recibimientos con txistu y confeti, socios de Gobierno muy queridos y un Ejecutivo que lo concede todo a cambio de seis votos. Al final, un minuto en negro para los únicos que nunca son bienvenidos en esta televisión: los asesinados por ETA. |
 | 23:00-02:00 | [La memoria selectiva](programas/la-memoria-selectiva.md) | Documental | Por concretar | La historia de la democracia española contada por quienes la han protagonizado y no por quienes la han editado: casi medio siglo de relato administrado por el PSOE y la izquierda, en el que unas memorias se exhiben, otras se archivan y algunas se reescriben por ley. |
 | 23:00-01:00 | [No, Patxarán](programas/no-patxaran.md) | Late night | Los Meconios | Los Meconios y Miguel Lago despiden el día con humor, música y más ganas de pinchar globos progresistas que de cobrar la próxima subvención. Se propone un late night sin líneas rojas, con actualidad copa en mano y sátira de subvenciones y observatorios. |
 <!-- programas-confirmados:fin -->
@@ -67,9 +68,7 @@ Los horarios son una propuesta de franjas de emisión. Los candidatos son altern
 | Horario | Nombre | Tipo | Presentador | Descripción |
 | --- | --- | --- | --- | --- |
 | 00:00-02:00 | [Pedro Sánchez, Hijo de Fruta](programas/pedro-sanchez-hijo-de-fruta.md) | Afternight show | Por concretar | Reformulación de «El Perro Andaluz» que da otra vuelta al relabeling de «perrosanxe». |
-| 08:00-10:00 | [Matinal (título pendiente)](programas/matinal-pendiente.md) | Magacín matinal | Por concretar | Propuesta pendiente de desarrollar; se señala la necesidad de incorporar un matinal a la parrilla. |
 | 14:00-16:00 | [Documental sobre el imperio español](programas/documental-imperio-espanol.md) | Documental histórico | Por concretar | Repaso al imperio español y a las hazañas de grandes personalidades españolas. |
-| 22:00-23:00 | [Ongi Etorri: bienvenidos a casa](programas/ongi-etorri.md) | Gala de variedades | Por concretar | La gran gala semanal de la convivencia: recibimientos con txistu y confeti, socios de Gobierno muy queridos y un Ejecutivo que lo concede todo a cambio de seis votos. Al final, un minuto en negro para los únicos que nunca son bienvenidos en esta televisión: los asesinados por ETA. |
 <!-- programas-candidatos:fin -->
 
 </details>
