@@ -7,9 +7,7 @@
   <meta name="description" content="Teletexto satírico con la parrilla ficticia de la nueva televisión pública: programas, manifiesto y rostros de la cadena.">
   <meta name="theme-color" content="#000000">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4' shape-rendering='crispEdges'%3E%3Crect width='4' height='4'/%3E%3Crect x='0' y='0' width='1' height='4' fill='%23ff0'/%3E%3Crect x='1' y='0' width='2' height='1' fill='%23ff0'/%3E%3Crect x='1' y='2' width='1' height='1' fill='%23f00'/%3E%3C/svg%3E">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap">
+  <link rel="preload" href="fuentes/vt323.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
@@ -31,10 +29,22 @@
         <nav class="fastext" id="fastext" aria-label="Botones de colores"></nav>
         <div class="ruido" id="ruido" aria-hidden="true"></div>
         <div class="aviso" id="aviso" role="status"></div>
+        <div class="compartir" id="compartir" role="dialog" aria-modal="true" aria-labelledby="compartir-titulo" hidden>
+          <div class="compartir-caja">
+            <h2 class="franja franja-azul" id="compartir-titulo">COMPARTIR PÁGINA <span id="compartir-num"></span></h2>
+            <button type="button" data-compartir="enlace"><span class="tecla">1</span> Copiar enlace</button>
+            <button type="button" data-compartir="nativo" id="compartir-nativo"><span class="tecla">2</span> Compartir en…</button>
+            <button type="button" data-compartir="copiar-imagen"><span class="tecla">3</span> Copiar pantallazo</button>
+            <button type="button" data-compartir="descargar"><span class="tecla">4</span> Descargar pantallazo</button>
+            <button type="button" data-compartir="cerrar"><span class="tecla">0</span> Cerrar</button>
+            <p class="compartir-estado" id="compartir-estado" aria-live="polite"></p>
+          </div>
+        </div>
       </div>
       <div class="marco-inferior">
         <span class="marca">FACHAVISIÓN</span>
         <span class="modelo">625 LÍNEAS · PAL · SIN SUBVENCIÓN</span>
+        <button type="button" class="boton-compartir" data-accion="compartir" title="Compartir (C)">⇪ COMPARTIR</button>
         <span class="piloto" title="Encendido"></span>
       </div>
     </div>
@@ -65,6 +75,7 @@
         <button type="button" data-accion="indice" title="Índice (I)">IDX</button>
         <button type="button" data-accion="revelar" title="Revelar (?)">?</button>
         <button type="button" data-accion="sonido" id="boton-sonido" title="Sonido (M)" aria-label="Activar sonido">🔇</button>
+        <button type="button" data-accion="compartir" title="Compartir (C)" aria-label="Compartir">⇪</button>
       </div>
       <div class="mando-pie">MOD. 1977-R</div>
     </aside>

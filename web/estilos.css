@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'VT323';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fuentes/vt323.woff2') format('woff2');
+}
+
 :root {
   --negro: #000;
   --blanco: #fff;
@@ -354,6 +362,9 @@ body.revelar .pista-revelar { display: none; }
 .datos dt { color: var(--cian); overflow-wrap: normal; hyphens: auto; }
 .datos dd { margin: 0; color: var(--blanco); }
 .teclas dt { color: var(--amarillo); }
+.guia dt a { color: var(--cian); white-space: nowrap; }
+.todas-noticias { margin-top: .3em; }
+.pagina a.todas-noticias .titulo { color: var(--rojo); }
 
 .descripcion { color: var(--blanco); border-left: .3em solid var(--magenta); padding-left: .4em; }
 
@@ -508,17 +519,103 @@ body.revelar .pista-revelar { display: none; }
 .mando button:focus-visible { outline: 2px solid var(--amarillo); outline-offset: 2px; }
 
 .mando-teclas, .mando-extra { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.mando-extra { grid-template-columns: repeat(4, 1fr); gap: 5px; }
 .mando-colores { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
 .mando-colores button { min-height: 22px; border-radius: 6px; }
 .mando .b-rojo { background: #d00; }
 .mando .b-verde { background: #0a0; }
 .mando .b-amarillo { background: #dd0; }
 .mando .b-azul { background: #04d; }
-.mando-extra button { font-size: 18px; }
+.mando-extra button { font-size: 16px; }
 
 .aviso-legal { color: #e8cfa6; font-size: 17px; text-align: center; margin: 16px 0 0; opacity: .8; }
 .aviso-legal a { color: var(--amarillo); }
 .sin-js { color: var(--amarillo); font-size: 22px; text-align: center; }
+
+/* ---------- Compartir ---------- */
+
+.boton-compartir {
+  font-family: var(--fuente);
+  font-size: 18px;
+  letter-spacing: .08em;
+  color: #2a180a;
+  background: linear-gradient(180deg, #f4dcb0, #c9a46c);
+  border: 1px solid #1d1006;
+  border-radius: 6px;
+  box-shadow: 0 2px 0 #1d1006, inset 0 1px 0 rgba(255, 255, 255, .5);
+  padding: 2px 10px;
+  cursor: pointer;
+}
+
+.boton-compartir:hover, .boton-compartir:focus-visible { background: var(--amarillo); outline: none; }
+.boton-compartir:active { transform: translateY(2px); box-shadow: 0 0 0 #1d1006; }
+
+.compartir {
+  position: absolute;
+  inset: 0;
+  z-index: 8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, .6);
+  font-size: 3.7cqi;
+}
+
+.compartir[hidden] { display: none; }
+
+.compartir-caja {
+  width: min(85%, 26em);
+  background: var(--negro);
+  border: .15em solid var(--cian);
+  padding: .3em .6em .5em;
+  display: flex;
+  flex-direction: column;
+  gap: .1em;
+}
+
+.compartir-caja .franja { margin-top: 0; }
+
+.compartir-caja button {
+  font: inherit;
+  text-align: left;
+  color: var(--blanco);
+  background: none;
+  border: 0;
+  padding: .05em .3em;
+  cursor: pointer;
+  text-shadow: inherit;
+}
+
+.compartir-caja button[hidden] { display: none; }
+.compartir-caja button:hover, .compartir-caja button:focus-visible { background: var(--azul); color: var(--amarillo); outline: none; }
+.compartir-caja .tecla { color: var(--cian); margin-right: .5ch; }
+.compartir-estado { min-height: 1.1em; margin: .3em 0 0; color: var(--verde); }
+.compartir-estado.error { color: var(--rojo); }
+
+/* Copia de la pantalla que se renderiza fuera de vista para el pantallazo */
+.captura { position: fixed; left: -10000px; top: 0; width: 820px; pointer-events: none; }
+.captura .pantalla {
+  aspect-ratio: auto;
+  height: auto !important;
+  max-height: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+.captura .cabecera, .captura .pagina { font-size: 3.7cqi !important; }
+.captura .pagina { overflow: visible; flex: none; padding-bottom: 1em; }
+.captura .cab-fecha { display: inline !important; }
+.captura .fuente, .captura .pasos { display: none; }
+.captura *, .captura *::before, .captura *::after { animation: none !important; transition: none !important; }
+
+.captura-pie {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  background: var(--azul);
+  color: var(--amarillo);
+  padding: .1em .7em .2em;
+  font-size: 3cqi;
+}
 
 /* ---------- Modo NO-DO ---------- */
 
@@ -552,7 +649,7 @@ body.no-do .pagina { animation: temblor .25s steps(2) infinite; }
   .salon { flex-direction: column; gap: 14px; }
   .tv { width: 100%; padding: 12px 12px 8px; border-radius: 22px; }
   .pantalla { aspect-ratio: auto; height: 72vh; height: 72svh; max-height: none; border-radius: 14px / 18px; }
-  .cabecera, .pagina, .rotulo, .fastext { font-size: max(16px, 5cqi); }
+  .cabecera, .pagina, .rotulo, .fastext, .compartir { font-size: max(16px, 5cqi); }
   .cab-fecha { display: none; }
   .marco-inferior { margin-top: 8px; font-size: 14px; }
   .marca { font-size: 18px; }

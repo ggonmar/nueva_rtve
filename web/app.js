@@ -243,17 +243,20 @@
       <p class="sigue"><a href="${enlaceNoticia(DESTACADA)}">Siga leyendo en la página ${DESTACADA.pagina} ▶</a></p>` : '';
     const masTitulares = otras.length
       ? `<h2 class="franja franja-amarillo">MÁS TITULARES</h2>${otras.map(filaNoticia).join('')}` : '';
+    const todasLasNoticias = NOTICIAS.length
+      ? `<a class="fila indice todas-noticias" href="#/noticias"><span class="titulo">▶ TODAS LAS NOTICIAS</span><span class="puntos" aria-hidden="true"></span><span class="num">110</span></a>` : '';
 
     const html = `
       ${banner('FACHATEXTO', 'rojo', { animado: true })}
       <p class="lema"><span class="amarillo">LA TELEVISIÓN PÚBLICA,</span> <span class="cian">PERO AL REVÉS</span></p>
-      ${ultimaHora}
 
       <h2 class="franja franja-azul">▶ AHORA EN ANTENA</h2>
       ${emitiendo.length ? emitiendo.map((p) => filaPrograma(p, ahora)).join('') : `<p class="relleno">${esc(azar(RELLENOS))}</p>`}
       <h2 class="franja franja-magenta">A CONTINUACIÓN</h2>
       ${siguen.map((p) => filaPrograma(p, ahora)).join('')}
+      ${ultimaHora}
       ${masTitulares}
+      ${todasLasNoticias}
 
       <h2 class="franja franja-verde">ÍNDICE</h2>
       ${filaIndice('MANIFIESTO', 'manifiesto', 101)}
@@ -262,13 +265,22 @@
       ${PROGRAMAS.length ? filaIndice('FICHAS DE PROGRAMAS', PROGRAMAS[0].slug, `${PROGRAMAS[0].pagina}-${PROGRAMAS[PROGRAMAS.length - 1].pagina}`) : ''}
       ${filaIndice('ROSTROS DE LA CADENA', 'rostros', 400)}
       ${filaIndice('SUBVENCIONÓMETRO', 'subvencionometro', 500)}
-      ${filaIndice('AYUDA Y TECLAS', 'ayuda', 199)}
+      ${filaIndice('AYUDA Y GUÍA DE PÁGINAS', 'ayuda', 199)}
 
       <h2 class="franja franja-cian">PREGUNTA DEL DÍA</h2>
       <p>${esc(pregunta)}</p>
       <p>RESPUESTA: <span class="oculto">${esc(respuesta)}</span> <span class="pista-revelar">(pulse ?)</span></p>`;
 
-    return { titulo: 'Portada', html };
+    return {
+      titulo: 'Portada',
+      html,
+      fastext: [
+        { texto: 'Noticias', destino: NOTICIAS.length ? 'noticias' : 'manifiesto' },
+        { texto: 'Parrilla', destino: 'parrilla' },
+        { texto: 'Manifiesto', destino: 'manifiesto' },
+        { texto: 'Zapping', destino: PROGRAMAS.length ? azar(PROGRAMAS).slug : 'portada' },
+      ],
+    };
   }
 
   const fechaNoticia = (iso) => new Intl.DateTimeFormat('es-ES', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })
@@ -469,10 +481,28 @@
   }
 
   function ayuda() {
+    const rangoPaginas = (lista) => (lista.length > 1 ? `${lista[0].pagina}-${lista[lista.length - 1].pagina}` : String(lista.length ? lista[0].pagina : ''));
+    const guia = [
+      ['100', 'portada', 'Portada: qué se emite ahora, qué viene después y la noticia de última hora.'],
+      ['101', 'manifiesto', 'Manifiesto: por qué existe esta parrilla.'],
+      ...(NOTICIAS.length ? [
+        ['110', 'noticias', 'Noticias: índice por secciones.'],
+        [rangoPaginas(NOTICIAS), `noticias/${NOTICIAS[0].slug}`, 'Una página por noticia, de la más reciente a la más antigua.'],
+      ] : []),
+      ['199', 'ayuda', 'Esta ayuda.'],
+      ['200', 'parrilla', 'Parrilla completa, con la barra de 24 horas y el programa en antena marcado.'],
+      ...(PROGRAMAS.length ? [[rangoPaginas(PROGRAMAS), PROGRAMAS[0].slug, 'Una página por programa: primero los confirmados, luego los candidatos.']] : []),
+      ['400', 'rostros', 'Rostros de la cadena: presentadores en plantilla y en la recámara.'],
+      ['500', 'subvencionometro', 'Subvencionómetro: dinero público repartido en directo.'],
+    ];
     return {
       titulo: 'Ayuda',
       html: `
         ${banner('AYUDA', 'amarillo')}
+        <h2 class="franja franja-verde">GUÍA DE PÁGINAS</h2>
+        <dl class="datos guia">
+          ${guia.map(([num, destino, texto]) => `<dt><a href="#/${esc(destino)}">${esc(num)}</a></dt><dd>${esc(texto)}</dd>`).join('')}
+        </dl>
         <h2 class="franja franja-azul">CÓMO SE MANEJA ESTO</h2>
         <dl class="datos teclas">
           <dt>0-9</dt><dd>Teclee un número de página de tres cifras.</dd>
@@ -481,9 +511,10 @@
           <dt>?</dt><dd>Revelar respuestas ocultas.</dd>
           <dt>I</dt><dd>Volver al índice (100).</dd>
           <dt>M</dt><dd>Sonido de época (bips).</dd>
+          <dt>C</dt><dd>Compartir la página: enlace o pantallazo.</dd>
         </dl>
         <p>También puede usar el mando a distancia o tocar directamente los enlaces de la pantalla.</p>
-        <h2 class="franja franja-magenta">MAPA DE PÁGINAS</h2>
+        <h2 class="franja franja-magenta">MAPA COMPLETO</h2>
         ${filaIndice('PORTADA', 'portada', 100)}
         ${filaIndice('MANIFIESTO', 'manifiesto', 101)}
         ${filaIndice('NOTICIAS', 'noticias', 110)}
@@ -604,6 +635,7 @@
     if (turno !== navegacion) return;
 
     if (limpiar) { limpiar(); limpiar = null; }
+    menuCompartir.hidden = true;
     document.body.classList.remove('revelar');
     ruido();
     const vista = construir(destino);
@@ -660,6 +692,137 @@
     }, 4000);
   }
 
+  /* ---------- Compartir ---------- */
+
+  const LIB_CAPTURA = 'https://cdn.jsdelivr.net/npm/modern-screenshot@4.7.0/+esm';
+  const menuCompartir = $('#compartir');
+  const estadoCompartir = $('#compartir-estado');
+  let libCaptura = null;
+  let focoPrevio = null;
+
+  if (!navigator.share) $('#compartir-nativo').hidden = true;
+
+  const urlActual = () => `${location.origin}${location.pathname}#/${actual ? actual.clave : 'portada'}`;
+  const tituloActual = () => document.title;
+  const nombreArchivo = () => `fachatexto-${(actual && actual.num) || 'xxx'}-${String((actual && actual.clave) || 'portada').replace(/[^a-z0-9]+/g, '-')}.png`;
+
+  function informar(texto, error = false) {
+    estadoCompartir.textContent = texto;
+    estadoCompartir.classList.toggle('error', error);
+  }
+
+  function abrirCompartir() {
+    if (!menuCompartir.hidden) { cerrarCompartir(); return; }
+    focoPrevio = document.activeElement;
+    $('#compartir-num').textContent = (actual && actual.num) || '???';
+    informar('');
+    menuCompartir.hidden = false;
+    pitido('tecla');
+    menuCompartir.querySelector('button:not([hidden])').focus();
+  }
+
+  function cerrarCompartir() {
+    menuCompartir.hidden = true;
+    if (focoPrevio && focoPrevio.focus) focoPrevio.focus({ preventScroll: true });
+  }
+
+  async function copiarTexto(texto) {
+    try {
+      await navigator.clipboard.writeText(texto);
+    } catch (e) {
+      const area = document.createElement('textarea');
+      area.value = texto;
+      area.setAttribute('readonly', '');
+      area.style.cssText = 'position:fixed;left:-9999px';
+      document.body.appendChild(area);
+      area.select();
+      const ok = document.execCommand('copy');
+      area.remove();
+      if (!ok) throw e;
+    }
+  }
+
+  async function pantallazo() {
+    libCaptura = libCaptura || import(LIB_CAPTURA);
+    const { domToBlob } = await libCaptura;
+    const limpiarIds = (nodo) => { nodo.removeAttribute('id'); nodo.querySelectorAll('[id]').forEach((n) => n.removeAttribute('id')); return nodo; };
+    const caja = document.createElement('div');
+    caja.className = 'captura';
+    caja.setAttribute('aria-hidden', 'true');
+    const pantalla = document.createElement('div');
+    pantalla.className = 'pantalla';
+    const pagina = limpiarIds(el.pagina.cloneNode(true));
+    pagina.removeAttribute('tabindex');
+    const pie = document.createElement('div');
+    pie.className = 'captura-pie';
+    pie.innerHTML = `<span>FACHATEXTO · PÁGINA ${esc((actual && actual.num) || '???')}</span><span>${esc(urlActual().replace(/^https?:\/\//, ''))}</span>`;
+    pantalla.append(limpiarIds($('#cabecera').cloneNode(true)), pagina, pie);
+    caja.appendChild(pantalla);
+    document.body.appendChild(caja);
+    try {
+      await document.fonts.ready;
+      return await domToBlob(pantalla, { scale: 2, type: 'image/png', backgroundColor: '#000' });
+    } finally {
+      caja.remove();
+    }
+  }
+
+  function descargar(blob) {
+    const enlace = document.createElement('a');
+    enlace.href = URL.createObjectURL(blob);
+    enlace.download = nombreArchivo();
+    document.body.appendChild(enlace);
+    enlace.click();
+    enlace.remove();
+    setTimeout(() => URL.revokeObjectURL(enlace.href), 10000);
+  }
+
+  let compartiendo = false;
+  async function compartir(opcion) {
+    if (opcion === 'cerrar') { cerrarCompartir(); return; }
+    if (compartiendo) return;
+    compartiendo = true;
+    pitido('tecla');
+    try {
+      if (opcion === 'enlace') {
+        await copiarTexto(urlActual());
+        informar('ENLACE COPIADO. PÉGUELO DONDE MÁS ESCUEZA.');
+      } else if (opcion === 'nativo') {
+        await navigator.share({ title: tituloActual(), url: urlActual() });
+        informar('COMPARTIDO. LA FACHOSFERA LE SALUDA.');
+      } else if (opcion === 'copiar-imagen') {
+        informar('REVELANDO EL PANTALLAZO...');
+        const imagen = pantallazo();
+        try {
+          if (!navigator.clipboard || !window.ClipboardItem) throw new Error('Portapapeles sin imágenes');
+          await navigator.clipboard.write([new window.ClipboardItem({ 'image/png': imagen })]);
+          informar('PANTALLAZO COPIADO AL PORTAPAPELES.');
+        } catch (e) {
+          descargar(await imagen);
+          informar('SU NAVEGADOR NO DEJA COPIAR IMÁGENES: SE HA DESCARGADO.');
+        }
+      } else if (opcion === 'descargar') {
+        informar('REVELANDO EL PANTALLAZO...');
+        descargar(await pantallazo());
+        informar('PANTALLAZO DESCARGADO.');
+      }
+      if (opcion !== 'nativo') pitido('premio');
+    } catch (e) {
+      if (e && e.name === 'AbortError') informar('');
+      else { informar('ERROR: LA CENSURA HA INTERVENIDO. INTÉNTELO DE NUEVO.', true); pitido('error'); }
+    } finally {
+      compartiendo = false;
+    }
+  }
+
+  menuCompartir.addEventListener('click', (evento) => {
+    if (evento.target === menuCompartir) { cerrarCompartir(); return; }
+    const boton = evento.target.closest('button[data-compartir]');
+    if (boton) compartir(boton.dataset.compartir);
+  });
+
+  document.querySelector('.boton-compartir').addEventListener('click', abrirCompartir);
+
   /* ---------- Código secreto: modo NO-DO ---------- */
 
   const KONAMI = ['arrowup', 'arrowup', 'arrowdown', 'arrowdown', 'arrowleft', 'arrowright', 'arrowleft', 'arrowright', 'b', 'a'];
@@ -693,6 +856,7 @@
         document.body.classList.toggle('revelar');
         break;
       case 'sonido': alternarSonido(); break;
+      case 'compartir': abrirCompartir(); break;
       default: break;
     }
   }
@@ -701,11 +865,16 @@
     if (evento.ctrlKey || evento.metaKey || evento.altKey) return;
     if (evento.target.closest && evento.target.closest('input, textarea, select')) return;
     const tecla = evento.key.toLowerCase();
+    if (!menuCompartir.hidden) {
+      const opciones = { 1: 'enlace', 2: 'nativo', 3: 'copiar-imagen', 4: 'descargar', 0: 'cerrar', escape: 'cerrar', c: 'cerrar' };
+      if (opciones[tecla] && !(tecla === '2' && !navigator.share)) { evento.preventDefault(); compartir(opciones[tecla]); }
+      return;
+    }
     if (comprobarKonami(tecla)) return;
     if (/^\d$/.test(tecla)) { evento.preventDefault(); digito(tecla); return; }
     const color = TECLAS_COLOR.indexOf(tecla);
     if (color !== -1) { accion(`color-${color}`); return; }
-    const mapa = { arrowleft: 'anterior', arrowright: 'siguiente', i: 'indice', '?': 'revelar', m: 'sonido' };
+    const mapa = { arrowleft: 'anterior', arrowright: 'siguiente', i: 'indice', '?': 'revelar', m: 'sonido', c: 'compartir' };
     if (mapa[tecla]) { evento.preventDefault(); accion(mapa[tecla]); }
   });
 

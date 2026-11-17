@@ -142,15 +142,17 @@ La parrilla también se publica como una web con estética de teletexto en [ggon
 
 | Página | Contenido |
 | --- | --- |
-| 100 | Portada: qué se emite ahora, qué viene después y titulares |
+| 100 | Portada: qué se emite ahora, qué viene después, una noticia de última hora al azar y más titulares |
 | 101 | Manifiesto (el texto de este README entre los comentarios `manifiesto:inicio` y `manifiesto:fin`) |
 | 110 | Índice de noticias, agrupadas por sección |
 | 111-198 | Una página por noticia, de la más reciente a la más antigua |
-| 199 | Ayuda y mapa de páginas |
+| 199 | Ayuda: guía de páginas, teclas y mapa completo |
 | 200 | Parrilla completa |
 | 301 en adelante | Una página por programa: primero los confirmados por hora de inicio y después los candidatos |
 | 400 | Rostros de la cadena (tablas de personas de este README) |
 | 500 | Subvencionómetro |
+
+Todas las páginas se pueden compartir con el botón «Compartir» del televisor, el botón ⇪ del mando o la tecla C. Se puede copiar el enlace, usar el menú de compartir del dispositivo, o copiar al portapapeles o descargar un pantallazo PNG de la página completa. El pantallazo se genera en el navegador con [modern-screenshot](https://github.com/qq15725/modern-screenshot), que se carga bajo demanda. La fuente VT323 se sirve desde `web/fuentes/` (licencia OFL).
 
 Cada programa tiene también una dirección fija basada en el nombre de su ficha, por ejemplo `#/el-cabestrillo` para `programas/el cabestrillo.md`. Para añadir la imagen representativa de un programa, guárdala como `imagenes/programas/<dirección>.jpg` (también valen `.png`, `.webp`, `.gif` y `.svg`); mientras no exista, la ficha muestra una carta de ajuste con la ruta esperada.
 
