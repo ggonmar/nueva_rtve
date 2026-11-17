@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Construye la web estilo teletexto a partir de las fichas de programas y del README."""
+"""Construye la web estilo teletexto a partir de las fichas de programas, noticias y rostros, y del README."""
 
 import argparse
 import html
@@ -13,27 +13,24 @@ import unicodedata
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from actualizar_parrilla import FIELD_PATTERN, read_program  # noqa: E402
+from actualizar_parrilla import FIELD_PATTERN, read_people, read_program, strip_notes  # noqa: E402
 
 
 ROOT = Path(__file__).resolve().parent.parent
-FIRST_PROGRAM_PAGE = 301
-LAST_PROGRAM_PAGE = 399
-FIRST_NEWS_PAGE = 111
-LAST_NEWS_PAGE = 198
+FIRST_PROGRAM_PAGE = 201
+LAST_PROGRAM_PAGE = 299
+FIRST_NEWS_PAGE = 301
+LAST_NEWS_PAGE = 399
+FIRST_PEOPLE_PAGE = 401
+LAST_PEOPLE_PAGE = 499
 NEWS_FIELDS = ("Titular", "Sección", "Fecha", "Entradilla")
 DATE_PATTERN = re.compile(r"\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])")
-IMAGE_DIR = Path("imagenes") / "programas"
+IMAGE_ROOT = Path("imagenes")
 IMAGE_EXTENSIONS = (".webp", ".png", ".jpg", ".jpeg", ".gif", ".svg")
 MANIFESTO_MARKERS = ("<!-- manifiesto:inicio -->", "<!-- manifiesto:fin -->")
-PEOPLE_MARKERS = {
-    "confirmados": ("<!-- personas-confirmados:inicio -->", "<!-- personas-confirmados:fin -->"),
-    "candidatos": ("<!-- personas-candidatos:inicio -->", "<!-- personas-candidatos:fin -->"),
-}
 BUILD_MARKER = ".nojekyll"
 
 EXTRA_FIELD_PATTERN = re.compile(r"^\s*-\s+\*\*([^*]+?):\*\*\s*(.*?)\s*$")
-NOTES_PATTERN = re.compile(r"(?mi)^#{1,6}[ \t]+Notas[ \t]*$")
 HEADING_PATTERN = re.compile(r"^(#{1,6})\s+(.*)$")
 ITEM_PATTERN = re.compile(r"^[-*+]\s+(.*)$")
 LINK_PATTERN = re.compile(r"\[([^\]]+)\]\(([^)\s]+)\)")
@@ -121,22 +118,17 @@ def markdown_to_html(text, link=None):
     return "".join(blocks)
 
 
-def strip_notes(text):
-    """Quita el apartado de notas internas (un título «Notas» y todo lo que le sigue)."""
-    match = NOTES_PATTERN.search(text)
-    return text[:match.start()] if match else text
-
-
-def split_program(text):
+def split_program(text, known=None):
     """Separa la cabecera de la ficha (campos) del resto del contenido."""
     extras, body = [], []
     in_header = True
     for line in text.splitlines():
         if in_header:
             stripped = line.strip()
-            if not stripped or re.match(r"#\s", stripped) or FIELD_PATTERN.match(line):
-                continue
             extra = EXTRA_FIELD_PATTERN.match(line)
+            is_known = extra.group(1) in known if known and extra else FIELD_PATTERN.match(line)
+            if not stripped or re.match(r"#\s", stripped) or is_known:
+                continue
             if extra:
                 extras.append(extra.groups())
                 continue
@@ -166,21 +158,9 @@ def between_markers(text, start, end):
     return text[text.index(start) + len(start):text.index(end)]
 
 
-def read_table(text, start, end):
-    block = between_markers(text, start, end)
-    rows = [line.strip() for line in block.splitlines() if line.strip().startswith("|")]
-    result = []
-    for row in rows[2:]:
-        cells = [cell.strip().replace(r"\|", "|") for cell in re.split(r"(?<!\\)\|", row.strip("|"))]
-        if len(cells) != 3:
-            raise ValueError(f"Fila de personas con columnas inesperadas: {row}")
-        result.append(cells)
-    return result
-
-
-def find_image(root, slug):
+def find_image(root, folder, slug):
     for extension in IMAGE_EXTENSIONS:
-        candidate = root / IMAGE_DIR / f"{slug}{extension}"
+        candidate = root / IMAGE_ROOT / folder / f"{slug}{extension}"
         if candidate.is_file():
             return candidate
     return None
@@ -254,7 +234,17 @@ def collect(root, repository=None, branch="main"):
     order = {"Confirmado": 0, "Candidato": 1}
     programs.sort(key=lambda item: (order[item["Estado"]], item["Horario"][:5], item["Título"].casefold()))
     if FIRST_PROGRAM_PAGE + len(programs) - 1 > LAST_PROGRAM_PAGE:
-        raise ValueError("Hay demasiados programas para las páginas 301-399")
+        raise ValueError(f"Hay demasiados programas para las páginas {FIRST_PROGRAM_PAGE}-{LAST_PROGRAM_PAGE}")
+
+    program_slugs = {program["ruta"]: program["slug"] for program in programs}
+    people = read_people(root, program_slugs)
+    if FIRST_PEOPLE_PAGE + len(people) - 1 > LAST_PEOPLE_PAGE:
+        raise ValueError(f"Hay demasiados rostros para las páginas {FIRST_PEOPLE_PAGE}-{LAST_PEOPLE_PAGE}")
+    for person in people:
+        person["slug"] = slugify(Path(person["ruta"]).stem)
+        if f"rostros/{person['slug']}" in slugs.values():
+            raise ValueError(f"Dos rostros generan la misma dirección web «{person['slug']}»: renombra {person['ruta']}")
+        slugs[person["ruta"]] = f"rostros/{person['slug']}"
 
     data = []
     for page, program in enumerate(programs, FIRST_PROGRAM_PAGE):
@@ -262,7 +252,7 @@ def collect(root, repository=None, branch="main"):
         extras, body = split_program(program["texto"])
         replaces = next((value for name, value in extras if name == "Reemplaza"), None)
         extras = [(name, value) for name, value in extras if name != "Reemplaza"]
-        image = find_image(root, program["slug"])
+        image = find_image(root, "programas", program["slug"])
         data.append({
             "slug": program["slug"],
             "pagina": page,
@@ -276,26 +266,40 @@ def collect(root, repository=None, branch="main"):
             "cuerpo": markdown_to_html(body, link),
             "reemplaza": render_inline(replaces, link) if replaces else None,
             "imagen": image.relative_to(root).as_posix() if image else None,
-            "imagenSugerida": (IMAGE_DIR / f"{program['slug']}.jpg").as_posix(),
+            "imagenSugerida": (IMAGE_ROOT / "programas" / f"{program['slug']}.jpg").as_posix(),
+            "rostros": [person["slug"] for person in people if program["ruta"] in person["programas"]],
             "fuente": program["ruta"],
+        })
+
+    faces = []
+    for page, person in enumerate(people, FIRST_PEOPLE_PAGE):
+        link = make_linker(person["ruta"], slugs, repository, branch)
+        text = strip_notes((root / person["ruta"]).read_text(encoding="utf-8"))
+        _, body = split_program(text, known={"Nombre", "Perfil", "Estado", "Programas", "Descripción"})
+        image = find_image(root, "rostros", person["slug"])
+        faces.append({
+            "slug": person["slug"],
+            "pagina": page,
+            "nombre": person["Nombre"],
+            "perfil": person["Perfil"],
+            "estado": person["Estado"],
+            "programas": [program_slugs[route] for route in person["programas"]],
+            "descripcion": render_inline(person["Descripción"], link),
+            "cuerpo": markdown_to_html(body, link),
+            "imagen": image.relative_to(root).as_posix() if image else None,
+            "imagenSugerida": (IMAGE_ROOT / "rostros" / f"{person['slug']}.jpg").as_posix(),
+            "fuente": person["ruta"],
         })
 
     readme = (root / "readme.md").read_text(encoding="utf-8")
     readme_link = make_linker("readme.md", slugs, repository, branch)
-    people = {
-        group: [
-            {"nombre": name, "perfil": profile, "notas": render_inline(notes, readme_link)}
-            for name, profile, notes in read_table(readme, start, end)
-        ]
-        for group, (start, end) in PEOPLE_MARKERS.items()
-    }
     return {
         "repositorio": repository,
         "rama": branch,
         "manifiesto": markdown_to_html(between_markers(readme, *MANIFESTO_MARKERS), readme_link),
         "programas": data,
         "noticias": read_news(root, slugs, repository, branch),
-        "personas": people,
+        "rostros": faces,
     }
 
 
@@ -311,11 +315,11 @@ def build(root, output, repository=None, branch="main"):
     (output / BUILD_MARKER).write_text("", encoding="utf-8")
     script = "window.TELETEXTO = " + json.dumps(data, ensure_ascii=False, indent=1) + ";\n"
     (output / "datos.js").write_text(script, encoding="utf-8", newline="\n")
-    for program in data["programas"]:
-        if program["imagen"]:
-            target = output / program["imagen"]
+    for item in data["programas"] + data["rostros"]:
+        if item["imagen"]:
+            target = output / item["imagen"]
             target.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copy2(root / program["imagen"], target)
+            shutil.copy2(root / item["imagen"], target)
     return data
 
 
@@ -334,7 +338,8 @@ def main():
     except ValueError as error:
         print(f"Error: {error}", file=sys.stderr)
         return 1
-    print(f"Web generada en {args.salida} con {len(data['programas'])} programas.")
+    print(f"Web generada en {args.salida} con {len(data['programas'])} programas, "
+          f"{len(data['noticias'])} noticias y {len(data['rostros'])} rostros.")
     return 0
 
 

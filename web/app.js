@@ -8,6 +8,7 @@
   const CONFIRMADOS = PROGRAMAS.filter((p) => p.estado === 'Confirmado');
   const CANDIDATOS = PROGRAMAS.filter((p) => p.estado === 'Candidato');
   const NOTICIAS = DATOS.noticias || [];
+  const ROSTROS = DATOS.rostros || [];
   const DESTACADA = NOTICIAS.length ? NOTICIAS[Math.floor(Math.random() * NOTICIAS.length)] : null;
   const MOVIMIENTO_REDUCIDO = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const COLORES = ['rojo', 'verde', 'amarillo', 'azul'];
@@ -189,6 +190,9 @@
 
   const enlacePrograma = (p) => `#/${p.slug}`;
   const enlaceNoticia = (n) => `#/noticias/${n.slug}`;
+  const enlaceRostro = (r) => `#/rostros/${r.slug}`;
+  const programaPorSlug = (slug) => PROGRAMAS.find((p) => p.slug === slug);
+  const rostroPorSlug = (slug) => ROSTROS.find((r) => r.slug === slug);
 
   const filaNoticia = (n) => `
     <a class="fila indice" href="${enlaceNoticia(n)}">
@@ -244,7 +248,7 @@
     const masTitulares = otras.length
       ? `<h2 class="franja franja-amarillo">MÁS TITULARES</h2>${otras.map(filaNoticia).join('')}` : '';
     const todasLasNoticias = NOTICIAS.length
-      ? `<a class="fila indice todas-noticias" href="#/noticias"><span class="titulo">▶ TODAS LAS NOTICIAS</span><span class="puntos" aria-hidden="true"></span><span class="num">110</span></a>` : '';
+      ? `<a class="fila indice todas-noticias" href="#/noticias"><span class="titulo">▶ TODAS LAS NOTICIAS</span><span class="puntos" aria-hidden="true"></span><span class="num">300</span></a>` : '';
 
     const html = `
       ${banner('FACHATEXTO', 'rojo', { animado: true })}
@@ -260,7 +264,7 @@
 
       <h2 class="franja franja-verde">ÍNDICE</h2>
       ${filaIndice('MANIFIESTO', 'manifiesto', 101)}
-      ${NOTICIAS.length ? filaIndice('NOTICIAS', 'noticias', 110) : ''}
+      ${NOTICIAS.length ? filaIndice('NOTICIAS', 'noticias', 300) : ''}
       ${filaIndice('PARRILLA COMPLETA', 'parrilla', 200)}
       ${PROGRAMAS.length ? filaIndice('FICHAS DE PROGRAMAS', PROGRAMAS[0].slug, `${PROGRAMAS[0].pagina}-${PROGRAMAS[PROGRAMAS.length - 1].pagina}`) : ''}
       ${filaIndice('ROSTROS DE LA CADENA', 'rostros', 400)}
@@ -319,7 +323,7 @@
         <p class="tenue aviso-noticia">Noticia satírica. Cualquier parecido con la realidad es culpa de la realidad.</p>
         <nav class="pasos" aria-label="Otras noticias">
           <a href="${enlaceNoticia(anterior)}">◀ ${anterior.pagina}</a>
-          <a href="#/noticias">NOTICIAS 110</a>
+          <a href="#/noticias">NOTICIAS 300</a>
           <a href="${enlaceNoticia(siguiente)}">${siguiente.pagina} ▶</a>
         </nav>
         ${DATOS.repositorio ? `<p class="fuente">${enlaceGithub(`blob/${DATOS.rama}/${encodeURI(n.fuente)}`, '✎ Ver o mejorar esta noticia en GitHub')}</p>` : ''}`,
@@ -387,6 +391,8 @@
       ['HORARIO', esc(p.horario)],
       ['TIPO', esc(p.tipo)],
       ['PRESENTA', esc(p.presentador || 'Por concretar')],
+      ...((p.rostros || []).length ? [['ROSTROS', p.rostros.map(rostroPorSlug).filter(Boolean)
+        .map((r) => `<a href="${enlaceRostro(r)}">${esc(r.nombre)} ${r.pagina}</a>`).join('<br>')]] : []),
       ['ESTADO', confirmado ? '<span class="verde">CONFIRMADO</span>' : '<span class="amarillo parpadeo">CANDIDATO</span>'],
       ...p.extras.map((e) => [esc(e.campo.toUpperCase()), e.valor]),
     ];
@@ -422,20 +428,71 @@
     };
   }
 
+  const filaRostro = (r) => `
+    <div class="bloque-programa">
+      <a class="fila indice" href="${enlaceRostro(r)}">
+        <span class="titulo">${esc(r.nombre)}</span><span class="puntos" aria-hidden="true"></span><span class="num">${r.pagina}</span>
+      </a>
+      <p class="detalle detalle-rostro"><span class="cian">${esc(r.perfil)}</span> · ${r.programas.length
+        ? r.programas.map(programaPorSlug).filter(Boolean).map((p) => esc(p.titulo)).join(', ')
+        : 'Programa por concretar'}</p>
+    </div>`;
+
   function rostros() {
-    const lista = (personas) => personas.map((p) => `
-      <div class="rostro">
-        <p><span class="amarillo">${esc(p.nombre)}</span> <span class="cian">· ${esc(p.perfil)}</span></p>
-        <p class="detalle">${p.notas}</p>
-      </div>`).join('');
+    const plantilla = ROSTROS.filter((r) => r.estado === 'Confirmado');
+    const recamara = ROSTROS.filter((r) => r.estado !== 'Confirmado');
     return {
       titulo: 'Rostros',
       html: `
         ${banner('ROSTROS', 'cian')}
         <h2 class="franja franja-verde">EN PLANTILLA</h2>
-        ${lista(DATOS.personas.confirmados)}
+        ${plantilla.map(filaRostro).join('') || '<p>Plantilla vacía. Todos de baja por ansiedad.</p>'}
         <h2 class="franja franja-amarillo">EN LA RECÁMARA</h2>
-        ${lista(DATOS.personas.candidatos)}`,
+        ${recamara.map(filaRostro).join('') || '<p>Nadie en la recámara. De momento.</p>'}`,
+    };
+  }
+
+  function rostro(r) {
+    const i = ROSTROS.indexOf(r);
+    const anterior = ROSTROS[(i - 1 + ROSTROS.length) % ROSTROS.length];
+    const siguiente = ROSTROS[(i + 1) % ROSTROS.length];
+    const confirmado = r.estado === 'Confirmado';
+    const imagen = r.imagen
+      ? `<img src="${esc(encodeURI(r.imagen))}" alt="Imagen de ${esc(r.nombre)}" loading="lazy">`
+      : cartaAjuste('FOTO PENDIENTE', `Se busca foto: ${r.imagenSugerida}`);
+    const programas = r.programas.map(programaPorSlug).filter(Boolean);
+    const datos = [
+      ['PERFIL', esc(r.perfil)],
+      ['ESTADO', confirmado ? '<span class="verde">EN PLANTILLA</span>' : '<span class="amarillo parpadeo">EN LA RECÁMARA</span>'],
+      ['PROGRAMAS', programas.length
+        ? programas.map((p) => `<a href="${enlacePrograma(p)}">${esc(p.titulo)} ${p.pagina}</a>`).join('<br>')
+        : 'Por concretar'],
+    ];
+    return {
+      titulo: r.nombre,
+      html: `
+        <div class="franja franja-${confirmado ? 'verde' : 'amarillo'} cabecera-programa">
+          <span>ROSTRO ${r.pagina}</span>
+        </div>
+        <h1 class="doble">${esc(r.nombre)}</h1>
+        <div class="ficha">
+          <figure class="imagen-programa">${imagen}</figure>
+          <dl class="datos">${datos.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join('')}</dl>
+        </div>
+        <p class="descripcion">${r.descripcion}</p>
+        ${r.cuerpo ? `<div class="cuerpo">${r.cuerpo}</div>` : ''}
+        <nav class="pasos" aria-label="Otros rostros">
+          <a href="${enlaceRostro(anterior)}">◀ ${anterior.pagina}</a>
+          <a href="#/rostros">ROSTROS 400</a>
+          <a href="${enlaceRostro(siguiente)}">${siguiente.pagina} ▶</a>
+        </nav>
+        ${DATOS.repositorio ? `<p class="fuente">${enlaceGithub(`blob/${DATOS.rama}/${encodeURI(r.fuente)}`, '✎ Ver o mejorar esta ficha en GitHub')}</p>` : ''}`,
+      fastext: [
+        { texto: 'Rostros', destino: 'rostros' },
+        { texto: `◀ ${anterior.pagina}`, destino: `rostros/${anterior.slug}` },
+        { texto: `${siguiente.pagina} ▶`, destino: `rostros/${siguiente.slug}` },
+        { texto: programas.length ? 'Su programa' : 'Zapping', destino: programas.length ? programas[0].slug : `rostros/${azar(ROSTROS).slug}` },
+      ],
     };
   }
 
@@ -487,14 +544,15 @@
     const guia = [
       ['100', 'portada', 'Portada: qué se emite ahora, qué viene después y la noticia de última hora.'],
       ['101', 'manifiesto', 'Manifiesto: por qué existe esta parrilla.'],
-      ...(NOTICIAS.length ? [
-        ['110', 'noticias', 'Noticias: índice por secciones.'],
-        [rangoPaginas(NOTICIAS), `noticias/${NOTICIAS[0].slug}`, 'Una página por noticia, de la más reciente a la más antigua.'],
-      ] : []),
       ['199', 'ayuda', 'Esta ayuda.'],
       ['200', 'parrilla', 'Parrilla completa, con la barra de 24 horas y el programa en antena marcado.'],
       ...(PROGRAMAS.length ? [[rangoPaginas(PROGRAMAS), PROGRAMAS[0].slug, 'Una página por programa: primero los confirmados, luego los candidatos.']] : []),
+      ...(NOTICIAS.length ? [
+        ['300', 'noticias', 'Noticias: índice por secciones.'],
+        [rangoPaginas(NOTICIAS), `noticias/${NOTICIAS[0].slug}`, 'Una página por noticia, de la más reciente a la más antigua.'],
+      ] : []),
       ['400', 'rostros', 'Rostros de la cadena: presentadores en plantilla y en la recámara.'],
+      ...(ROSTROS.length ? [[rangoPaginas(ROSTROS), `rostros/${ROSTROS[0].slug}`, 'Una página por rostro, con foto y sus programas.']] : []),
       ['500', 'subvencionometro', 'Subvencionómetro: dinero público repartido en directo.'],
       ['555', 'buscador', 'Buscador: programas, noticias y presentadores según escribe.'],
     ];
@@ -520,11 +578,12 @@
         <h2 class="franja franja-magenta">MAPA COMPLETO</h2>
         ${filaIndice('PORTADA', 'portada', 100)}
         ${filaIndice('MANIFIESTO', 'manifiesto', 101)}
-        ${filaIndice('NOTICIAS', 'noticias', 110)}
+        ${filaIndice('NOTICIAS', 'noticias', 300)}
         ${NOTICIAS.map(filaNoticia).join('')}
         ${filaIndice('PARRILLA', 'parrilla', 200)}
         ${PROGRAMAS.map((p) => filaIndice(p.titulo, p.slug, p.pagina)).join('')}
         ${filaIndice('ROSTROS', 'rostros', 400)}
+        ${ROSTROS.map((r) => filaIndice(r.nombre, `rostros/${r.slug}`, r.pagina)).join('')}
         ${filaIndice('SUBVENCIONÓMETRO', 'subvencionometro', 500)}
         ${filaIndice('BUSCADOR', 'buscador', 555)}
         <p class="tenue">Se rumorea que existe un código secreto de los de antes. ↑↑↓↓…</p>`,
@@ -539,13 +598,9 @@
 
   function construirIndice() {
     const fijas = [
-      [100, 'Portada', 'portada'], [101, 'Manifiesto', 'manifiesto'], [110, 'Noticias', 'noticias'],
+      [100, 'Portada', 'portada'], [101, 'Manifiesto', 'manifiesto'], [300, 'Noticias', 'noticias'],
       [199, 'Ayuda y guía de páginas', 'ayuda'], [200, 'Parrilla completa', 'parrilla'],
       [400, 'Rostros de la cadena', 'rostros'], [500, 'Subvencionómetro', 'subvencionometro'],
-    ];
-    const personas = [
-      ...DATOS.personas.confirmados.map((p) => ({ ...p, grupo: 'en plantilla' })),
-      ...DATOS.personas.candidatos.map((p) => ({ ...p, grupo: 'en la recámara' })),
     ];
     return [
       ...fijas.map(([num, titulo, destino]) => ({ tipo: 'PÁG', num, titulo, detalle: 'Página del FACHATEXTO', destino, extra: '' })),
@@ -558,9 +613,10 @@
         tipo: 'NOTI', num: n.pagina, titulo: n.titular, destino: `noticias/${n.slug}`,
         detalle: `${n.seccion} · ${fechaNoticia(n.fecha)}`, extra: `${n.seccion} ${soloTexto(n.entradilla)}`,
       })),
-      ...personas.map((p) => ({
-        tipo: 'ROST', num: 400, titulo: p.nombre, destino: 'rostros',
-        detalle: `${p.perfil} · ${p.grupo}`, extra: `${p.perfil} ${soloTexto(p.notas)}`,
+      ...ROSTROS.map((r) => ({
+        tipo: 'ROST', num: r.pagina, titulo: r.nombre, destino: `rostros/${r.slug}`,
+        detalle: `${r.perfil} · ${r.estado === 'Confirmado' ? 'en plantilla' : 'en la recámara'}`,
+        extra: `${r.perfil} ${soloTexto(r.descripcion)} ${r.programas.map((s) => (programaPorSlug(s) || {}).titulo || '').join(' ')}`,
       })),
     ].map((r) => ({ ...r, claveTitulo: normalizar(r.titulo), claveExtra: normalizar(r.extra) }));
   }
@@ -649,16 +705,14 @@
     return { titulo: 'Buscador', html, montar };
   }
 
-  function transicion() {
+  function cambioDeBandera({ titulo, rotulo, color, aviso, clase, etiqueta, franjas, enCurso, hecho }) {
     const html = `
-      ${banner('1936-1978', 'magenta')}
-      <p class="cian centrado">EMISIÓN ESPECIAL DE MADRUGADA · NO AJUSTE SU TELEVISOR</p>
-      <div class="bandera en-marcha" id="bandera" role="img" aria-label="La bandera republicana se transforma en la bandera de España">
-        <span class="bandera-franja bf1"></span><span class="bandera-franja bf2"></span><span class="bandera-franja bf3"></span>
-      </div>
+      ${banner(rotulo, color)}
+      <p class="cian centrado">${esc(aviso)}</p>
+      <div class="bandera ${clase} en-marcha" id="bandera" role="img" aria-label="${esc(etiqueta)}">${franjas}</div>
       <p class="estado-transicion">
-        <span class="fase-curso">TRANSICIÓN EN CURSO. NO CAMBIE DE CANAL…</span>
-        <span class="fase-hecha">TRANSICIÓN COMPLETADA. EL MORADO HA SIDO REASIGNADO A UN OBSERVATORIO.</span>
+        <span class="fase-curso">${esc(enCurso)}</span>
+        <span class="fase-hecha">${esc(hecho)}</span>
       </p>
       <p class="centrado"><button type="button" class="boton-tt" id="rebobinar">◀◀ REBOBINAR</button></p>`;
     const montar = () => {
@@ -674,8 +728,33 @@
       boton.addEventListener('click', reiniciar);
       return () => boton.removeEventListener('click', reiniciar);
     };
-    return { titulo: 'Transición', html, montar };
+    return { titulo, html, montar };
   }
+
+  const transicion = () => cambioDeBandera({
+    titulo: 'Transición',
+    rotulo: '1936-1978',
+    color: 'magenta',
+    aviso: 'EMISIÓN ESPECIAL DE MADRUGADA · NO AJUSTE SU TELEVISOR',
+    clase: 'bandera-936',
+    etiqueta: 'La bandera republicana se transforma en la bandera de España',
+    franjas: '<span class="bandera-franja bf1"></span><span class="bandera-franja bf2"></span><span class="bandera-franja bf3"></span>',
+    enCurso: 'TRANSICIÓN EN CURSO. NO CAMBIE DE CANAL…',
+    hecho: 'TRANSICIÓN COMPLETADA. EL MORADO HA SIDO REASIGNADO A UN OBSERVATORIO.',
+  });
+
+  const articulo155 = () => cambioDeBandera({
+    titulo: 'Artículo 155',
+    rotulo: 'ART 155',
+    color: 'amarillo',
+    aviso: 'CONSTITUCIÓN ESPAÑOLA · ARTÍCULO 155 · APLICACIÓN INMEDIATA',
+    clase: 'bandera-155',
+    etiqueta: 'La estelada independentista se transforma en la bandera de España',
+    franjas: Array.from({ length: 9 }, (_, i) => `<span class="bandera-franja bc${i + 1}"></span>`).join('')
+      + '<span class="estelada-triangulo"><span class="estelada-estrella">★</span></span>',
+    enCurso: 'APLICANDO EL 155. LA REPÚBLICA DURARÁ LO DE SIEMPRE: OCHO SEGUNDOS…',
+    hecho: 'ARTÍCULO 155 APLICADO. EL PRÓFUGO SIGUE EN WATERLOO, LA BANDERA EN SU SITIO.',
+  });
 
   const EXCUSAS = [
     'Ha sido retirada por el Observatorio de la Neutralidad Informativa.',
@@ -709,15 +788,16 @@
   const FIJAS = [
     { num: 100, alias: 'portada', construir: portada },
     { num: 101, alias: 'manifiesto', construir: manifiesto },
-    { num: 110, alias: 'noticias', construir: noticias },
+    { num: 155, alias: 'articulo-155', construir: articulo155, oculta: true },
     { num: 199, alias: 'ayuda', construir: ayuda },
     { num: 200, alias: 'parrilla', construir: parrilla },
+    { num: 300, alias: 'noticias', construir: noticias },
     { num: 400, alias: 'rostros', construir: rostros },
     { num: 500, alias: 'subvencionometro', construir: subvencionometro },
     { num: 555, alias: 'buscador', construir: buscador },
     { num: 936, alias: 'transicion', construir: transicion, oculta: true },
   ];
-  const SECUENCIA = [...FIJAS.filter((f) => !f.oculta).map((f) => f.num), ...PROGRAMAS.map((p) => p.pagina), ...NOTICIAS.map((n) => n.pagina)]
+  const SECUENCIA = [...FIJAS.filter((f) => !f.oculta).map((f) => f.num), ...PROGRAMAS.map((p) => p.pagina), ...NOTICIAS.map((n) => n.pagina), ...ROSTROS.map((r) => r.pagina)]
     .sort((a, b) => a - b);
 
   function resolver(clave) {
@@ -732,6 +812,8 @@
     if (prog) return { num: prog.pagina, programa: prog, clave: prog.slug };
     const nota = NOTICIAS.find((n) => n.pagina === numero || `noticias/${n.slug}` === texto);
     if (nota) return { num: nota.pagina, noticia: nota, clave: `noticias/${nota.slug}` };
+    const cara = ROSTROS.find((r) => r.pagina === numero || `rostros/${r.slug}` === texto);
+    if (cara) return { num: cara.pagina, rostro: cara, clave: `rostros/${cara.slug}` };
     return { num: numero, clave: texto };
   }
 
@@ -739,6 +821,7 @@
     if (destino.fija) return destino.fija.construir();
     if (destino.programa) return programa(destino.programa);
     if (destino.noticia) return noticia(destino.noticia);
+    if (destino.rostro) return rostro(destino.rostro);
     return error(destino.num);
   }
 
@@ -799,7 +882,7 @@
     pintarFastext(vista.fastext || FASTEXT_POR_DEFECTO());
     actual = destino;
     limpiar = vista.montar ? vista.montar() : null;
-    if (!destino.fija && !destino.programa && !destino.noticia) pitido('error');
+    if (!destino.fija && !destino.programa && !destino.noticia && !destino.rostro) pitido('error');
     el.pagina.focus({ preventScroll: true });
   }
 

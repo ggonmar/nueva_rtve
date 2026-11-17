@@ -694,6 +694,42 @@ body.revelar .pista-revelar { display: none; }
 
 .captura .centrado .boton-tt { display: none; }
 
+/* ---------- Página 155: el artículo 155 ---------- */
+
+.bandera-155 .bandera-franja {
+  --de: var(--amarillo);
+  --a: var(--amarillo);
+  --g: .9;
+  flex: var(--g) 1 0;
+  background: var(--a);
+}
+
+.bandera-155 .bc2, .bandera-155 .bc4, .bandera-155 .bc6, .bandera-155 .bc8 { --de: var(--rojo); }
+.bandera-155 .bc1, .bandera-155 .bc2, .bandera-155 .bc8, .bandera-155 .bc9 { --a: var(--rojo); --g: 1.125; }
+
+.estelada-triangulo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--azul);
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.estelada-estrella { color: var(--blanco); font-size: 2.4em; line-height: 1; margin-left: .2em; }
+
+.bandera-155.en-marcha .bandera-franja { animation: franja-155 3.2s steps(6) 1.2s both; }
+.bandera-155.en-marcha .estelada-triangulo { animation: estelada-fuera 3.2s steps(6) 1.2s both; }
+
+@keyframes franja-155 { from { background: var(--de); flex-grow: 1; } to { background: var(--a); flex-grow: var(--g); } }
+@keyframes estelada-fuera { from { width: 40%; } to { width: 0; } }
+
+.pagina .detalle.detalle-rostro { margin-left: 3.2ch !important; }
+
 /* ---------- Modo NO-DO ---------- */
 
 body.no-do .pantalla { filter: grayscale(1) sepia(.7) contrast(1.25) brightness(.95); }

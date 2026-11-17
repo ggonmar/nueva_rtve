@@ -20,15 +20,6 @@ Texto del **manifiesto**.
 
 Más _texto_.
 
-<!-- personas-confirmados:inicio -->
-| Nombre | Perfil de programa | Notas |
-| --- | --- | --- |
-| Alaska | Presentadora | Asignada a \\| todo. |
-<!-- personas-confirmados:fin -->
-<!-- personas-candidatos:inicio -->
-| Nombre | Perfil de programa | Notas |
-| --- | --- | --- |
-<!-- personas-candidatos:fin -->
 """
 
 
@@ -77,7 +68,7 @@ class ConstruirWebTest(unittest.TestCase):
 
         programs = {item["slug"]: item for item in data["programas"]}
         self.assertEqual([item["slug"] for item in data["programas"]], ["la-cena", "tarde", "idea"])
-        self.assertEqual([item["pagina"] for item in data["programas"]], [301, 302, 303])
+        self.assertEqual([item["pagina"] for item in data["programas"]], [201, 202, 203])
         self.assertEqual(programs["la-cena"]["extras"], [{"campo": "Slogan", "valor": "<em>Hola</em>"}])
         self.assertEqual(programs["la-cena"]["reemplaza"], "<em>Cine de Barrio</em>")
         self.assertIsNone(programs["tarde"]["reemplaza"])
@@ -86,7 +77,6 @@ class ConstruirWebTest(unittest.TestCase):
         self.assertIsNone(programs["tarde"]["imagen"])
         self.assertIn("<strong>manifiesto</strong>", data["manifiesto"])
         self.assertNotIn("<em>texto</em>", data["manifiesto"])
-        self.assertEqual(data["personas"]["confirmados"][0]["notas"], "Asignada a | todo.")
         self.assertEqual((output / "imagenes" / "programas" / "la-cena.png").read_bytes(), b"png")
         self.assertTrue((output / "index.html").exists())
         script = (output / "datos.js").read_text(encoding="utf-8")
@@ -121,7 +111,7 @@ class ConstruirWebTest(unittest.TestCase):
 
         data = build(self.root, self.root / "_site")
 
-        self.assertEqual([(n["slug"], n["pagina"]) for n in data["noticias"]], [("nueva", 111), ("vieja", 112)])
+        self.assertEqual([(n["slug"], n["pagina"]) for n in data["noticias"]], [("nueva", 301), ("vieja", 302)])
         self.assertEqual(data["noticias"][0]["entradilla"], "Una <em>entradilla</em>")
         self.assertEqual(data["noticias"][0]["cuerpo"], '<p>Texto con <a href="#/tarde">enlace</a>.</p>')
 
@@ -132,6 +122,48 @@ class ConstruirWebTest(unittest.TestCase):
             build(self.root, self.root / "_site")
         (self.root / "noticias" / "mala.md").write_text("- **Titular:** Solo titular\n", encoding="utf-8")
         with self.assertRaisesRegex(ValueError, "faltan campos: Sección, Fecha, Entradilla"):
+            build(self.root, self.root / "_site")
+
+    def rostro(self, filename, name, status="Confirmado", programs=None, extra=""):
+        folder = self.root / "rostros"
+        folder.mkdir(exist_ok=True)
+        programs_line = f"- **Programas:** {programs}\n" if programs else ""
+        (folder / filename).write_text(
+            f"# {name}\n\n- **Nombre:** {name}\n- **Perfil:** Presentador\n- **Estado:** {status}\n"
+            f"{programs_line}- **Descripción:** Uno de los *nuestros*\n{extra}",
+            encoding="utf-8",
+        )
+
+    def test_genera_rostros_enlazados_con_sus_programas(self):
+        self.ficha("tarde.md", "Tarde")
+        self.ficha("noche.md", "Noche", schedule="22:00-23:00")
+        self.rostro("zoe.md", "Zoe", programs="[Tarde](../programas/tarde.md), [Noche](../programas/noche.md)",
+                    extra="\nBiografía con [su programa](../programas/noche.md).\n\n# Notas\nNo publicar.\n")
+        self.rostro("ana.md", "Ana", status="Candidato")
+        self.rostro("bea.md", "Bea")
+        (self.root / "imagenes" / "rostros").mkdir(parents=True)
+        (self.root / "imagenes" / "rostros" / "zoe.webp").write_bytes(b"webp")
+        output = self.root / "_site"
+
+        data = build(self.root, output)
+
+        faces = {item["slug"]: item for item in data["rostros"]}
+        self.assertEqual([(r["slug"], r["pagina"]) for r in data["rostros"]], [("bea", 401), ("zoe", 402), ("ana", 403)])
+        self.assertEqual(faces["zoe"]["programas"], ["tarde", "noche"])
+        self.assertEqual(faces["zoe"]["descripcion"], "Uno de los <em>nuestros</em>")
+        self.assertEqual(faces["zoe"]["cuerpo"], '<p>Biografía con <a href="#/noche">su programa</a>.</p>')
+        self.assertEqual(faces["zoe"]["imagen"], "imagenes/rostros/zoe.webp")
+        self.assertEqual((output / "imagenes" / "rostros" / "zoe.webp").read_bytes(), b"webp")
+        self.assertEqual(faces["ana"]["programas"], [])
+        self.assertEqual({p["slug"]: p["rostros"] for p in data["programas"]}, {"tarde": ["zoe"], "noche": ["zoe"]})
+
+    def test_rechaza_rostros_con_programas_inexistentes(self):
+        self.ficha("tarde.md", "Tarde")
+        self.rostro("zoe.md", "Zoe", programs="[Mañana](../programas/manana.md)")
+        with self.assertRaisesRegex(ValueError, "no existe"):
+            build(self.root, self.root / "_site")
+        self.rostro("zoe.md", "Zoe", programs="Tarde")
+        with self.assertRaisesRegex(ValueError, "debe enlazar"):
             build(self.root, self.root / "_site")
 
     def test_rechaza_fichas_con_la_misma_direccion(self):

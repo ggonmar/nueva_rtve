@@ -126,6 +126,35 @@ class GenerarParrillaTest(unittest.TestCase):
             generate(self.root)
         self.assertEqual(original, (self.root / "readme.md").read_text(encoding="utf-8"))
 
+    def test_genera_las_tablas_de_rostros_con_enlaces_a_sus_programas(self):
+        self.ficha("tarde.md", "Tarde")
+        readme = self.root / "readme.md"
+        readme.write_text(
+            readme.read_text(encoding="utf-8")
+            + "<!-- personas-confirmados:inicio -->\nvieja\n<!-- personas-confirmados:fin -->\n"
+            + "<!-- personas-candidatos:inicio -->\nvieja\n<!-- personas-candidatos:fin -->\n",
+            encoding="utf-8",
+        )
+        (self.root / "rostros").mkdir()
+        (self.root / "rostros" / "zoe.md").write_text(
+            "- **Nombre:** Zoe\n- **Perfil:** Presentadora\n- **Estado:** Confirmado\n"
+            "- **Programas:** [Tarde](../programas/tarde.md)\n- **Descripción:** A | B\n",
+            encoding="utf-8",
+        )
+        (self.root / "rostros" / "ana.md").write_text(
+            "- **Nombre:** Ana\n- **Perfil:** Reportera\n- **Estado:** Candidato\n- **Descripción:** Por ver\n",
+            encoding="utf-8",
+        )
+
+        self.assertTrue(generate(self.root))
+
+        text = readme.read_text(encoding="utf-8")
+        self.assertIn("| [Zoe](rostros/zoe.md) | Presentadora | [Tarde](programas/tarde.md) | A \\| B |", text)
+        self.assertIn("| [Ana](rostros/ana.md) | Reportera | Por concretar | Por ver |", text)
+        self.assertLess(text.index("[Zoe]"), text.index("personas-candidatos:inicio"))
+        self.assertGreater(text.index("[Ana]"), text.index("personas-candidatos:inicio"))
+        self.assertNotIn("vieja", text)
+
     def test_rechaza_titulos_duplicados_y_marcadores_invalidos(self):
         self.ficha("a.md", "Mismo")
         self.ficha("b.md", "mismo", "Candidato")

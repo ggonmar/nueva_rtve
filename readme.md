@@ -80,20 +80,20 @@ Los horarios son una propuesta de franjas de emisión. Los candidatos son altern
 <summary><h4>Confirmados<h4></summary>
 
 <!-- personas-confirmados:inicio -->
-| Nombre | Perfil de programa | Notas |
-| --- | --- | --- |
-| Alaska | Presentadora | Asignada a Una, Grande y Libre; también se propone tenerla en la recámara. |
-| Ramón García | Presentador | Asignado a Quién quiere ser funcionario. |
-| Los Meconios | Presentadores / humoristas | Asignados a No, Patxarán; también se propone su perfil de parodia musical y sátira política para el formato. |
-| Miguel Lago | Colaborador | Asignado a No, Patxarán. |
-| ElXokas, WSW y UTBH | Presentadores / participantes | Asignados a El Cabestrillo. |
-| Inda, Fonseca y Santaolalla | Colaboradores | Asignados a El Cabestrillo; la parrilla original indica que la participación de Santaolalla sería «obligada bajo amenaza de imputación». |
-| Iker Jiménez | Presentador | Asignado a Cuarto Reich. |
-| Juan Ramón Rallo | Presentador | Asignado a El último contribuyente. |
-| Santiago Segura y El Sevilla | Presentadores | Asignados a Cachitos de Hierro y Rojo; Santiago Segura también se propone para la recámara. |
-| Bertín Osborne | Presentador | Asignado a Españoles por España y La Reconquista. |
-| Federico Jiménez Losantos | Presentador | Asignado a Bulos Días. |
-| José Luis Ábalos | Presentador | Asignado a First Dates: Paradores. |
+| Nombre | Perfil | Programas | Descripción |
+| --- | --- | --- | --- |
+| [Alaska](rostros/alaska.md) | Presentadora | [Una, Grande y Libre](programas/una-grande-y-libre.md) | Asignada a Una, Grande y Libre; también se propone tenerla en la recámara. |
+| [Bertín Osborne](rostros/bertin-osborne.md) | Presentador | [Españoles por España](programas/espanoles-por-espana.md) | Asignado a Españoles por España. |
+| [ElXokas, WSW y UTBH](rostros/elxokas-wsw-y-utbh.md) | Presentadores / participantes | [El Cabestrillo](programas/el-cabestrillo.md) | Asignados a El Cabestrillo. |
+| [Federico Jiménez Losantos](rostros/federico-jimenez-losantos.md) | Presentador | [Bulos Días](programas/bulos-dias.md) | Asignado a Bulos Días. |
+| [Iker Jiménez](rostros/iker-jimenez.md) | Presentador | [Cuarto Reich](programas/cuarto-reich.md) | Asignado a Cuarto Reich. |
+| [Inda, Fonseca y Santaolalla](rostros/inda-fonseca-y-santaolalla.md) | Colaboradores | [El Cabestrillo](programas/el-cabestrillo.md) | Asignados a El Cabestrillo; la parrilla original indica que la participación de Santaolalla sería «obligada bajo amenaza de imputación». |
+| [José Luis Ábalos](rostros/jose-luis-abalos.md) | Presentador | [First Dates: Paradores](programas/first-dates-paradores.md) | Asignado a First Dates: Paradores. |
+| [Juan Ramón Rallo](rostros/juan-ramon-rallo.md) | Presentador | [El último contribuyente](programas/el-ultimo-contribuyente.md) | Asignado a El último contribuyente. |
+| [Los Meconios](rostros/los-meconios.md) | Presentadores / humoristas | [No, Patxarán](programas/no-patxaran.md) | Asignados a No, Patxarán; también se propone su perfil de parodia musical y sátira política para el formato. |
+| [Miguel Lago](rostros/miguel-lago.md) | Colaborador | [No, Patxarán](programas/no-patxaran.md), [La Reconquista](programas/la-reconquista.md) | Colaborador en No, Patxarán y presentador de La Reconquista. |
+| [Ramón García](rostros/ramon-garcia.md) | Presentador | [Quién quiere ser funcionario](programas/quien-quiere-ser-funcionario.md) | Asignado a Quién quiere ser funcionario. |
+| [Santiago Segura y El Sevilla](rostros/santiago-segura-y-el-sevilla.md) | Presentadores | [Cachitos de Hierro y Rojo](programas/cachitos-de-hierro-y-rojo.md) | Asignados a Cachitos de Hierro y Rojo; Santiago Segura también se propone para la recámara. |
 <!-- personas-confirmados:fin -->
 
 </details>
@@ -102,20 +102,18 @@ Los horarios son una propuesta de franjas de emisión. Los candidatos son altern
 <summary><h4>Candidatos</h4></summary>
 
 <!-- personas-candidatos:inicio -->
-| Nombre | Perfil de programa | Notas |
-| --- | --- | --- |
-| Carlos Sobera | Presentador | Antes asignado a Quién quiere ser funcionario; programa por concretar. |
-| Jesús Calleja | Presentador / reportero | Posible encaje en Españoles por España. |
-| Francisco Marhuenda | Presentador / tertuliano | Propuesta de tertulia política, análisis de actualidad y defensa numantina de cualquier decisión gubernamental. |
-| Los Meconios | Presentadores / humoristas | Se propone su parodia musical y sátira política como alternativa a un presentador convencional. |
-| Vito Quiles | Reportero / colaborador | Encaja en Españoles por España; también podría asumir un espacio de «batalleo cultural». |
-| Eduardo Inda | Tertuliano / colaborador | Se propone incorporarlo a algún programa; además figura como colaborador de El Cabestrillo. |
-| Antonio Naranjo | Tertuliano / colaborador | Se propone incorporarlo a algún programa; destino por concretar. |
-| Alaska | Presentadora / colaboradora | Se propone tenerla en la recámara, además de su asignación a Una, Grande y Libre. |
-| Santiago Segura | Presentador / colaborador | Se propone tenerlo en la recámara, además de su asignación a Cachitos de Hierro y Rojo. |
-| Cristina Seguí | Colaboradora | Posible incorporación; programa por concretar. |
-| Arcadi Espada | Colaborador / reportero | Posible encaje en Españoles por España. |
-| Aldo Comas | Presentador / showman | Artista todoterreno: pintor, actor, productor, músico, paracaidista y piloto de helicóptero. Se negó a llevar el pin de Palestina en los Goya 2026 y salió de la gala con un «¡Viva España!». Programa por concretar. |
+| Nombre | Perfil | Programas | Descripción |
+| --- | --- | --- | --- |
+| [Aldo Comas](rostros/aldo-comas.md) | Presentador / showman | Por concretar | Artista todoterreno: pintor, actor, productor, músico, paracaidista y piloto de helicóptero. Se negó a llevar el pin de Palestina en los Goya 2026 y salió de la gala con un «¡Viva España!». Programa por concretar. |
+| [Antonio Naranjo](rostros/antonio-naranjo.md) | Tertuliano / colaborador | Por concretar | Se propone incorporarlo a algún programa; destino por concretar. |
+| [Arcadi Espada](rostros/arcadi-espada.md) | Colaborador / reportero | Por concretar | Posible encaje en Españoles por España. |
+| [Carlos Sobera](rostros/carlos-sobera.md) | Presentador | Por concretar | Antes asignado a Quién quiere ser funcionario; programa por concretar. |
+| [Cristina Seguí](rostros/cristina-segui.md) | Colaboradora | Por concretar | Posible incorporación; programa por concretar. |
+| [Eduardo Inda](rostros/eduardo-inda.md) | Tertuliano / colaborador | Por concretar | Se propone incorporarlo a algún programa; además figura como colaborador de El Cabestrillo. |
+| [Francisco Marhuenda](rostros/francisco-marhuenda.md) | Presentador / tertuliano | Por concretar | Propuesta de tertulia política, análisis de actualidad y defensa numantina de cualquier decisión gubernamental. |
+| [Jesús Calleja](rostros/jesus-calleja.md) | Presentador / reportero | Por concretar | Posible encaje en Españoles por España. |
+| [Santiago Segura](rostros/santiago-segura.md) | Presentador / colaborador | Por concretar | Se propone tenerlo en la recámara, además de su asignación a Cachitos de Hierro y Rojo. |
+| [Vito Quiles](rostros/vito-quiles.md) | Reportero / colaborador | Por concretar | Encaja en Españoles por España; también podría asumir un espacio de «batalleo cultural». |
 <!-- personas-candidatos:fin -->
 
 </details>
@@ -127,7 +125,7 @@ Estamos abiertos a nuevas propuestas, no dudes en submittear tus ideas.
 
 ## Organización
 
-Las fichas están en la carpeta [programas](programas/) y se enlazan desde las tablas anteriores. Cada ficha identifica el tipo de programa y las personas asignadas cuando esa información está disponible; los apartados todavía no definidos pueden completarse más adelante. Las ideas de partida están en [conversaciones/chatgpt.md](conversaciones/chatgpt.md).
+Las fichas de programas están en la carpeta [programas](programas/) y las de las personas, en [rostros](rostros/); ambas se enlazan desde las tablas anteriores. Cada ficha identifica el tipo de programa y las personas asignadas cuando esa información está disponible; los apartados todavía no definidos pueden completarse más adelante. Las ideas de partida están en [conversaciones/chatgpt.md](conversaciones/chatgpt.md).
 
 ### Actualización de la parrilla
 
@@ -143,9 +141,21 @@ Cada archivo Markdown de `programas` debe incluir estos campos, uno por línea:
 - **Descripción:** Descripción breve para la parrilla.
 ```
 
-El estado debe ser `Confirmado` o `Candidato`. El campo `Presentador` es opcional: si todavía no está asignado, la tabla muestra «Por concretar». El campo `Reemplaza` también es opcional: indica a qué programa de la televisión actual sustituye, y en la web solo aparece al final de la página del programa. Las tablas de programas de este README se generan a partir de estas fichas; no hay que editar las filas entre sus marcadores. Las tablas de personas y asignaciones se mantienen manualmente.
+El estado debe ser `Confirmado` o `Candidato`. El campo `Presentador` es opcional: si todavía no está asignado, la tabla muestra «Por concretar». El campo `Reemplaza` también es opcional: indica a qué programa de la televisión actual sustituye, y en la web solo aparece al final de la página del programa. Las tablas de programas de este README se generan a partir de estas fichas; no hay que editar las filas entre sus marcadores.
 
 El campo `Horario` es obligatorio y usa el formato de 24 horas `HH:MM-HH:MM`. Si la hora final es anterior a la inicial, termina al día siguiente (por ejemplo, `23:00-01:00`). Las tablas se ordenan por hora de inicio, desde las 00:00; a igualdad de hora, por título.
+
+Las tablas de personas también se generan, a partir de las fichas de la carpeta `rostros`. Cada una lleva estos campos:
+
+```markdown
+- **Nombre:** Nombre de la persona o del grupo
+- **Perfil:** Presentador / colaborador
+- **Estado:** Confirmado
+- **Programas:** [Título del programa](../programas/ficha.md), [Otro](../programas/otra.md)
+- **Descripción:** Descripción breve para la tabla y la web.
+```
+
+`Estado` es `Confirmado` (en plantilla) o `Candidato` (en la recámara). `Programas` es opcional, pero si se rellena debe enlazar a fichas existentes de `programas`; si un enlace no lleva a ninguna ficha, el generador falla. Debajo de los campos se puede escribir una biografía libre en Markdown.
 
 Para actualizar las tablas localmente, ejecuta `python scripts/actualizar_parrilla.py`. Para comprobar que están al día sin modificarlas, añade `--check`. Al subir a `main` cambios de las fichas, la parrilla, el generador o su workflow, GitHub Actions ejecuta el generador y, si es necesario, publica un commit de `github-actions[bot]` con la parrilla actualizada. Para ello, el repositorio debe permitir que las Actions escriban en el contenido y la rama debe admitir ese commit.
 
@@ -157,12 +167,13 @@ La parrilla también se publica como una web con estética de teletexto en [ggon
 | --- | --- |
 | 100 | Portada: qué se emite ahora, qué viene después, una noticia de última hora al azar y más titulares |
 | 101 | Manifiesto (el texto de este README entre los comentarios `manifiesto:inicio` y `manifiesto:fin`) |
-| 110 | Índice de noticias, agrupadas por sección |
-| 111-198 | Una página por noticia, de la más reciente a la más antigua |
 | 199 | Ayuda: guía de páginas, teclas y mapa completo |
 | 200 | Parrilla completa |
-| 301 en adelante | Una página por programa: primero los confirmados por hora de inicio y después los candidatos |
-| 400 | Rostros de la cadena (tablas de personas de este README) |
+| 201-299 | Una página por programa: primero los confirmados por hora de inicio y después los candidatos |
+| 300 | Índice de noticias, agrupadas por sección |
+| 301-399 | Una página por noticia, de la más reciente a la más antigua |
+| 400 | Rostros de la cadena: en plantilla y en la recámara |
+| 401-499 | Una página por rostro, con su foto y enlaces a sus programas |
 | 500 | Subvencionómetro |
 | 555 | Buscador: programas, noticias, presentadores y páginas, con resultados según se escribe |
 
@@ -170,7 +181,9 @@ Todas las páginas se pueden compartir con el botón «Compartir» del televisor
 
 Cada programa tiene también una dirección fija basada en el nombre de su ficha, por ejemplo `#/el-cabestrillo` para `programas/el-cabestrillo.md`. Para añadir la imagen representativa de un programa, guárdala como `imagenes/programas/<dirección>.jpg` (también valen `.png`, `.webp`, `.gif` y `.svg`); mientras no exista, la ficha muestra una carta de ajuste con la ruta esperada.
 
-Tanto en las fichas de programas como en las noticias, todo lo que vaya a partir de un título `# Notas` (de cualquier nivel) es interno: se queda en el repositorio y no aparece en la web. Sirve para fuentes, ideas descartadas o comentarios del equipo.
+Los rostros funcionan igual: cada uno tiene la dirección `#/rostros/<nombre-de-la-ficha>` y su foto va en `imagenes/rostros/<nombre-de-la-ficha>.jpg` (o en cualquiera de los formatos anteriores). Por ejemplo, `imagenes/rostros/bertin-osborne.png` para `rostros/bertin-osborne.md`. Las páginas de los programas enlazan a sus rostros, y las de los rostros, a sus programas.
+
+En las fichas de programas, de rostros y en las noticias, todo lo que vaya a partir de un título `# Notas` (de cualquier nivel) es interno: se queda en el repositorio y no aparece en la web. Sirve para fuentes, ideas descartadas o comentarios del equipo.
 
 Las noticias están en la carpeta [noticias](noticias/), una por archivo Markdown. Cada vez que se carga la web, la portada muestra una al azar en «Última hora». Cada noticia empieza con estos campos, uno por línea, seguidos del cuerpo en Markdown:
 
