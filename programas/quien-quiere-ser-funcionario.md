@@ -31,15 +31,6 @@ El concurso no se ríe de quienes estudian años para sacar una plaza, sino de u
 
 Cada prueba vale puntos según el grupo al que se aspira. El ganador del programa diario obtiene una plaza C2. El ganador del especial del domingo se lleva una plaza C1 y una placa conmemorativa, la misma que se usa en las inauguraciones de Megainfraestructuras. Los perdedores reciben una bolsa de empleo, que es exactamente eso: una bolsa de tela con el logotipo del ministerio.
 
-## Propuesta de spin-off: Quién quiere ser pensionista
+## Spin-off: Quién quiere ser pensionista
 
-Si el formato funciona, la cadena propone un spin-off para la sobremesa de los sábados con el mismo esquema, pero con un premio todavía más escaso: una pensión de jubilación.
-
-Los concursantes son trabajadores en activo de entre 30 y 45 años que compiten por asegurarse hoy una pensión que el sistema no garantiza para mañana. Las pruebas cambian de enfoque:
-
-- **La carrera de la cotización:** los aspirantes corren durante 38 años y medio en una cinta, con la meta moviéndose hacia atrás cada vez que se aprueba una reforma.
-- **La hucha de las pensiones:** cada concursante intenta encontrar algo de dinero en la hucha del Estado. Gana quien saque una moneda; hasta ahora no ha ganado nadie.
-- **El cálculo imposible:** con calculadora y en directo, los participantes intentan averiguar cuánto les quedará de pensión. Los resultados se comparan al final con el precio de un alquiler.
-- **Final con el abuelo:** el ganador se sienta junto a un jubilado actual para comparar pensiones y cotizaciones. El jubilado cobra más que el sueldo del concursante.
-
-El premio es una carta oficial que garantiza el cobro de la pensión cuando llegue el momento, firmada por un ministro que ya no estará en el cargo para cumplirla.
+El formato ha tenido tanto éxito que ya tiene hermano pequeño: [Quién quiere ser pensionista](quien-quiere-ser-pensionista.md), los sábados en la sobremesa. La misma plaza, la misma charanga y un premio todavía más escaso: una pensión de jubilación. Los concursantes eliminados de este programa tienen plaza directa en el otro, porque sin plaza de funcionario lo de la pensión se complica bastante.
