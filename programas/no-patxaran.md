@@ -8,6 +8,25 @@
 - **Presentador:** Los Meconios
 - **Colaborador asignado:** Miguel Lago
 
+## Tipo de programa o sección
+
+Late night diario en directo, a la vieja usanza: mesa de presentador, sofá de invitados, banda en el plató, público de madrugada y una botella de patxarán permanentemente sobre la mesa. Bebe de los clásicos del género, de *Buenafuente* a *Crónicas marcianas*, pasando por *Esta noche cruzamos el Mississippi* de Pepe Navarro, con la madrugada como territorio sin horario protegido.
+
+## Premisa y enfoque satírico
+
+El título le da la vuelta al «¡No pasarán!» y lo convierte en lo que de verdad no pasa en este programa: ni el patxarán, que se queda en la mesa, ni la censura, ni el comisario de turno del humor progresista. Durante años, el late night de la televisión pública ha consistido en reírse siempre de los mismos con el permiso de los mismos. Aquí se acabó.
+
+Los Meconios llevan el programa como lo que son: dos cómicos que sueltan burradas sin pedir perdón y cantan canciones que harían sonrojar a un comité de ética. Miguel Lago pone el contrapunto de monologuista, siempre a punto de cruzar la línea y siempre cruzándola.
+
+## Secciones
+
+- **El monólogo de apertura:** Miguel Lago repasa la actualidad del día con un vaso de patxarán en la mano. Si un titular no le da para un chiste, lo pide prestado al Consejo de Ministros, que siempre tiene alguno.
+- **La canción de la semana:** Los Meconios convierten la última ocurrencia del Gobierno en un éxito musical, con banda en directo y coreografía de dudoso gusto. Cada semana un estilo: rumba, cuplé, reguetón o himno de verbena.
+- **Barra libre:** los presentadores leen en voz alta los tuits más ofendidos que ha provocado el programa la noche anterior y les ponen música de fondo.
+- **El entrevistado incómodo:** cada noche se sienta en el sofá alguien a quien nunca invitarían a otro late night de la casa, y se le deja hablar sin interrumpir, que en esta televisión es lo más subversivo que se puede hacer.
+- **Subvenciómetro musical:** Los Meconios cantan, a ritmo de pasodoble, la lista de subvenciones al cine español del mes, con su importe y su número de espectadores. La canción suele ser muy larga y la lista de espectadores, muy corta.
+- **La última y nos vamos:** despedida con todo el equipo en el escenario, el público cantando y la botella de patxarán vacía. Hasta mañana, si el regulador lo permite.
+
 # Notas
 
 ## Propuesta de enfoque
