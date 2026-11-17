@@ -4,7 +4,7 @@
 - **Tipo:** Concurso
 - **Estado:** Confirmado
 - **Horario:** 00:30-03:00
-- **Descripción:** Cada semana, varios g-etnianos, moros y panchos compiten por uno de los pocos IMVs que le sobran al ministerio.
+- **Descripción:** Cada semana, varios g-etnianos, amegos y pantxos compiten por uno de los pocos IMVs que le sobran al ministerio.
 
 ## Tipo de programa o sección
 
