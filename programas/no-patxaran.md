@@ -20,7 +20,7 @@ Los Meconios llevan el programa como lo que son: dos cómicos que sueltan burrad
 
 ## Secciones
 
-- **El monólogo de apertura:** cada programa arranca igual. Se apagan las luces, suena la banda y Los Meconios, en pie sobre la mesa, alzan sus vasos y dan el grito de guerra: «Ni un paso atrás, pero sí una copita». Después, Miguel Lago repasa la actualidad del día con su patxarán en la mano. Si un titular no le da para un chiste, lo pide prestado al Consejo de Ministros, que siempre tiene alguno.
+- **El monólogo de apertura:** cada programa arranca igual. Se apagan las luces, suena la banda y Los Meconios, en pie sobre la mesa, alzan sus vasos y dan el grito de guerra: «Ni un paso atrás, pero sí una copita». Después, Miguel Lago repasa la actualidad del día con su patxarán en la mano. 
 - **La canción de la semana:** Los Meconios convierten la última ocurrencia del Gobierno en un éxito musical, con banda en directo y coreografía de dudoso gusto. Cada semana un estilo: rumba, cuplé, reguetón o himno de verbena.
 - **Barra libre:** los presentadores leen en voz alta los tuits más ofendidos que ha provocado el programa la noche anterior y les ponen música de fondo.
 - **El entrevistado incómodo:** cada noche se sienta en el sofá alguien a quien nunca invitarían a otro late night de la casa, y se le deja hablar sin interrumpir, que en esta televisión es lo más subversivo que se puede hacer.

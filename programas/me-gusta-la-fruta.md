@@ -18,9 +18,6 @@ Cada mañana se cocina con lo que hay en el mercado y se comenta lo que hay en e
 
 ## Secciones
 
-- **El frutero del día:** la presentadora presenta la fruta de temporada con su ficha nutricional y su equivalente político. El plátano, rico en potasio y en resbalones; la piña, dura por fuera y con mucho que esconder dentro; y el melón, que nunca se sabe si va a salir bueno hasta que se abre, como los presupuestos.
 - **Hijo de fruta:** receta estrella de cada viernes. Una macedonia de todo lo que el presidente ha prometido y no ha cumplido, servida en un vaso de cartón «resiliente». Se recomienda tomarla sin azúcar, porque ya viene bastante edulcorada desde Moncloa.
-- **Manzanas podridas:** la sección de nutrición preventiva. Una dietista explica cómo detectar a tiempo una pieza en mal estado antes de que eche a perder todo el frutero, con ejemplos sacados de la actualidad del partido.
-- **Más cara que el aguacate:** repaso a la inflación en el carro de la compra. Cada semana se compara el precio de una fruta con el de un asesor de Moncloa, por kilo.
-- **Que te den… fruta:** los espectadores mandan sus frases más sinceras sobre el Gobierno y la presentadora las traduce en directo al idioma frutal antes de que intervenga el regulador. La audiencia no ha bajado de un «melocotonazo» desde el estreno.
-- **La pera limonera:** cada lunes se elige al ministro más empalagoso de la semana. El premio es una pera de verdad, porque esto es un programa de alimentación sana.
+- **Manzanas podridas:** la sección de nutrición preventiva. Una dietista explica cómo detectar a tiempo una pieza en mal estado antes de que eche a perder todo el frutero, como pasaba con Cerdán. Y con Ábalos. Y con Koldo. Y con el chófer.
+- **Que te den… fruta:** los espectadores mandan sus frases más sinceras sobre el Gobierno y la presentadora las traduce en directo al idioma frutal. La audiencia no ha bajado de un «melocotonazo» desde el estreno.

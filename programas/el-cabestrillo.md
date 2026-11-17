@@ -16,4 +16,4 @@
 Recopilación de los momentos más disparatados de los debates políticos de la semana.
 
 ### A ver, que me caliento
-Sección en la que cada tertuliano (excepto Santaolalla) dispone de dos minutos para responder a una noticia sin interrupciones.
+Sección en la que cada tertuliano (excepto Santaolalla) dispone de dos minutos para responder a una noticia sin interrupciones, al más puro estilo monólogo de Twich.
