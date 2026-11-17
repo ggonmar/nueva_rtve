@@ -8,7 +8,7 @@
 
 VALLADOLID, (FACHATEXTO). Los jueces del Libro Guinness de los Récords han certificado este lunes que el ministro de Transportes, Óscar Puente, ha batido el récord mundial de insultos publicados en una red social en 24 horas: 1.312 mensajes en los que se reparten «facha», «gañán», «indocumentado», «bocachancla» y un amplio surtido de calificativos que la organización ha preferido no leer en voz alta.
 
-El anterior récord también era suyo. Según sus colaboradores, la marca se logró «sin dopaje y con una sola mano, porque con la otra estaba firmando el contrato de unos trenes que no caben por los túneles».
+El anterior récord también era suyo. Según sus colaboradores, la marca se logró «sin dopaje y con una sola mano, porque con la otra estaba firmando el contrato de unas nuevas y para nada peligrosas vías de alta velocidad».
 
 ## «Esto es un ataque a la democracia»
 
