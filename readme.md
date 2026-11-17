@@ -106,6 +106,7 @@ Los horarios son una propuesta de franjas de emisión. Los candidatos son altern
 | Santiago Segura | Presentador / colaborador | Se propone tenerlo en la recámara, además de su asignación a Cachitos de Hierro y Rojo. |
 | Cristina Seguí | Colaboradora | Posible incorporación; programa por concretar. |
 | Arcadi Espada | Colaborador / reportero | Posible encaje en Españoles por España. |
+| Aldo Comas | Presentador / showman | Artista todoterreno: pintor, actor, productor, músico, paracaidista y piloto de helicóptero. Se negó a llevar el pin de Palestina en los Goya 2026 y salió de la gala con un «¡Viva España!». Posibles encajes: Cine de PAU, Megainfraestructuras o Españoles por España. |
 <!-- personas-candidatos:fin -->
 
 </details>
