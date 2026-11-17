@@ -24,6 +24,8 @@ Un recorrido por la red ferroviaria con cronómetro en mano. Trenes parados en m
 
 El episodio dedica su parte final a los descarrilamientos y a la pregunta que nadie en el ministerio quiere contestar: cuánto se ha dejado de invertir en revisar vías, agujas y taludes mientras se anunciaban nuevas líneas a bombo y platillo. La respuesta del ministro llega, como siempre, en forma de mensaje en redes culpando a un Gobierno de hace veinte años.
 
+Cuando ese argumento se agota, aparece el comodín: la culpa es de la liberalización. Según el ministerio, la llegada de operadores privados ha llenado las vías de trenes y las ha desgastado. El episodio desmonta la excusa con una idea sencilla: una infraestructura se construye para usarla, y cuanto más se use, mejor, porque una vía de alta velocidad vacía es el monumento más caro del país. Además, cada tren privado que circula paga a Adif un canon por uso de la vía de los más altos de Europa. Ese dinero existe y se cobra puntualmente. Debería ir a traviesas, catenarias y señalización. La pregunta es por qué termina en asesores, campañas institucionales y los vicios de siempre del PSOE. El rótulo de cierre lo resume: «El problema no es que pasen muchos trenes. Es adónde va lo que pagan».
+
 ### Episodio 2: El barranco que nadie encauzó
 
 Tras la DANA, el relato oficial cupo en una sola mesa: la de El Ventorro. Durante meses, tertulias, portadas y comparecencias giraron en torno a la comida de Mazón, a cuántas copas hubo en la sobremesa y a si estaba o no en condiciones de coger el teléfono. Hubo reconstrucciones minuto a minuto del menú, peritos en sobremesas y hasta debates sobre el maridaje.
