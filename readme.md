@@ -29,6 +29,7 @@ Los horarios son una propuesta de franjas de emisión. Los candidatos son altern
 <!-- programas-confirmados:inicio -->
 | Horario | Nombre | Tipo | Presentador | Descripción |
 | --- | --- | --- | --- | --- |
+| 00:30-03:00 | [El chiringuito de gorrones](programas/el-chiringuito-de-gorrones.md) | Concurso | Por concretar | Cada semana, varias personas acostumbradas a cobrar el IMV compiten por uno de los pocos ingresos mínimos vitales que le sobran al ministerio tras repartir el resto entre asesores. |
 | 01:00-02:00 | [Cachitos de Hierro y Rojo](programas/cachitos-de-hierro-y-rojo.md) | Archivo musical | Santiago Segura y El Sevilla | Santiago Segura y El Sevilla rebuscan en el archivo musical: himnos, joyas olvidadas y artistas que descubrieron que protestar contra el sistema suena mejor con ayuda pública. |
 | 02:00-06:00 | [Malas Lenguas](programas/malas-lenguas.md) | Enseñanza | Por concretar | Programa de 2 a 6 de la mañana en el que se enseña catalán, euskera y galego. |
 | 06:00-07:00 | [Megainfraestructuras](programas/megainfraestructuras.md) | Documentales | Por concretar | Un recorrido por obras faraónicas y proyectos abandonados, donde la cinta inaugural llega puntual aunque la infraestructura todavía esté esperando presupuesto, pasajeros o sentido común. |
