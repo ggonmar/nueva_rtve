@@ -5,7 +5,7 @@
 - **Estado:** Confirmado
 - **Horario:** 19:00-20:00
 - **Presentador:** José Luis Ábalos
-- **Descripción:** Spin-off del programa de citas de Cuatro, grabado en la red de Paradores y presentado por alguien que conoce cada habitación. Al programa se llega en autobús, y la primera eliminatoria es una subasta.
+- **Descripción:** Spin-off del programa de citas de Cuatro, grabado en la red de Paradores y presentado por alguien que conoce cada habitación. Al programa se llega en autobús, y la primera eliminatoria es una selección de personal a cargo del propio presentador.
 
 ## Tipo de programa o sección
 
@@ -20,7 +20,7 @@ El presentador se toma su papel muy en serio: defiende en cada programa que el a
 ## Mecánica
 
 - **La llegada:** los concursantes no vienen por su cuenta. Los recoge un autobús fletado por el Ministerio de Transportes, con Koldo al volante, que hace parada en todas las sedes del partido antes de llegar al Parador.
-- **Primera eliminatoria, la subasta:** nada más bajar del autobús, los solteros pujan por el derecho a sentarse a cenar. No se paga en dinero, sino en mascarillas sobrantes de 2020. Quien se queda sin pujar vuelve a casa en el mismo autobús, que por supuesto llega tarde.
+- **Primera eliminatoria, la selección de personal:** nada más bajar del autobús, Ábalos, con la experiencia de quien ha colocado a mucha gente, entrevista a los solteros uno a uno y se queda con los que, en sus propias palabras, «se enrollan que te cagas». El baremo no se publica, el tribunal es de una sola persona y no cabe recurso. Los descartados vuelven a casa en el mismo autobús, que por supuesto llega tarde.
 - **La cena:** la carta incluye «Menú Ministerial», con factura a nombre de otra persona, y «Menú Comisión», en el que un 2 % de cada plato se queda en la cocina.
 - **La decisión final:** como en el original, cada pareja decide si quiere una segunda cita. Si la respuesta es sí, Ábalos les ofrece un puesto de «asesor sin funciones» para que puedan verse en horario laboral.
 
