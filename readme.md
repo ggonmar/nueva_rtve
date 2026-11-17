@@ -156,6 +156,8 @@ Todas las páginas se pueden compartir con el botón «Compartir» del televisor
 
 Cada programa tiene también una dirección fija basada en el nombre de su ficha, por ejemplo `#/el-cabestrillo` para `programas/el cabestrillo.md`. Para añadir la imagen representativa de un programa, guárdala como `imagenes/programas/<dirección>.jpg` (también valen `.png`, `.webp`, `.gif` y `.svg`); mientras no exista, la ficha muestra una carta de ajuste con la ruta esperada.
 
+Tanto en las fichas de programas como en las noticias, todo lo que vaya a partir de un título `# Notas` (de cualquier nivel) es interno: se queda en el repositorio y no aparece en la web. Sirve para fuentes, ideas descartadas o comentarios del equipo.
+
 Las noticias están en la carpeta [noticias](noticias/), una por archivo Markdown. Cada vez que se carga la web, la portada muestra una al azar en «Última hora». Cada noticia empieza con estos campos, uno por línea, seguidos del cuerpo en Markdown:
 
 ```markdown

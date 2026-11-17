@@ -67,7 +67,7 @@ class ConstruirWebTest(unittest.TestCase):
     def test_genera_paginas_datos_e_imagenes(self):
         self.ficha("tarde.md", "Tarde", schedule="18:00-19:00")
         self.ficha("la cena.md", "La Cena", schedule="09:00-10:00",
-                   extra="- **Slogan:** *Hola*\n\n## Secciones\nVer [la tarde](tarde.md).\n")
+                   extra="- **Slogan:** *Hola*\n\n## Secciones\nVer [la tarde](tarde.md).\n\n# Notas\nNo publicar.\n")
         self.ficha("idea.md", "Idea", status="Candidato", schedule="01:00-02:00")
         (self.root / "imagenes" / "programas").mkdir(parents=True)
         (self.root / "imagenes" / "programas" / "la-cena.png").write_bytes(b"png")
@@ -115,7 +115,7 @@ class ConstruirWebTest(unittest.TestCase):
     def test_genera_noticias_ordenadas_por_fecha(self):
         self.ficha("tarde.md", "Tarde")
         self.noticia("vieja.md", "2026-01-01")
-        self.noticia("nueva.md", "2026-11-17", "\nTexto con [enlace](../programas/tarde.md).\n")
+        self.noticia("nueva.md", "2026-11-17", "\nTexto con [enlace](../programas/tarde.md).\n\n## Notas\nFuente interna.\n")
 
         data = build(self.root, self.root / "_site")
 

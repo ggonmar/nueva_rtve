@@ -8,6 +8,8 @@
 - **Presentador:** Bertín Osborne
 - **Colaboradores:** Pendientes de concretar
 
+# Notas
+
 ## Candidatos mencionados
 
 En `conversaciones/chatgpt.md` se considera que Vito Quiles podría encajar en el programa, aunque también se plantea para un espacio de «batalleo cultural». Arcadi Espada y Jesús Calleja también se mencionan como posibles encajes. Son propuestas, no asignaciones confirmadas.

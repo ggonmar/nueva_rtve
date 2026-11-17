@@ -33,6 +33,7 @@ PEOPLE_MARKERS = {
 BUILD_MARKER = ".nojekyll"
 
 EXTRA_FIELD_PATTERN = re.compile(r"^\s*-\s+\*\*([^*]+?):\*\*\s*(.*?)\s*$")
+NOTES_PATTERN = re.compile(r"(?mi)^#{1,6}[ \t]+Notas[ \t]*$")
 HEADING_PATTERN = re.compile(r"^(#{1,6})\s+(.*)$")
 ITEM_PATTERN = re.compile(r"^[-*+]\s+(.*)$")
 LINK_PATTERN = re.compile(r"\[([^\]]+)\]\(([^)\s]+)\)")
@@ -120,6 +121,12 @@ def markdown_to_html(text, link=None):
     return "".join(blocks)
 
 
+def strip_notes(text):
+    """Quita el apartado de notas internas (un título «Notas» y todo lo que le sigue)."""
+    match = NOTES_PATTERN.search(text)
+    return text[:match.start()] if match else text
+
+
 def split_program(text):
     """Separa la cabecera de la ficha (campos) del resto del contenido."""
     extras, body = [], []
@@ -184,7 +191,7 @@ def read_news(root, slugs, repository, branch):
     for path in sorted((root / "noticias").rglob("*.md")):
         source = path.relative_to(root).as_posix()
         fields, body, in_header = {}, [], True
-        for line in path.read_text(encoding="utf-8").splitlines():
+        for line in strip_notes(path.read_text(encoding="utf-8")).splitlines():
             field = EXTRA_FIELD_PATTERN.match(line) if in_header else None
             if field:
                 name, value = field.groups()
@@ -241,7 +248,7 @@ def collect(root, repository=None, branch="main"):
             raise ValueError(f"Dos fichas generan la misma dirección web «{slug}»: renombra {path}")
         slugs[program["ruta"]] = slug
         program["slug"] = slug
-        program["texto"] = path.read_text(encoding="utf-8")
+        program["texto"] = strip_notes(path.read_text(encoding="utf-8"))
         programs.append(program)
 
     order = {"Confirmado": 0, "Candidato": 1}
