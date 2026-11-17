@@ -34,8 +34,8 @@ Los horarios son una propuesta de franjas de emisión. Los candidatos son altern
 | 02:00-06:00 | [Malas Lenguas](programas/malas-lenguas.md) | Enseñanza | Por concretar | Programa de 2 a 6 de la mañana en el que se enseña catalán, euskera y galego. |
 | 06:00-07:00 | [MEGAFACHADAS](programas/megafachadas.md) | Documentales | Por concretar | El gran documental de ingeniería, pero al revés: en lugar de enseñar cómo se construyen las grandes obras, muestra cómo se caen a pedazos tras una década sin mantenimiento. La cinta inaugural, eso sí, sigue impecable. |
 | 08:00-09:00 | [Me gusta la fruta](programas/me-gusta-la-fruta.md) | Nutrición | Por concretar | Matinal de alimentación sana con una sola norma: aquí se habla claro y se come fruta. Mucha fruta. Especialmente cuando sale el presidente en las noticias. |
+| 10:00-12:00 | [Bulos Días](programas/bulos-dias.md) | Magacín de actualidad | Federico Jiménez Losantos | El matinal de actualidad que el Gobierno no puede desmentir: Federico Jiménez Losantos desayuna cada mañana con los titulares del día y separa lo que pasa de lo que Moncloa dice que pasa. Si alguien lo llama bulo, es que va bien encaminado. |
 | 10:00-11:00 | [El último contribuyente](programas/el-ultimo-contribuyente.md) | Documental económico | Juan Ramón Rallo | Juan Ramón Rallo sigue la pista del esquivo ciudadano que todavía paga la fiesta, mientras cada nueva partida presupuestaria amenaza con convertirlo en especie protegida. |
-| 10:00-12:00 | [La memoria selectiva](programas/la-memoria-selectiva.md) | Documental | Federico Jiménez Losantos | La historia de la democracia española contada por quienes la han protagonizado y no por quienes la han editado: casi medio siglo de relato administrado por el PSOE y la izquierda, en el que unas memorias se exhiben, otras se archivan y algunas se reescriben por ley. |
 | 12:00-13:00 | [Quién quiere ser funcionario](programas/quien-quiere-ser-funcionario.md) | Concurso | Ramón García | Con las oposiciones reducidas al mínimo, el Estado monetiza el proceso: en lugar de examen, los aspirantes superan pruebas al estilo Grand Prix para sumar puntos y llevarse una plaza de funcionario C2. Los domingos, especial C1. |
 | 13:00-14:00 | [Cunetas o Pesetas](programas/cunetas-o-pesetas.md) | Concurso | Por concretar | Los concursantes eligen entre remover eternamente el pasado o llevarse un premio; el presentador descubre que hasta la memoria histórica tiene presupuesto. |
 | 14:00-14:30 | [La Cuneta de la Fortuna](programas/la-cuneta-de-la-fortuna.md) | Concurso | Por concretar | Concurso documental que recorre las cunetas de España: los concursantes buscan a sus tatarabuelos mientras giran una enorme ruleta de cartón piedra. ¡Cuidado con caer en la quiebra! |
@@ -54,6 +54,7 @@ Los horarios son una propuesta de franjas de emisión. Los candidatos son altern
 | 21:45-22:45 | [La Reconquista](programas/la-reconquista.md) | Late night | Bertín Osborne | Bertín Osborne recupera el late night de la televisión pública: guitarra, invitados sin pin y las preguntas de siempre, pero al revés. Aquí no se resiste a nada; se reconquista todo. |
 | 22:00-23:30 | [Aquellos Maravillosos Años](programas/aquellos-maravillosos-anos.md) | Serie | Por concretar | Serie que recuerda con nostalgia la Españita feliz de los 2000: hipotecas a 40 años que se firmaban sonriendo, el euro recién estrenado, pleno empleo en la obra y un país que ganaba Mundiales sin pedir perdón por ello. |
 | 22:00-23:00 | [Cuarto Reich](programas/cuarto-reich.md) | Misterio | Iker Jiménez | Iker Jiménez investiga el fenómeno paranormal favorito de la tertulia: encontrar un fascista detrás de cada crítica, incluso cuando solo hay un autónomo con una factura. |
+| 23:00-02:00 | [La memoria selectiva](programas/la-memoria-selectiva.md) | Documental | Por concretar | La historia de la democracia española contada por quienes la han protagonizado y no por quienes la han editado: casi medio siglo de relato administrado por el PSOE y la izquierda, en el que unas memorias se exhiben, otras se archivan y algunas se reescriben por ley. |
 | 23:00-01:00 | [No, Patxarán](programas/no-patxaran.md) | Late night | Los Meconios | Los Meconios y Miguel Lago despiden el día con humor, música y más ganas de pinchar globos progresistas que de cobrar la próxima subvención. Se propone un late night sin líneas rojas, con actualidad copa en mano y sátira de subvenciones y observatorios. |
 <!-- programas-confirmados:fin -->
 
@@ -92,7 +93,7 @@ Los horarios son una propuesta de franjas de emisión. Los candidatos son altern
 | Juan Ramón Rallo | Presentador | Asignado a El último contribuyente. |
 | Santiago Segura y El Sevilla | Presentadores | Asignados a Cachitos de Hierro y Rojo; Santiago Segura también se propone para la recámara. |
 | Bertín Osborne | Presentador | Asignado a Españoles por España y La Reconquista. |
-| Federico Jiménez Losantos | Presentador | Asignado a La memoria selectiva. |
+| Federico Jiménez Losantos | Presentador | Asignado a Bulos Días. |
 | José Luis Ábalos | Presentador | Asignado a First Dates: Paradores. |
 <!-- personas-confirmados:fin -->
 

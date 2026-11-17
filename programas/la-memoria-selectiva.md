@@ -3,14 +3,13 @@
 - **Título:** La memoria selectiva
 - **Tipo:** Documental
 - **Estado:** Confirmado
-- **Horario:** 10:00-12:00
-- **Presentador:** Federico Jiménez Losantos
+- **Horario:** 23:00-02:00
 - **Descripción:** La historia de la democracia española contada por quienes la han protagonizado y no por quienes la han editado: casi medio siglo de relato administrado por el PSOE y la izquierda, en el que unas memorias se exhiben, otras se archivan y algunas se reescriben por ley.
 - **Productores asignados:** Tierra Ignota
 
 ## Tipo de programa o sección
 
-Serie documental semanal, con archivo, testimonios y la voz de Federico Jiménez Losantos, que presenta cada capítulo como quien abre un expediente que alguien prefería mantener cerrado. Producen los documentalistas de Tierra Ignota.
+Serie documental de madrugada, producida por Tierra Ignota, con archivo, testimonios y una voz en off que presenta cada capítulo como quien abre un expediente que alguien prefería mantener cerrado. La franja es deliberada: lo que el relato oficial esconde de día, aquí se emite de noche.
 
 ## Premisa y enfoque satírico
 
