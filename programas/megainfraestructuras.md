@@ -26,9 +26,11 @@ El episodio dedica su parte final a los descarrilamientos y a la pregunta que na
 
 ### Episodio 2: El barranco que nadie encauzó
 
-Un viaje a la historia de los planes hidrológicos que dormían en los cajones mientras el agua esperaba su momento. Proyectos de encauzamiento redactados, aprobados y presupuestados durante décadas, informes técnicos que advertían de lo que podía pasar y una confederación hidrográfica dependiente del ministerio que nunca encontró el momento de ejecutarlos.
+Tras la DANA, el relato oficial cupo en una sola mesa: la de El Ventorro. Durante meses, tertulias, portadas y comparecencias giraron en torno a la comida de Mazón, a cuántas copas hubo en la sobremesa y a si estaba o no en condiciones de coger el teléfono. Hubo reconstrucciones minuto a minuto del menú, peritos en sobremesas y hasta debates sobre el maridaje.
 
-Cuando llegó la DANA, esas obras seguían en papel. El episodio no busca risas, sino una pregunta incómoda: cuántas vidas y cuántas casas se habrían salvado si una parte de lo gastado en propaganda se hubiera dedicado a hormigón, cauces y presas. La única cinta inaugural que aparece en el capítulo es la del primer aniversario.
+Mientras tanto, nadie se hizo la pregunta que importa: por qué el plan de prevención de inundaciones llevaba dieciséis años sin aplicarse. El episodio recorre esos dieciséis años de proyectos de encauzamiento redactados, aprobados y presupuestados, de informes técnicos que advertían exactamente de lo que iba a pasar y de una confederación hidrográfica dependiente del ministerio que nunca encontró el momento de ejecutarlos.
+
+Cuando llegó el agua, esas obras seguían en papel. El episodio no busca risas, sino una pregunta incómoda: cuántas vidas y cuántas casas se habrían salvado si una parte de lo gastado en propaganda se hubiera dedicado a hormigón, cauces y presas. Al final, la voz en off resume el relato oficial en una frase: «Se investigó con lupa una sobremesa de cuatro horas y no se investigó una obra pendiente de dieciséis años». La única cinta inaugural que aparece en el capítulo es la del primer aniversario.
 
 ### Episodio 3: Autovía del Bache
 
