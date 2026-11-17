@@ -25,7 +25,3 @@ El nombre es una declaración de intenciones: cada mañana, el país se despiert
 - **Fact-checking a los fact-checkers:** se comprueban las verificaciones publicadas por los medios subvencionados. Suele haber más errores en las verificaciones que en lo verificado.
 - **El relato del día:** antes de cerrar, el programa anticipa qué palabra va a repetir el Gobierno durante la jornada («resiliencia», «ultraderecha», «máquina del fango») y lleva la cuenta a la tarde siguiente. El récord está en 47 veces en una sola comparecencia.
 - **Llamada del oyente:** cualquier espectador puede llamar para denunciar un bulo. Si el bulo es del Gobierno, se le regala una taza.
-
-## Relación con La memoria selectiva
-
-Bulos Días cuenta la actualidad de hoy; [La memoria selectiva](la-memoria-selectiva.md), de madrugada, cuenta cómo se contó la de ayer. Los dos programas comparten redacción, hemeroteca y una misma tesis: el relato se fabrica, y alguien tiene que leer las instrucciones de montaje.
