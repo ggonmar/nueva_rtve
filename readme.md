@@ -34,6 +34,7 @@ Los horarios son una propuesta de franjas de emisión. Los candidatos son altern
 | 02:00-06:00 | [Malas Lenguas](programas/malas-lenguas.md) | Enseñanza | Por concretar | Programa de 2 a 6 de la mañana en el que se enseña catalán, euskera y galego. |
 | 06:00-07:00 | [MEGAFACHADAS](programas/megafachadas.md) | Documentales | Por concretar | El gran documental de ingeniería, pero al revés: en lugar de enseñar cómo se construyen las grandes obras, muestra cómo se caen a pedazos tras una década sin mantenimiento. La cinta inaugural, eso sí, sigue impecable. |
 | 08:00-09:00 | [Me gusta la fruta](programas/me-gusta-la-fruta.md) | Nutrición | Por concretar | Matinal de alimentación sana con una sola norma: aquí se habla claro y se come fruta. Mucha fruta. Especialmente cuando sale el presidente en las noticias. |
+| 09:00-10:00 | [Anotop At](programas/anotop-at.md) | Serie de ficción | Toni Cantó y Bibiana Fernández | Drama de mafias en clave de serie de culto: la ascensión de un hombre que llegó al poder desde el negocio familiar de las saunas y que no ha dejado ley, promesa ni compañero de partido sin pisar. Toni Cantó es Pedro Sánchez y Bibiana Fernández, Begoña Gómez. |
 | 10:00-12:00 | [Bulos Días](programas/bulos-dias.md) | Magacín de actualidad | Federico Jiménez Losantos | El matinal de actualidad que el Gobierno no puede desmentir: Federico Jiménez Losantos desayuna cada mañana con los titulares del día y separa lo que pasa de lo que Moncloa dice que pasa. Si alguien lo llama bulo, es que va bien encaminado. |
 | 10:00-11:00 | [El último contribuyente](programas/el-ultimo-contribuyente.md) | Documental económico | Juan Ramón Rallo | Juan Ramón Rallo sigue la pista del esquivo ciudadano que todavía paga la fiesta, mientras cada nueva partida presupuestaria amenaza con convertirlo en especie protegida. |
 | 12:00-13:00 | [Quién quiere ser funcionario](programas/quien-quiere-ser-funcionario.md) | Concurso | Ramón García | Con las oposiciones reducidas al mínimo, el Estado monetiza el proceso: en lugar de examen, los aspirantes superan pruebas al estilo Grand Prix para sumar puntos y llevarse una plaza de funcionario C2. Los domingos, especial C1. |
@@ -83,6 +84,7 @@ Los horarios son una propuesta de franjas de emisión. Los candidatos son altern
 | --- | --- | --- | --- |
 | [Alaska](rostros/alaska.md) | Presentadora | [Una, Grande y Libre](programas/una-grande-y-libre.md) | Asignada a Una, Grande y Libre; también se propone tenerla en la recámara. |
 | [Bertín Osborne](rostros/bertin-osborne.md) | Presentador | [Españoles por España](programas/espanoles-por-espana.md) | Asignado a Españoles por España. |
+| [Bibiana Fernández](rostros/bibiana-fernandez.md) | Actriz | [Anotop At](programas/anotop-at.md) | Interpreta a Begoña Gómez en Anotop At. |
 | [ElXokas, WSW y UTBH](rostros/elxokas-wsw-y-utbh.md) | Presentadores / participantes | [El Cabestrillo](programas/el-cabestrillo.md) | Asignados a El Cabestrillo. |
 | [Federico Jiménez Losantos](rostros/federico-jimenez-losantos.md) | Presentador | [Bulos Días](programas/bulos-dias.md) | Asignado a Bulos Días. |
 | [Iker Jiménez](rostros/iker-jimenez.md) | Presentador | [Cuarto Reich](programas/cuarto-reich.md) | Asignado a Cuarto Reich. |
@@ -93,6 +95,7 @@ Los horarios son una propuesta de franjas de emisión. Los candidatos son altern
 | [Miguel Lago](rostros/miguel-lago.md) | Colaborador | [No, Patxarán](programas/no-patxaran.md), [La Reconquista](programas/la-reconquista.md) | Colaborador en No, Patxarán y presentador de La Reconquista. |
 | [Ramón García](rostros/ramon-garcia.md) | Presentador | [Quién quiere ser funcionario](programas/quien-quiere-ser-funcionario.md) | Asignado a Quién quiere ser funcionario. |
 | [Santiago Segura y El Sevilla](rostros/santiago-segura-y-el-sevilla.md) | Presentadores | [Cachitos de Hierro y Rojo](programas/cachitos-de-hierro-y-rojo.md) | Asignados a Cachitos de Hierro y Rojo; Santiago Segura también se propone para la recámara. |
+| [Toni Cantó](rostros/toni-canto.md) | Actor | [Anotop At](programas/anotop-at.md) | Interpreta a Pedro Sánchez en Anotop At. Actor y exdiputado, conoce de primera mano el oficio de cambiar de partido sin despeinarse. |
 <!-- personas-confirmados:fin -->
 
 </details>
