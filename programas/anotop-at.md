@@ -15,7 +15,7 @@ Como toda serie de ficción, empieza con un rótulo: «Esta historia está inspi
 
 ## Premisa y enfoque satírico
 
-El protagonista es un hombre guapo, alto y con una ambición sin techo, que se casa con la hija de un empresario de saunas y descubre que el negocio familiar le ha enseñado todo lo que necesita saber sobre política: a cobrar por adelantado, a no hacer preguntas y a que lo que pasa dentro no salga fuera. Desde ese momento, nada ni nadie se interpone entre él y el Palacio de la Moncloa.
+El protagonista es un hombre guapo, alto y con una ambición sin techo, que se casa con la hija de un empresario de saunas y descubre que el negocio familiar le ha enseñado todo lo que necesita saber sobre política: a cobrar por adelantado, a no hacer preguntas y a que lo que pasa dentro no salga fuera - a no ser que haga falta. Desde ese momento, nada ni nadie se interpone entre él y el Palacio de la Moncloa.
 
 En la serie, el personaje es un psicópata de manual: encantador en público, gélido en privado, incapaz de sentir culpa y siempre dispuesto a sacrificar a quien haga falta. Los amigos de ayer acaban en el banquillo, los socios de hoy cobran en competencias y la palabra dada dura exactamente lo que tarda en cambiar la aritmética parlamentaria.
 
