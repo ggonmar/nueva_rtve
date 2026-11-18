@@ -5,7 +5,7 @@
 - **Estado:** Confirmado
 - **Horario:** 09:00-10:00
 - **Presentador:** Toni Cantó y Bibiana Fernández
-- **Descripción:** Drama de mafias en clave de serie de culto: la ascensión de un hombre que llegó al poder desde el negocio familiar de las saunas y que no ha dejado ley, promesa ni compañero de partido sin pisar. Toni Cantó es Pedro Sánchez y Bibiana Fernández, Begoña Gómez.
+- **Descripción:** Drama de mafias en clave de serie de culto: la ascensión de un hombre que llegó al poder desde el negocio familiar de las saunas y que no ha dejado ley, promesa ni compañero de partido sin pisar. Enfrente, sus opositores farmean aura en cada cara a cara, aunque a mitad de la réplica se les trabe la lengua. Toni Cantó es Pedro Sánchez y Bibiana Fernández, Begoña Gómez.
 
 ## Tipo de programa o sección
 
